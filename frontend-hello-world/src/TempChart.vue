@@ -1,12 +1,12 @@
 <template>
-  <div id="TempGraph" class="small">
+  <div id="TempChart" class="small">
     <line-chart :chart-data="datacollection"></line-chart>
     <button @click="fillData()">Randomize</button>
   </div>
 </template>
 
 <script>
-  import LineChart from './TempGraph.js'
+  import LineChart from './Chart.js'
 
   export default {
     components: {
@@ -26,11 +26,7 @@
           labels: [this.getRandomInt(), this.getRandomInt()],
           datasets: [
             {
-              label: 'Data One',
-              backgroundColor: '#f87979',
-              data: [this.getRandomInt(), this.getRandomInt()]
-            }, {
-              label: 'Data One',
+              label: 'Temperature',
               backgroundColor: '#f87979',
               data: [this.getRandomInt(), this.getRandomInt()]
             }
@@ -46,6 +42,7 @@
 
 <style>
   .small {
+    display: inline-block;
     max-width: 600px;
     margin:  150px auto;
   }
