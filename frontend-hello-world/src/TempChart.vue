@@ -1,5 +1,5 @@
 <template>
-  <div id="TempChart" class="small">
+  <div id="TempChart" >
     <line-chart :chart-data="datacollection"></line-chart>
     <button @click="fillData()">Randomize</button>
   </div>
@@ -23,12 +23,12 @@
     methods: {
       fillData () {
         this.datacollection = {
-          labels: [this.getRandomInt(), this.getRandomInt()],
+          labels: [this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt()],
           datasets: [
             {
               label: 'Temperature',
               backgroundColor: '#f87979',
-              data: [this.getRandomInt(), this.getRandomInt()]
+              data: [this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt()]
             }
           ]
         }
@@ -43,7 +43,7 @@
 <style>
   .small {
     display: inline-block;
-    max-width: 600px;
+    max-width: 500px;
     margin:  150px auto;
   }
 </style>

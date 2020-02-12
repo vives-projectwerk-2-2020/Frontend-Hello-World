@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import TempChart from './TempChart.vue'
 import HumidityChart from './HumidityChart.vue'
+import PressureChart from './PressureChart.vue'
 
 Vue.config.productionTip = false
 
@@ -16,3 +17,7 @@ new Vue({
 new Vue({
   render: h => h(HumidityChart),
 }).$mount('#HumidityChart')
+
+new Vue({
+  render: h => h(PressureChart),
+}).$mount('#PressureChart')

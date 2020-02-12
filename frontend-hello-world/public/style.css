@@ -1,6 +1,11 @@
 .charts {
     text-align: center;
     margin: auto;
+    display: grid;
+}
+
+.chart {
+    width: 40%;
 }
 
 .small {

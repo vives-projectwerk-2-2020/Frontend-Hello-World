@@ -26,8 +26,8 @@
           labels: [this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt()],
           datasets: [
             {
-              label: 'Humidity',
-              backgroundColor: '#0000ff',
+              label: 'Pressure',
+              backgroundColor: '#013220',
               data: [this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt()]
             }
           ]
