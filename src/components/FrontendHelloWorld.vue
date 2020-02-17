@@ -1,12 +1,16 @@
 <template>
   <div>
       <h1>{{ msg }}</h1>
+      <TemperatureChart/>
       <MyChart/>
+      <HumidityChart/>
   </div>
 </template>
 
 <script>
 import MyChart from './MyChart'
+import TemperatureChart from './TemperatureChart'
+import HumidityChart from './HumidityChart'
 
 export default {
   name: 'HelloWorld',
@@ -14,7 +18,9 @@ export default {
     msg: String
   },
   components: {
-    MyChart
+    MyChart,
+    TemperatureChart,
+    HumidityChart
   }
 }
 </script>

@@ -24,8 +24,13 @@ export default {
       labels: [],
       datasets: [
         {
-          label: 'Pressure',
-          data: []
+          label: 'Humidity',
+          data: [],
+          backgroundColor:
+                    'rgba(0, 0, 132, 0.2)',
+                borderColor:
+                    'rgba(0, 0, 0, 1)',
+                borderWidth: 1
         }
       ] 
     }
