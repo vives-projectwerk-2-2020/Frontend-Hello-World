@@ -22,3 +22,13 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Docker build
+
+```
+docker build -t <name> .
+docker run -d -p 8080:8080 <name>
+```
+Setting `EXPOSE` port to 8080
+
+-> `192.168.99.100:8080`
