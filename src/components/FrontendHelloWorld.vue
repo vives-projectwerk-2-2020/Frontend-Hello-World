@@ -4,6 +4,7 @@
       <TemperatureChart/>
       <MyChart/>
       <HumidityChart/>
+      
   </div>
 </template>
 
