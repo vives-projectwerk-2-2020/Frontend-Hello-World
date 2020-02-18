@@ -32,3 +32,10 @@ docker run -d -p 8080:8080 <name>
 Setting `EXPOSE` port to 8080
 
 -> `192.168.99.100:8080`
+
+## To run with nginx
+
+```
+docker build -t <name> .
+docker run -d -p 8080:80 <name>
+```
