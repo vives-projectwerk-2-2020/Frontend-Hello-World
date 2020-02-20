@@ -6,6 +6,14 @@
       clipped
     >
       <v-list dense>
+         <v-list-item link>
+          <v-list-item-action>
+           <v-icon>mdi-log-in</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Login</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
         <v-list-item link>
           <v-list-item-action>
             <v-icon>mdi-view-dashboard</v-icon>
@@ -43,34 +51,8 @@
           justify="center"
         >
           <v-col class="shrink">
-            <v-tooltip right>
-              <template v-slot:activator="{ on }">
-                <v-btn
-                  :href="source"
-                  icon
-                  large
-                  target="_blank"
-                  v-on="on"
-                >
-                  <v-icon large>mdi-code-tags</v-icon>
-                </v-btn>
-              </template>
-              <span>Source</span>
-            </v-tooltip>
-            <v-tooltip right>
-              <template v-slot:activator="{ on }">
-                <v-btn
-                  icon
-                  large
-                  href="https://codepen.io/johnjleider/pen/bXNzZL"
-                  target="_blank"
-                  v-on="on"
-                >
-                  <v-icon large>mdi-codepen</v-icon>
-                </v-btn>
-              </template>
-              <span>Codepen</span>
-            </v-tooltip>
+            
+            
           </v-col>
         </v-row>
       </v-container>
@@ -79,18 +61,19 @@
     <v-footer app>
       <span>&copy; 2019</span>
     </v-footer>
+      <div id="app">
+    
+    <HelloWorld msg="Welcome to Particula"/>
+  </div>
   </v-app>
 
 
-  <!-- <div id="app">
-    
-    <HelloWorld msg="Welcome to Particula"/>
-  </div> -->
+
 </template>
 
 <script>
 import HelloWorld from './components/FrontendHelloWorld'
-import vuetify from '@/plugins/vuetify'
+// import vuetify from '@/plugins/vuetify'
 
 export default {
   name: 'App',
