@@ -72,7 +72,7 @@
 </template>
 
 <script>
-import HelloWorld from './components/FrontendHelloWorld'
+import HelloWorld from '../components/FrontendHelloWorld'
 // import vuetify from '@/plugins/vuetify'
 
 export default {
