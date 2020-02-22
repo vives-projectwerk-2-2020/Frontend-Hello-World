@@ -5,15 +5,7 @@
     <TemperatureChart />
     <MyChart />
     <HumidityChart />
-
-     <v-footer dark padless>
-    <v-col
-      class="text-center"
-      cols="12"
-    >
-      {{ new Date().getFullYear() }} — <strong>Particula</strong>
-    </v-col>
-  </v-footer>
+   
   </div>
 </template>
 
