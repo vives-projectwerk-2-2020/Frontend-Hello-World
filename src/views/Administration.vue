@@ -1,6 +1,6 @@
 <template>
   <v-app id="inspire">
-      <v-navigation-drawer
+    <v-navigation-drawer
       v-model="drawer"
       app
       clipped
@@ -11,7 +11,7 @@
            <v-icon>mdi-log-in</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Login/Registration</v-list-item-title>
+            <v-list-item-title><router-link to="/login">Login/Registration</router-link></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item link>
@@ -33,14 +33,15 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar
+      <v-app-bar
       app
       clipped-left
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>Application</v-toolbar-title>
+      <v-toolbar-title>Particula</v-toolbar-title>
     </v-app-bar>
 
+    <v-container>
     <v-content>
       <v-container
         class="fill-height"
@@ -65,6 +66,7 @@
             md="4"
             class=pr-5
           >
+          <v-container id="app">
             <v-card class="elevation-12">
               <v-toolbar
                 color="primary"
@@ -101,6 +103,7 @@
                 <v-card-text>Forgot password?</v-card-text>
               </v-card-actions>
             </v-card>
+            </v-container>
           </v-col>
           
         <v-col
@@ -109,6 +112,7 @@
             md="4"
             class=pl-5
           >
+          <v-container id="app">
             <v-card class="elevation-12">
               <v-toolbar
                 color="primary"
@@ -150,6 +154,7 @@
                 <v-btn color="primary">SIGN UP</v-btn>
               </v-card-actions>
             </v-card>
+            </v-container>
           </v-col>
         </v-row>
       </v-container>
@@ -157,17 +162,23 @@
         </v-row>
       </v-container>
     </v-content>
-
-      <v-footer app>
-      <span>&copy; 2019</span>
+    </v-container>
+       <v-footer app>
+      <span>&copy; Particula 2020</span>
     </v-footer>
   </v-app>
 </template>
 
 <script>
-  export default {
-    props: {
+export default {
+  props: {
       source: String,
+    },
+    data: () => ({
+      drawer: null,
+    }),
+    created () {
+      this.$vuetify.theme.dark = false
     },
   }
 </script>
