@@ -1,6 +1,6 @@
 <template>
-  <v-app id="inspire">
-    <v-navigation-drawer
+      <v-app id="inspire">
+        <v-navigation-drawer
       v-model="drawer"
       app
       clipped
@@ -32,15 +32,6 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-
-      <v-app-bar
-      app
-      clipped-left
-    >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>Particula</v-toolbar-title>
-    </v-app-bar>
-
     <v-container>
     <v-content>
       <v-container
@@ -162,10 +153,17 @@
       </v-container>
     </v-content>
     </v-container>
-       <v-footer app>
+       <v-app-bar
+      app
+      clipped-left
+    >
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <v-toolbar-title>Particula</v-toolbar-title>
+    </v-app-bar>
+           <v-footer app>
       <span>&copy; Particula 2020</span>
     </v-footer>
-  </v-app>
+      </v-app>
 </template>
 
 <script>
