@@ -17,8 +17,6 @@ export default {
       this.$vuetify.theme.dark = false
     },
   }
-
-
 </script>
 
 <style>
