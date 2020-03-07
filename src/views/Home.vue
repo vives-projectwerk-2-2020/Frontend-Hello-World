@@ -20,7 +20,7 @@
             <v-icon>mdi-home</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Home</v-list-item-title>
+            <v-list-item-title><router-link to="/home">Home</router-link></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item link>
@@ -28,7 +28,7 @@
             <v-icon>mdi-information-outline</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>About</v-list-item-title>
+            <v-list-item-title><router-link to="/about">About</router-link></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
