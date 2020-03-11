@@ -41,29 +41,27 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title>Particula</v-toolbar-title>
     </v-app-bar>
-    </div> -->
-    <Sidebar>
-    </Sidebar>
-    
+    </div>-->
+    <Sidebar></Sidebar>
 
     <v-content>
-      <v-container
-        class="fill-height"
-        fluid
-      >
-        <v-row
-          align="center"
-          justify="center"
-        >
-
+      <v-container class="fill-height" fluid>
+        <v-row align="center" justify="center">
           <v-container>
-              <div id="app">
-                  <h1> {{ info.data.latitude }} </h1>
-                  <h1> {{ info.data.longitude }} </h1>
-              </div>
-           
+            <div id="app">
+              <v-card max-width="500" max-height="500" class="mx-auto">
+                <v-list-item>
+                  <v-list-item-content>
+                    <v-list-item-title class="headline">Live Sensor</v-list-item-title>
+                    <v-list-item-subtitle>These are the values of sensor with id:</v-list-item-subtitle>
+                  </v-list-item-content>
+                </v-list-item>
+
+                <p>Temperature: {{ info.data.latitude }}</p>
+                <p>Pressure: {{ info.data.longitude }}</p>
+              </v-card>
+            </div>
           </v-container>
-          
         </v-row>
       </v-container>
     </v-content>
@@ -72,53 +70,48 @@
       <span>&copy; Particula 2020</span>
     </v-footer>
   </v-app>
-
-
-
 </template>
 
 <script>
-import Sidebar from '../components/Sidebar'
-import axios from "axios"
+import Sidebar from "../components/Sidebar";
+import axios from "axios";
 // import vuetify from '@/plugins/vuetify'
 
 export default {
-  name: 'App',
-  el: '#app',
+  name: "App",
+  el: "#app",
   components: {
-    Sidebar,
+    Sidebar
   },
   props: {
-      source: String,
+    source: String
+  },
+  data: () => ({
+    drawer: null,
+    info: null
+  }),
+  created() {
+    this.$vuetify.theme.dark = false;
+  },
+  mounted() {
+    axios
+      .get("https://api.wheretheiss.at/v1/satellites/25544")
+      .then(response => (this.info = response));
+    this.intervalFetchData();
+  },
+  methods: {
+    getAPI: function() {
+      axios
+        .get("https://api.wheretheiss.at/v1/satellites/25544")
+        .then(response => (this.info = response));
     },
-    data: () => ({
-      drawer: null,
-      info: null
-    }),
-    created () {
-      this.$vuetify.theme.dark = false
-    },
-    mounted () {
-        axios
-            .get('https://api.wheretheiss.at/v1/satellites/25544')
-            .then(response => (this.info = response))
-        this.intervalFetchData();
-    },
-    methods: {
-        getAPI: function () {
-            axios
-            .get('https://api.wheretheiss.at/v1/satellites/25544')
-            .then(response => (this.info = response))
-        },
-        intervalFetchData: function () {
-            setInterval(() => {
-                this.getAPI();
-            }, 2000);
-        }
+    intervalFetchData: function() {
+      setInterval(() => {
+        this.getAPI();
+      }, 2000);
     }
   }
-
-
+};
 </script>
 
 <style>
