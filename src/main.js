@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import Live from './views/Live.vue'
 import vuetify from './plugins/vuetify'
 import router from './router'
 
@@ -10,3 +11,9 @@ new Vue({
   vuetify,
   render: h => h(App)
 }).$mount('#app')
+
+new Vue({
+  router,
+  vuetify,
+  render: h => h(Live)
+}).$mount('#live')
