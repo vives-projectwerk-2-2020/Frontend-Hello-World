@@ -58,7 +58,8 @@
 
           <v-container>
               <div id="app">
-                  {{ info }}
+                  <h1> {{ info.data.latitude }} </h1>
+                  <h1> {{ info.data.longitude }} </h1>
               </div>
            
           </v-container>
@@ -99,8 +100,21 @@ export default {
     },
     mounted () {
         axios
-            .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+            .get('https://api.wheretheiss.at/v1/satellites/25544')
             .then(response => (this.info = response))
+        this.intervalFetchData();
+    },
+    methods: {
+        getAPI: function () {
+            axios
+            .get('https://api.wheretheiss.at/v1/satellites/25544')
+            .then(response => (this.info = response))
+        },
+        intervalFetchData: function () {
+            setInterval(() => {
+                this.getAPI();
+            }, 2000);
+        }
     }
   }
 
