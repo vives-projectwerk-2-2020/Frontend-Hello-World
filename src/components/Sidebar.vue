@@ -18,7 +18,7 @@
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>
-              <router-link to="/home">Home</router-link>
+              <router-link to="/">Home</router-link>
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
