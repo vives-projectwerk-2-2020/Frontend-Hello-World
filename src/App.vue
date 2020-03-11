@@ -1,12 +1,17 @@
 <template>
-  <v-app id="inspire">
-    <router-view />
-  </v-app>
+  <div id="app">
+    <v-app id="inspire">
+      <router-view />
+    </v-app>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'App',
+  mounted () {
+    
+  },
   props: {
       source: String,
     },
@@ -17,8 +22,6 @@ export default {
       this.$vuetify.theme.dark = false
     },
   }
-
-
 </script>
 
 <style>
