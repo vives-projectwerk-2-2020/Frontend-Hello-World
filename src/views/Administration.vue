@@ -50,9 +50,13 @@
 </template>
 
 <script>
+import Sidebar from '../components/Sidebar'
 export default {
   props: {
     source: String
+  },
+  components: {
+    Sidebar
   },
   data: () => ({
     drawer: null
