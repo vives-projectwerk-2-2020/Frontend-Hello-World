@@ -67,9 +67,6 @@
     <v-footer app>
       <span>&copy; Particula 2020</span>
     </v-footer>
-      <!-- <div id="app">
-        <HelloWorld msg="Welcome to Particula"/>
-      </div> -->
   </v-app>
 
 
@@ -77,15 +74,14 @@
 </template>
 
 <script>
-import HelloWorld from '../components/FrontendHelloWorld'
 import Sidebar from '../components/Sidebar'
-// import vuetify from '@/plugins/vuetify'
+import vuetify from '@/plugins/vuetify'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    Sidebar
+    Sidebar,
+    vuetify
   },
   props: {
       source: String,
