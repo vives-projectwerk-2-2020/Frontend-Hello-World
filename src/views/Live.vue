@@ -1,4 +1,3 @@
-  
 <template>
   <v-app id="inspire">
     <!-- <div>
@@ -10,26 +9,26 @@
       <v-list dense>
          <v-list-item link>
           <v-list-item-action>
-           <v-icon>mdi-login</v-icon>
+           <v-icon>mdi-log-in</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title><router-link to="/login">Login/Registration</router-link></v-list-item-title>
+            <v-list-item-title><router-link to="/login">Login</router-link></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item link>
           <v-list-item-action>
-            <v-icon>mdi-home</v-icon>
+            <v-icon>mdi-view-dashboard</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title><router-link to="/home">Home</router-link></v-list-item-title>
+            <v-list-item-title>Dashboard</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item link>
           <v-list-item-action>
-            <v-icon>mdi-information-outline</v-icon>
+            <v-icon>mdi-settings</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title><router-link to="/about">About</router-link></v-list-item-title>
+            <v-list-item-title>Settings</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -68,9 +67,6 @@
     <v-footer app>
       <span>&copy; Particula 2020</span>
     </v-footer>
-      <!-- <div id="app">
-        <HelloWorld msg="Welcome to Particula"/>
-      </div> -->
   </v-app>
 
 
@@ -78,14 +74,14 @@
 </template>
 
 <script>
-import HelloWorld from '../components/FrontendHelloWorld'
 import Sidebar from '../components/Sidebar'
-// import vuetify from '@/plugins/vuetify'
+import vuetify from '@/plugins/vuetify'
+
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    Sidebar
+    Sidebar,
+    vuetify
   },
   props: {
       source: String,
@@ -97,6 +93,8 @@ export default {
       this.$vuetify.theme.dark = false
     },
   }
+
+
 </script>
 
 <style>
