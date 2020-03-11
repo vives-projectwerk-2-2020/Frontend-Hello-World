@@ -56,8 +56,8 @@
           justify="center"
         >
 
-          <v-container id="app">
-            <HelloWorld msg="Welcome to Particula"/>
+          <v-container>
+           
           </v-container>
           
         </v-row>
@@ -75,13 +75,12 @@
 
 <script>
 import Sidebar from '../components/Sidebar'
-import vuetify from '@/plugins/vuetify'
+// import vuetify from '@/plugins/vuetify'
 
 export default {
   name: 'App',
   components: {
     Sidebar,
-    vuetify
   },
   props: {
       source: String,
