@@ -1,47 +1,7 @@
   
 <template>
   <v-app id="inspire">
-    <v-navigation-drawer
-      v-model="drawer"
-      app
-      clipped
-    >
-      <v-list dense>
-         <v-list-item link>
-          <v-list-item-action>
-           <v-icon>mdi-login</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title><router-link to="/login">Login/Registration</router-link></v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item link>
-          <v-list-item-action>
-            <v-icon>mdi-home</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title><router-link to="/home">Home</router-link></v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item link>
-          <v-list-item-action>
-            <v-icon>mdi-information-outline</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title><router-link to="/about">About</router-link></v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-
-    <v-app-bar
-      app
-      clipped-left
-    >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>Particula</v-toolbar-title>
-    </v-app-bar>
-
+    <Sidebar> </Sidebar>
     <v-content>
       <v-container
         class="fill-height"
@@ -74,11 +34,13 @@
 
 <script>
 import HelloWorld from '../components/FrontendHelloWorld'
+import Sidebar from '../components/Sidebar'
 // import vuetify from '@/plugins/vuetify'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    Sidebar
   },
   props: {
       source: String,
