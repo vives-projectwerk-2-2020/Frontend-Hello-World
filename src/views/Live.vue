@@ -59,6 +59,7 @@
 
                 <p>Temperature: {{ info.data.latitude }}</p>
                 <p>Pressure: {{ info.data.longitude }}</p>
+                <p>Humidity: </p>
               </v-card>
             </div>
           </v-container>
