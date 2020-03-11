@@ -1,10 +1,10 @@
 <template>
     <div>
-        <v-navigation-drawer
-      v-model="drawer"
-      app
-      clipped
-    >
+      <v-navigation-drawer
+        v-model="drawer"
+        app
+        clipped
+      >
       <v-list dense>
          <v-list-item link>
           <v-list-item-action>
@@ -32,7 +32,6 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-
     <v-app-bar
       app
       clipped-left
@@ -42,3 +41,18 @@
     </v-app-bar>
     </div>
 </template>
+
+<script>
+export default {
+  name: 'Sidebar',
+  props: {
+      source: String,
+    },
+    data: () => ({
+      drawer: null,
+    }),
+    created () {
+      this.$vuetify.theme.dark = false
+    },
+  }
+</script>
