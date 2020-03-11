@@ -57,6 +57,9 @@
         >
 
           <v-container>
+              <div id="app">
+                  {{ info }}
+              </div>
            
           </v-container>
           
@@ -75,10 +78,12 @@
 
 <script>
 import Sidebar from '../components/Sidebar'
+import axios from "axios"
 // import vuetify from '@/plugins/vuetify'
 
 export default {
   name: 'App',
+  el: '#app',
   components: {
     Sidebar,
   },
@@ -87,10 +92,16 @@ export default {
     },
     data: () => ({
       drawer: null,
+      info: null
     }),
     created () {
       this.$vuetify.theme.dark = false
     },
+    mounted () {
+        axios
+            .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+            .then(response => (this.info = response))
+    }
   }
 
 
