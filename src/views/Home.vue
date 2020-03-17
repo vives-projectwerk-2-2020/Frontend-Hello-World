@@ -13,7 +13,7 @@
         >
 
           <v-container id="app">
-            <HelloWorld msg="Welcome to Particula, now updating dynamically from github :)"/>
+            <HelloWorld msg="Welcome to Particula, now updating dynamically from github"/>
           </v-container>
           
         </v-row>
