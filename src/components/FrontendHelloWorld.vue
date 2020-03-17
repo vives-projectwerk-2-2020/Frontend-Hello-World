@@ -2,17 +2,18 @@
   <div>
     
     <h1>{{ msg }}</h1>
-    <TemperatureChart />
+    <!--<TemperatureChart />
+    <HumidityChart />-->
     <MyChart />
-    <HumidityChart />
+    
    
   </div>
 </template>
 
 <script>
 import MyChart from "./MyChart";
-import TemperatureChart from "./TemperatureChart";
-import HumidityChart from "./HumidityChart";
+//import TemperatureChart from "./TemperatureChart";
+//import HumidityChart from "./HumidityChart";
 import "vuetify/dist/vuetify.min.css";
 
 export default {
@@ -21,9 +22,9 @@ export default {
     msg: String
   },
   components: {
-    MyChart,
+    MyChart/*,
     TemperatureChart,
-    HumidityChart
+    HumidityChart*/
   }
 };
 </script>
