@@ -56,6 +56,6 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           cd ${{ secrets.PATH }}
-          docker-compose pull
+          docker-compose pull frontend
           docker-compose up -d frontend
 
