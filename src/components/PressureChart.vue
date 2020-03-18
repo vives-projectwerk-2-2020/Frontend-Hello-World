@@ -10,7 +10,7 @@
 
 <script>
 import LineChart from './Chart.vue'
-import axios from "axios";
+import axios from "axios"
 
 export default {
   name: 'LineChartContainer',
@@ -50,11 +50,8 @@ export default {
           .then(response => (this.info = response));
         
         for(let i=0; i < Object.keys(this.info.data).length; i++) {
-          console.log(this.info.data[i]);
-          const pressure = Number(this.info.data[i].pressure)
-        // yvalues.push(parseFloat(temp) + 14)
-        this.chartdata.datasets[0].data.push( pressure )
-        this.chartdata.labels.push( this.info.data[i].timestamp )
+          this.chartdata.datasets[0].data.push(this.info.data[i].pressure)
+          this.chartdata.labels.push( this.info.data[i].timestamp )
         }
       this.loaded = true
     }
