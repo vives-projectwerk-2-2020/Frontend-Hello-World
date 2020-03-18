@@ -2,6 +2,18 @@
     <div>
       <v-navigation-drawer v-model="drawer" app temporary>
       <v-list dense>
+        
+        <v-list-item link>
+          <v-list-item-action>
+            <v-icon>mdi-home</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>
+              <router-link to="/">Home</router-link>
+            </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        
         <v-list-item link>
           <v-list-item-action>
             <v-icon>mdi-login</v-icon>
@@ -15,11 +27,11 @@
 
         <v-list-item link>
           <v-list-item-action>
-            <v-icon>mdi-home</v-icon>
+            <v-icon>mdi-chart-areaspline</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>
-              <router-link to="/">Home</router-link>
+              <router-link to="/charts">Sensor Charts</router-link>
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
@@ -42,17 +54,6 @@
           <v-list-item-content>
             <v-list-item-title>
               <router-link to="/about">About</router-link>
-            </v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-
-        <v-list-item link>
-          <v-list-item-action>
-            <v-icon>mdi-information-outline</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>
-              <router-link to="/charts">Sensor Charts</router-link>
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
