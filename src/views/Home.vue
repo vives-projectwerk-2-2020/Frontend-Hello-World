@@ -1,5 +1,4 @@
-  
-<template>
+  <template>
   <v-app id="inspire">
     <Sidebar> </Sidebar>
     <v-content>
@@ -13,7 +12,7 @@
         >
 
           <v-container id="app">
-            <HelloWorld msg="Welcome to Particula"/>
+            <SensorCharts title="Sensor Page"/>
           </v-container>
           
         </v-row>
@@ -33,13 +32,13 @@
 </template>
 
 <script>
-import HelloWorld from '../components/FrontendHelloWorld'
+import SensorCharts from '../components/SensorCharts'
 import Sidebar from '../components/Sidebar'
 // import vuetify from '@/plugins/vuetify'
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    SensorCharts,
     Sidebar
   },
   props: {

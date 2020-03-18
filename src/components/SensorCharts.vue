@@ -1,16 +1,17 @@
 <template>
   <div>
     
-    <h1>{{ msg }}</h1>
+    <h1>{{ title }}</h1>
     <TemperatureChart />
-    <MyChart />
     <HumidityChart />
+    <PressureChart />
+    
    
   </div>
 </template>
 
 <script>
-import MyChart from "./MyChart";
+import PressureChart from "./PressureChart";
 import TemperatureChart from "./TemperatureChart";
 import HumidityChart from "./HumidityChart";
 import "vuetify/dist/vuetify.min.css";
@@ -18,10 +19,10 @@ import "vuetify/dist/vuetify.min.css";
 export default {
   name: "HelloWorld",
   props: {
-    msg: String
+    title: String
   },
   components: {
-    MyChart,
+    PressureChart,
     TemperatureChart,
     HumidityChart
   }
