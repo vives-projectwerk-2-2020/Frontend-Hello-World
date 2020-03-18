@@ -1,7 +1,7 @@
 <template>
   <div>
     
-    <h1>{{ msg }}</h1>
+    <h1>{{ title }}</h1>
     <TemperatureChart />
     <HumidityChart />
     <PressureChart />
@@ -19,7 +19,7 @@ import "vuetify/dist/vuetify.min.css";
 export default {
   name: "HelloWorld",
   props: {
-    msg: String
+    title: String
   },
   components: {
     PressureChart,
