@@ -57,9 +57,13 @@
                   </v-list-item-content>
                 </v-list-item>
 
-                <p>Temperature: {{ info.data.latitude }}</p>
-                <p>Pressure: {{ info.data.longitude }}</p>
-                <p>Humidity: </p>
+                <p> PM10: {{ info.data[0].pm10 }} </p>
+                <p> PM25 {{ info.data[0].pm25 }} </p>
+                <p> Temperature {{ info.data[0].temperature }} </p>
+                <p> Pressure {{ info.data[0].pressure }} </p>
+                <p> Humidity {{ info.data[0].humidity }} </p>
+                <p> Time: {{ info.data[0].timestamp }} </p>
+                
               </v-card>
             </div>
           </v-container>
@@ -95,21 +99,19 @@ export default {
     this.$vuetify.theme.dark = false;
   },
   mounted() {
-    axios
-      .get("https://api.wheretheiss.at/v1/satellites/25544")
-      .then(response => (this.info = response));
+    this.getAPI();
     this.intervalFetchData();
   },
   methods: {
     getAPI: function() {
       axios
-        .get("https://api.wheretheiss.at/v1/satellites/25544")
+        .get("https://virtserver.swaggerhub.com/sillevl/Particula/0.1/measurements/3fa85f64-5717-4562-b3fc-2c963f66afa6?period=24h&properties=pm10")
         .then(response => (this.info = response));
     },
     intervalFetchData: function() {
       setInterval(() => {
         this.getAPI();
-      }, 2000);
+      }, 10000);
     }
   }
 };
