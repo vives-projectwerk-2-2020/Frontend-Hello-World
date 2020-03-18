@@ -13,7 +13,7 @@
         >
 
           <v-container id="app">
-            <HelloWorld msg="Welcome to Particula"/>
+            <SensorCharts msg="Welcome to Particula"/>
           </v-container>
           
         </v-row>
@@ -33,13 +33,13 @@
 </template>
 
 <script>
-import HelloWorld from '../components/FrontendHelloWorld'
+import SensorCharts from '../components/SensorCharts'
 import Sidebar from '../components/Sidebar'
 // import vuetify from '@/plugins/vuetify'
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    SensorCharts,
     Sidebar
   },
   props: {
