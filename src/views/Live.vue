@@ -56,13 +56,6 @@
                     <v-list-item-subtitle>These are the values of sensor with id:</v-list-item-subtitle>
                   </v-list-item-content>
                 </v-list-item>
-
-                <p> PM10: {{ info.data[0].pm10 }} </p>
-                <p> PM25 {{ info.data[0].pm25 }} </p>
-                <p> Temperature {{ info.data[0].temperature }} </p>
-                <p> Pressure {{ info.data[0].pressure }} </p>
-                <p> Humidity {{ info.data[0].humidity }} </p>
-                <p> Time: {{ info.data[0].timestamp }} </p>
                 
               </v-card>
             </div>
