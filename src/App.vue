@@ -72,13 +72,10 @@
 </template>
 
 <script>
-import HelloWorld from './components/FrontendHelloWorld'
-// import vuetify from '@/plugins/vuetify'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  mounted () {
+    
   },
   props: {
       source: String,
@@ -90,8 +87,6 @@ export default {
       this.$vuetify.theme.dark = false
     },
   }
-
-
 </script>
 
 <style>
