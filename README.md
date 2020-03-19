@@ -1,6 +1,6 @@
 # frontend-hello-world
 
-![Docker Image CI](https://github.com/vives-projectwerk-2-2020/Frontend/workflows/Docker%20Image%20CI/badge.svg?branch=develop)
+![Docker Image CI](https://github.com/vives-projectwerk-2-2020/Frontend/workflows/Docker%20Image%20CI/badge.svg?branch=master)
 
 ## Project setup
 ```
