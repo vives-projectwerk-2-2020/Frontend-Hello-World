@@ -1,17 +1,16 @@
   <template>
-  <div id="app">
+  <div id="map">
       <p>{{htmlcontent}}</p>
   </div>
 </template>
 
 <script>
-
-var app = new Vue({
-    el:'#app',
-    data:{
+export default {
+    name:'map',
+    data: () => ({
         htmlcontent: '<h1>tjoep</h1>'
-    }
-})
+    })
+}
 </script>
 
 <style>
