@@ -1,26 +1,11 @@
-  <template>
-  <div id="app">
-      <p>{{htmlcontent}}</p>
-  </div>
+<template>
+
+    <Sidebar> </Sidebar>
+   
 </template>
 
 <script>
-
-var app = new Vue({
-    el:'#app',
-    data:{
-        htmlcontent: '<h1>tjoep</h1>'
-    }
-})
+export default {
+  name: 'Map',
+  }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

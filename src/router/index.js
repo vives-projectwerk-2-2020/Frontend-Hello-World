@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Login from '../views/Administration.vue'
 import Live from '../views/Live.vue'
+import HomeMap from '../views/HomeMap.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/live',
     name: 'live',
     component: Live
+  },
+  {
+    path: '/map',
+    name: 'homeMap',
+    component: HomeMap
   }
 ]
 

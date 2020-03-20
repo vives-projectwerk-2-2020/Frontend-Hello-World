@@ -6,6 +6,9 @@ import Map from './components/Map.vue'
 import About from './views/About.vue'
 import vuetify from './plugins/vuetify'
 import router from './router'
+import LoadScript from 'vue-plugin-load-script';
+ 
+Vue.use(LoadScript)
 
 Vue.config.productionTip = false
 
