@@ -12,6 +12,7 @@
         >
 
           <v-container id="app">
+            <h1>Sensor Charts</h1>
             <SensorCharts title="Sensor Page"/>
           </v-container>
           
@@ -26,9 +27,6 @@
         <HelloWorld msg="Welcome to Particula"/>
       </div> -->
   </v-app>
-
-
-
 </template>
 
 <script>

@@ -1,23 +1,11 @@
   <template>
   <v-app id="inspire">
     <Sidebar> </Sidebar>
-    <v-content>
-      <v-container
-        class="fill-height"
-        fluid
-      >
-        <v-row
-          align="center"
-          justify="center"
-        >
 
-          <v-container id="app">
-            <SensorCharts title="Sensor Page"/>
-          </v-container>
-          
-        </v-row>
-      </v-container>
-    </v-content>
+    <v-container>
+      <div id="demoMap" style="height:250px"></div>
+    </v-container>
+    
 
     <v-footer app>
       <span>&copy; Particula 2020</span>
@@ -32,13 +20,14 @@
 </template>
 
 <script>
-import SensorCharts from '../components/SensorCharts'
 import Sidebar from '../components/Sidebar'
+
 // import vuetify from '@/plugins/vuetify'
+
+
 export default {
   name: 'App',
   components: {
-    SensorCharts,
     Sidebar
   },
   props: {
@@ -47,11 +36,31 @@ export default {
     data: () => ({
       drawer: null,
     }),
+    mounted() {
+      // let recaptchaScript = document.createElement('script')
+      // recaptchaScript.setAttribute('src', '../components/map/OpenLayers.js')
+      // document.head.appendChild(recaptchaScript)
+
+      
+    },
     created () {
-      this.$vuetify.theme.dark = false
+      this.$vuetify.theme.dark = false;
+
+      // let ckeditor = document.createElement('script');
+      // ckeditor.setAttribute('src',"../components/map/OpenLayers.js");
+      // document.head.appendChild(ckeditor);
+
+      var map = new OpenLayers.Map("demoMap");
+      map.addLayer(new OpenLayers.Layer.OSM());
+      map.zoomToMaxExtent();
+
+      
     },
   }
+
+
 </script>
+
 
 <style>
 #app {

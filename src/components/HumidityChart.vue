@@ -10,6 +10,7 @@
 
 <script>
 import LineChart from './Chart.vue'
+import axios from "axios";
 
 export default {
   name: 'LineChartContainer',
@@ -41,21 +42,15 @@ export default {
   },
   methods: {
     async getData() {
-      const response = await fetch('example.csv');
-      const csv = await response.text();
-
-      const table = csv.split('\n').slice(1)
-      table.forEach(row => {
-        const columns = row.split(',')
-        const year = Number(columns[0])
-        // xvalues.push(year)
-        const temp = Number(columns[1])
-        // yvalues.push(parseFloat(temp) + 14)
-        this.chartdata.datasets[0].data.push( temp )
-        this.chartdata.labels.push( year )
-        console.log({ x: temp, y: year })
-      })
-
+      await
+        axios
+          .get("https://virtserver.swaggerhub.com/sillevl/Particula/0.1/measurements/3fa85f64-5717-4562-b3fc-2c963f66afa6?period=24h&properties=pm10")
+          .then(response => (this.info = response));
+        
+        for(let i=0; i < Object.keys(this.info.data).length; i++) {
+          this.chartdata.datasets[0].data.push(this.info.data[i].humidity)
+          this.chartdata.labels.push( this.info.data[i].timestamp )
+        }
       this.loaded = true
     }
   }
