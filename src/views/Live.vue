@@ -1,47 +1,6 @@
 <template>
   <v-app id="inspire">
-    <!-- <div>
-    <v-navigation-drawer
-      v-model="drawer"
-      app
-      clipped
-    >
-      <v-list dense>
-         <v-list-item link>
-          <v-list-item-action>
-           <v-icon>mdi-log-in</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title><router-link to="/login">Login</router-link></v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item link>
-          <v-list-item-action>
-            <v-icon>mdi-view-dashboard</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Dashboard</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item link>
-          <v-list-item-action>
-            <v-icon>mdi-settings</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Settings</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
 
-    <v-app-bar
-      app
-      clipped-left
-    >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>Particula</v-toolbar-title>
-    </v-app-bar>
-    </div>-->
     <Sidebar></Sidebar>
 
     <v-content>
@@ -58,10 +17,10 @@
                 </v-list-item>
 
                 <p> PM10: {{ info.data[0].pm10 }} </p>
-                <p> PM25 {{ info.data[0].pm25 }} </p>
-                <p> Temperature {{ info.data[0].temperature }} </p>
-                <p> Pressure {{ info.data[0].pressure }} </p>
-                <p> Humidity {{ info.data[0].humidity }} </p>
+                <p> PM2.5: {{ info.data[0].pm2_5 }} </p>
+                <p> Temperature: {{ info.data[0].temperature }} </p>
+                <p> Pressure: {{ info.data[0].pressure }} </p>
+                <p> Humidity: {{ info.data[0].humidity }} </p>
                 <p> Time: {{ info.data[0].timestamp }} </p>
                 
               </v-card>
@@ -111,7 +70,7 @@ export default {
     intervalFetchData: function() {
       setInterval(() => {
         this.getAPI();
-      }, 10000);
+      }, 2000);
     }
   }
 };
