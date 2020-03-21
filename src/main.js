@@ -42,12 +42,9 @@ new Vue({
   vuetify,
   render: h => h(About)
 }).$mount('#about')
-<<<<<<< HEAD
 
 new Vue({
   router,
   vuetify,
   render: h => h(Map)
 }).$mount('#map')
-=======
->>>>>>> live

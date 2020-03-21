@@ -42,8 +42,8 @@ import axios from "axios";
 // import vuetify from '@/plugins/vuetify'
 
 export default {
-  name: "App",
-  el: "#app",
+  name: "Live",
+  el: "#live",
   components: {
     Sidebar
   },
