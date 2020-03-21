@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import Live from './views/Live.vue'
 import Home from './views/Home.vue'
 import Admin from './views/Administration.vue'
 import Map from './components/Map.vue'
@@ -21,6 +22,12 @@ new Vue({
 new Vue({
   router,
   vuetify,
+  render: h => h(Live)
+}).$mount('#live')
+
+new Vue({
+  router,
+  vuetify,
   render: h => h(Home)
 }).$mount('#home')
 
@@ -35,9 +42,12 @@ new Vue({
   vuetify,
   render: h => h(About)
 }).$mount('#about')
+<<<<<<< HEAD
 
 new Vue({
   router,
   vuetify,
   render: h => h(Map)
 }).$mount('#map')
+=======
+>>>>>>> live
