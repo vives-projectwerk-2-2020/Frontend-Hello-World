@@ -1,10 +1,6 @@
 # frontend-hello-world
 
-<<<<<<< HEAD
 ![Docker Image CI](https://github.com/vives-projectwerk-2-2020/Frontend/workflows/Docker%20Image%20CI/badge.svg?branch=master)
-=======
-![Docker Image CI](https://github.com/vives-projectwerk-2-2020/Frontend/workflows/Docker%20Image%20CI/badge.svg?branch=develop)
->>>>>>> develop
 
 ## Project setup
 ```
