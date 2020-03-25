@@ -110,7 +110,7 @@ export default {
           type: "warning",
           icon: "ti-shine",
           title: "Temperature",
-          value: "20°C",
+          value: info.data[0].pm10,
         },
         {
           type: "success",
