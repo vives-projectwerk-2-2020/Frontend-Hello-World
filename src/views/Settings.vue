@@ -1,15 +1,31 @@
 <template>
   <v-app id="inspire">
     <Sidebar></Sidebar>
-    <v-content>
-      <v-container class="fill-height" fluid>
-        <p class="display-2">Settings</p>
 
-      </v-container>
-    </v-content>
-    <v-footer color="indigo" app>
-      <span class="white--text">&copy; 2020</span>
-    </v-footer>
+    <v-card width="450" class="ma-auto" dark>
+      <v-header>Themes</v-header>
+
+      <v-divider></v-divider>
+
+      <v-list light >
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title>Light</v-list-item-title>
+            <v-list-item-subtitle>I need a little light to guide the way!</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+
+      <v-list dark>
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title>Dark</v-list-item-title>
+            <v-list-item-subtitle>I like the dark side! It has cookies!</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+
+    </v-card>
   </v-app>
 </template>
 
@@ -23,11 +39,8 @@ export default {
     Sidebar
   },
   data: () => ({
-    drawer: null
-  }),
-  created() {
-    this.$vuetify.theme.dark = false;
-  }
+    settings: []
+  })
 };
 </script>
 

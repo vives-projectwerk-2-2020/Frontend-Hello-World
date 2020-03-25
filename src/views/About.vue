@@ -138,13 +138,7 @@ export default {
     },
     components: {
       Sidebar
-    },
-    data: () => ({
-      drawer: null,
-    }),
-    created () {
-      this.$vuetify.theme.dark = false
-    },
+    }
   }
 </script>
 
