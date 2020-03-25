@@ -19,7 +19,7 @@
         </v-row>
 
         <p class="subtitle-1">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus similique odio incidunt asperiores? Porro dolorem incidunt culpa! Incidunt illo vel animi
+          Devops Was Here Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus similique odio incidunt asperiores? Porro dolorem incidunt culpa! Incidunt illo vel animi
           laudantium numquam quae similique, maiores ea pariatur, repellendus corporis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eos dolorum quos
           quas, officia, dignissimos deserunt perferendis laudantium ab nihil aliquam corrupti expedita quibusdam quia natus eveniet recusandae culpa voluptatem. Lorem
           ipsum dolor sit amet, consectetur adipisicing elit. Hic, tenetur! Exercitationem, commodi neque! Laudantium enim eius quis ea? Quod totam magni tempore
