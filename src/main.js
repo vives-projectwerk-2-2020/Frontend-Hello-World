@@ -3,7 +3,7 @@ import App from './App.vue'
 import Live from './views/Live.vue'
 import Home from './views/Home.vue'
 import Admin from './views/Administration.vue'
-import Map from './components/Map.vue'
+// import Map from './components/Map.vue' blijkbaar nog niet gebruikt
 import About from './views/About.vue'
 import vuetify from './plugins/vuetify'
 import router from './router'
