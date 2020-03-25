@@ -1,27 +1,16 @@
-<template>
-  <div id="app">
-    <v-app id="inspire">
-      <router-view />
-    </v-app>
+  <template>
+  <div id="map">
+      <p>{{htmlcontent}}</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App',
-  mounted () {
-    
-  },
-  props: {
-      source: String,
-    },
+    name:'map',
     data: () => ({
-      drawer: null,
-    }),
-    created () {
-      this.$vuetify.theme.dark = false
-    },
-  }
+        htmlcontent: '<h1>tjoep</h1>'
+    })
+}
 </script>
 
 <style>
