@@ -45,6 +45,9 @@
         </v-list>
       </v-card>
     </v-row>
+    <v-footer app>
+      <span>&copy; Particula 2020</span>
+    </v-footer>
   </v-app>
 </template>
 
