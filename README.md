@@ -41,3 +41,37 @@ Setting `EXPOSE` port to 8080
 docker build -t <name> .
 docker run -d -p 8080:80 <name>
 ```
+
+---
+
+## Website pages
+
+### Home
+
+Displays a map with all sensors currently in the network.
+
+![Homepage image](./src/img/Homepage.png)
+
+### Live Values
+
+A page with current values of a selected sensor.
+
+![Live values page](./src/img/Live-values.png)
+
+### Historical values
+
+A page with historical values of a selected sensor.
+
+![Historical values page](./src/img/Historical-values.png)
+
+### Login/registration
+
+Allows users to login or register to the platform.
+
+![Login/registration page](./src/img/Login.png)
+
+### About
+
+This page gives information about the Particula project.
+
+![Login/registration page](./src/img/About.png)
