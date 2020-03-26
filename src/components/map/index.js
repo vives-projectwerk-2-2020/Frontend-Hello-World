@@ -25,17 +25,10 @@ function initMap() {
     // }
     for (var i = 0; i < locations.length; i++) {
         var item = locations[i];
-        // var image = {
-        //     url: '/img/Gray.png',
-        //     scaledSize: new google.maps.Size(20, 20),
-        //     optimized: false,
-        //     zIndex: 100
-        // }
-
+   
         var marker = new google.maps.Marker({
             position: { lat: item[1], lng: item[2] },
             title: String(item[0]),
-            // map: map,
         });
         oms.addListener('click', function (marker) {
             iw.setContent('TESTTESTTESTTEST');
@@ -48,16 +41,5 @@ function initMap() {
         maxZoom: 11,
         imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m',//standard cluster markers
     });
-}
-function getData(){
-    setTimeout(() => {
-        setData()
-    }, 500);
-}
-function setData(){
-    console.log("here")
-    var rigthDataDiv = document.getElementById("rightDataDiv");
-    rigthDataDiv.innerHTML += "fake data "
-    getData()
 }
 

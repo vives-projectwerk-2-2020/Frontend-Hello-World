@@ -1,64 +1,50 @@
   <template>
   <v-app id="inspire">
-    <Sidebar> </Sidebar>
+    <Sidebar></Sidebar>
 
     <v-container>
-      <div id="demoMap" style="height:250px"></div>
+      <div id="demoMap" style="height:800px">
+        
+      </div>
+      <div id="content"><a href="#" v-bind:placeholder="load_home()" required>HOME</a></div>
     </v-container>
-    
 
     <v-footer app>
       <span>&copy; Particula 2020</span>
     </v-footer>
-      <!-- <div id="app">
+    <!-- <div id="app">
         <HelloWorld msg="Welcome to Particula"/>
-      </div> -->
+    </div>-->
   </v-app>
-
-
-
 </template>
 
+
 <script>
-import Sidebar from '../components/Sidebar'
+import Sidebar from "../components/Sidebar";
 
 // import vuetify from '@/plugins/vuetify'
 
-
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Sidebar
   },
   props: {
-      source: String,
-    },
-    data: () => ({
-      drawer: null,
-    }),
-    mounted() {
-      // let recaptchaScript = document.createElement('script')
-      // recaptchaScript.setAttribute('src', '../components/map/OpenLayers.js')
-      // document.head.appendChild(recaptchaScript)
-
-      
-    },
-    created () {
-      this.$vuetify.theme.dark = false;
-
-      // let ckeditor = document.createElement('script');
-      // ckeditor.setAttribute('src',"../components/map/OpenLayers.js");
-      // document.head.appendChild(ckeditor);
-
-      var map = new OpenLayers.Map("demoMap");
-      map.addLayer(new OpenLayers.Layer.OSM());
-      map.zoomToMaxExtent();
-
-      
-    },
+    source: String
+  },
+  data: () => ({
+    drawer: null
+  }),
+  mounted() {},
+  created() {},
+  methods: {
+    load_home() {
+      console.log("Load_Home");
+      document.getElementById("demoMap").innerHTML =
+        '<object type="type/html" data="../components/map/index.html" ></object>';
+    }
   }
-
-
+};
 </script>
 
 
