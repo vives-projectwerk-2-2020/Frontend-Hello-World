@@ -6,6 +6,7 @@ import Login from '../views/Administration.vue'
 import Live from '../views/Live.vue'
 import Settings from '../views/Settings.vue'
 import ChartPage from '../views/ChartPage.vue'
+import HomeMap from '../views/HomeMap.vue'
 
 Vue.use(VueRouter)
 
@@ -45,6 +46,11 @@ const routes = [
     path: '/charts',
     name: 'charts',
     component: ChartPage
+  },
+  {
+    path: '/HomeMap',
+    name: 'homeMap',
+    component: HomeMap
   }
 ]
 

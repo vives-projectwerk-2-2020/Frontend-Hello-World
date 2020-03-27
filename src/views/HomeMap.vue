@@ -50,9 +50,9 @@ export default {
       // ckeditor.setAttribute('src',"../components/map/OpenLayers.js");
       // document.head.appendChild(ckeditor);
 
-      var map = new OpenLayers.Map("demoMap");
-      map.addLayer(new OpenLayers.Layer.OSM());
-      map.zoomToMaxExtent();
+      // var map = new OpenLayers.Map("demoMap");
+      // map.addLayer(new OpenLayers.Layer.OSM());
+      // map.zoomToMaxExtent();
 
       
     },
