@@ -19,6 +19,7 @@
         </v-row>
       </v-container>
     </v-content>
+    
     <v-layout row wrap>
      <v-flex xs12 sm6 md4 lg3 v-for="parameter in stats" v-bind:key= "parameter.title">
        <v-card flat class="text-xs-center ma-40">
