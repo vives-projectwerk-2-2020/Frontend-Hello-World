@@ -1,7 +1,5 @@
 <template>
-  <v-app id="inspire">
-    <Sidebar />
-
+  <div>
     <v-content>
       <v-container
         class="fill-height"
@@ -27,60 +25,49 @@
                   </v-list-item-content>
                 </v-list-item>
 
-                <p> PM10: {{ info.data[0].pm10 }} </p>
-                <p> PM2.5: {{ info.data[0].pm2_5 }} </p>
-                <p> Temperature: {{ info.data[0].temperature }} </p>
-                <p> Pressure: {{ info.data[0].pressure }} </p>
-                <p> Humidity: {{ info.data[0].humidity }} </p>
-                <p> Time: {{ info.data[0].timestamp }} </p>
+                <p> PM10: {{ info.pm10 }} </p>
+                <p> PM2.5: {{ info.pm2_5 }} </p>
+                <p> Temperature: {{ info.temperature }} </p>
+                <p> Pressure: {{ info.pressure }} </p>
+                <p> Humidity: {{ info.humidity }} </p>
+                <p> Time: {{ info.timestamp }} </p>
               </v-card>
             </div>
           </v-container>
         </v-row>
       </v-container>
     </v-content>
-
-    <v-footer app>
-      <span>&copy; Particula 2020</span>
-    </v-footer>
-  </v-app>
+  </div>
 </template>
 
 <script>
-import Sidebar from "../components/Sidebar";
+
 import axios from "axios";
 // import vuetify from '@/plugins/vuetify'
 
 export default {
-  el: "#live",
   name: "Live",
-  components: {
-    Sidebar
-  },
-  props: {
-    source: String
-  },
   data: () => ({
-    drawer: null,
-    info: null
+    info: {}
   }),
-  created() {
-    this.$vuetify.theme.dark = false;
-  },
   mounted() {
     this.getAPI();
     this.intervalFetchData();
   },
   methods: {
     getAPI: function() {
+      // TODO Use websocket / MQTT instead !!
       axios
-        .get("https://virtserver.swaggerhub.com/sillevl/Particula/0.1/measurements/3fa85f64-5717-4562-b3fc-2c963f66afa6?period=24h&properties=pm10")
-        .then(response => (this.info = response));
+        .get(
+          "https://virtserver.swaggerhub.com/sillevl/Particula/0.1/measurements/3fa85f64-5717-4562-b3fc-2c963f66afa6?period=24h&properties=pm10",
+          { headers: { 'Access-Control-Allow-Origin': '*',} } )
+        .then(response => this.info = response.data[0] )
     },
     intervalFetchData: function() {
-      setInterval(() => {
-        this.getAPI();
-      }, 2000);
+      // TODO Use websocket / MQTT instead !!
+      // setInterval(() => {
+      //   this.getAPI();
+      // }, 2000);
     }
   }
 };
