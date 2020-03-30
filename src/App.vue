@@ -1,27 +1,31 @@
 <template>
   <div id="app">
     <v-app id="inspire">
+      <Sidebar />
       <router-view />
+      <Footer />
     </v-app>
   </div>
 </template>
 
 <script>
+import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer"
+
 export default {
   name: 'App',
-  props: {
-      source: String,
-    },
-    data: () => ({
-      drawer: null,
-    }),
-  mounted () {
-    
+  components: {
+    Sidebar, Footer
   },
-    created () {
-      this.$vuetify.theme.dark = false
-    },
-  }
+  
+  data: () => ({
+    drawer: null,
+  }),
+
+  created () {
+    this.$vuetify.theme.dark = false
+  },
+}
 </script>
 
 <style>
