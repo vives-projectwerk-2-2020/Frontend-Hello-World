@@ -1,6 +1,6 @@
-  <template>
+<template>
   <v-app id="inspire">
-    <Sidebar> </Sidebar>
+    <Sidebar />
     <v-content>
       <v-container
         class="fill-height"
@@ -10,11 +10,9 @@
           align="center"
           justify="center"
         >
-
           <v-container id="app">
-            <SensorCharts title="Sensor Page"/>
+            <SensorCharts title="Sensor Page" />
           </v-container>
-          
         </v-row>
       </v-container>
     </v-content>
@@ -22,13 +20,10 @@
     <v-footer app>
       <span>&copy; Particula 2020</span>
     </v-footer>
-      <!-- <div id="app">
+    <!-- <div id="app">
         <HelloWorld msg="Welcome to Particula"/>
       </div> -->
   </v-app>
-
-
-
 </template>
 
 <script>

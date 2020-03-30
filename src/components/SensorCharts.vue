@@ -2,18 +2,21 @@
   <div>
     <h1>{{ title }}</h1>
     <v-container fluid>
-        <v-row>
-        <v-col cols="12" sm="5">
-            <p>Chart</p>
-            <v-select
-                v-model="dropdown_current_values"
-                :items="dropdown_charts"
-                chips
-                label="all"
-                multiple
-                solo
-                v-on:change="changePage"
-          ></v-select>
+      <v-row>
+        <v-col
+          cols="12"
+          sm="5"
+        >
+          <p>Chart</p>
+          <v-select
+            v-model="dropdown_current_values"
+            :items="dropdown_charts"
+            chips
+            label="all"
+            multiple
+            solo
+            @change="changePage"
+          />
         </v-col>
         <!--
         <v-col cols="12" sm="5">
@@ -26,13 +29,11 @@
                 <v-icon left>mdi-pencil</v-icon> Edit
             </v-btn>
         </v-col> -->
-        </v-row>
+      </v-row>
     </v-container>
     <TemperatureChart v-if="seeTemperature" />
     <HumidityChart v-if="seeHumidity" />
     <PressureChart v-if="seePressure" />
-    
-   
   </div>
 </template>
 
@@ -44,13 +45,13 @@ import "vuetify/dist/vuetify.min.css";
 
 export default {
     name: "HelloWorld",
-    props: {
-        title: String
-    },
     components: {
         PressureChart,
         TemperatureChart,
         HumidityChart
+    },
+    props: {
+        title: String
     },
     data: () => ({
         dropdown_charts: ['Temperature', 'Humidity', 'Pressure', 'All'],

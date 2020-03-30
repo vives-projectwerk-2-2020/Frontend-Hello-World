@@ -1,18 +1,35 @@
 <template>
   <v-app id="inspire">
-    <Sidebar></Sidebar>
+    <Sidebar />
     <v-content>
-      <v-container class="fill-height" fluid>
-        <p class="display-3">About the Project</p>
+      <v-container
+        class="fill-height"
+        fluid
+      >
+        <p class="display-3">
+          About the Project
+        </p>
 
         <v-row>
-          <v-col cols="12" sm="6">
-            <v-img src="../img/brugge.jpg" :aspect-ratio="16/9"></v-img>
+          <v-col
+            cols="12"
+            sm="6"
+          >
+            <v-img
+              src="../img/brugge.jpg"
+              :aspect-ratio="16/9"
+            />
           </v-col>
 
-          <v-col cols="12" sm="6">
-            <v-img src="../img/fine_dust.jpg" :aspect-ratio="16/9">
-              <div class="fill-height bottom-gradient"></div>
+          <v-col
+            cols="12"
+            sm="6"
+          >
+            <v-img
+              src="../img/fine_dust.jpg"
+              :aspect-ratio="16/9"
+            >
+              <div class="fill-height bottom-gradient" />
             </v-img>
           </v-col>
         </v-row>
@@ -30,10 +47,15 @@
           laudantium deleniti ea maiores quas. Debitis suscipit, quasi ipsa non molestias eveniet minima rem doloribus laborum.
         </p>
 
-        <p class="display-2">The final product</p>
+        <p class="display-2">
+          The final product
+        </p>
 
         <v-row>
-          <v-col cols="12" sm="6">
+          <v-col
+            cols="12"
+            sm="6"
+          >
             <p class="body-1">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita ut ipsum saepe earum, enim rem adipisci quas neque reiciendis impedit, iure inventore,
               totam quod. Molestiae consequuntur quibusdam eveniet ab reprehenderit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, perferendis
@@ -47,20 +69,36 @@
               voluptatum rem in velit.
             </p>
           </v-col>
-          <v-col cols="12" sm="6">
-            <v-img src="../img/final_product.png" :aspect-ratio="16/9">
-              <div class="fill-height repeating-gradient"></div>
+          <v-col
+            cols="12"
+            sm="6"
+          >
+            <v-img
+              src="../img/final_product.png"
+              :aspect-ratio="16/9"
+            >
+              <div class="fill-height repeating-gradient" />
             </v-img>
           </v-col>
         </v-row>
 
-        <p class="display-2">Used materials and sensors</p>
+        <p class="display-2">
+          Used materials and sensors
+        </p>
 
         <v-row>
-          <v-col cols="6" sm="4">
-            <v-img src="../img/pressure_sensor.jpg" :aspect-ratio="16/9"></v-img>
+          <v-col
+            cols="6"
+            sm="4"
+          >
+            <v-img
+              src="../img/pressure_sensor.jpg"
+              :aspect-ratio="16/9"
+            />
 
-            <p class="display-1">The pressure sensor</p>
+            <p class="display-1">
+              The pressure sensor
+            </p>
 
             <p class="body-1">
               orem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt maiores commodi atque at itaque rerum, sequi fuga quos, cumque fugiat qui ab perferendis
@@ -70,24 +108,40 @@
             </p>
           </v-col>
 
-          <v-col cols="6" sm="4">
-            <p class="display-1">The solar panel</p>
+          <v-col
+            cols="6"
+            sm="4"
+          >
+            <p class="display-1">
+              The solar panel
+            </p>
             <p class="body-1">
               orem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt maiores commodi atque at itaque rerum, sequi fuga quos, cumque fugiat qui ab perferendis quam
               quia reprehenderit animi blanditiis tenetur expedita! Deserunt maiores commodi atque at itaque rerum, sequi fuga quos, cumque fugiat qui ab perferendis
               quam quia reprehenderit animi blanditiis tenetur expedita! Deserunt maiores commodi atque at itaque rerum, sequi fuga quos, cumque fugiat qui ab perferendis
               quam quia reprehenderit animi blanditiis tenetur expedita!
             </p>
-            <v-img src="../img/solar-panel.jpg" :aspect-ratio="16/9">
-              <div class="fill-height bottom-gradient"></div>
+            <v-img
+              src="../img/solar-panel.jpg"
+              :aspect-ratio="16/9"
+            >
+              <div class="fill-height bottom-gradient" />
             </v-img>
           </v-col>
 
-          <v-col cols="6" sm="4">
-            <v-img src="../img/mbed-module.jpg" :aspect-ratio="16/9">
-              <div class="fill-height repeating-gradient"></div>
+          <v-col
+            cols="6"
+            sm="4"
+          >
+            <v-img
+              src="../img/mbed-module.jpg"
+              :aspect-ratio="16/9"
+            >
+              <div class="fill-height repeating-gradient" />
             </v-img>
-            <p class="display-1">The mbed module</p>
+            <p class="display-1">
+              The mbed module
+            </p>
             <p class="body-1">
               orem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt maiores commodi atque at itaque rerum, sequi fuga quos, cumque fugiat qui ab perferendis quam
               quia reprehenderit animi blanditiis tenetur expedita! Deserunt maiores commodi atque at itaque rerum, sequi fuga quos, cumque fugiat qui ab perferendis
@@ -97,7 +151,9 @@
           </v-col>
         </v-row>
 
-        <p class="display-2">Extra information</p>
+        <p class="display-2">
+          Extra information
+        </p>
 
         <p class="body-1">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita ut ipsum saepe earum, enim rem adipisci quas neque reiciendis impedit, iure inventore,
@@ -112,15 +168,26 @@
           voluptatum rem in velit.
         </p>
 
-        <p class="display-2">VIVES Brugge Station</p>
+        <p class="display-2">
+          VIVES Brugge Station
+        </p>
 
         <v-row>
-          <v-col cols="12" sm="6">
-            <v-img src="../img/vives.jpg" :aspect-ratio="16/9">
-              <div class="fill-height repeating-gradient"></div>
+          <v-col
+            cols="12"
+            sm="6"
+          >
+            <v-img
+              src="../img/vives.jpg"
+              :aspect-ratio="16/9"
+            >
+              <div class="fill-height repeating-gradient" />
             </v-img>
           </v-col>
-          <v-col cols="12" sm="6">
+          <v-col
+            cols="12"
+            sm="6"
+          >
             <p class="body-1">
               The VIVES Bruges technology campus is a stone's throw from the station. The courses that you can take there can use the most modern,
               high-tech facilities in the university landscape in Flanders. But not only that: because the technology campus is close to the station,
@@ -133,12 +200,21 @@
             </p>
             <p
               class="body-2"
-            >The VIVES technology campus is embedded in the KU Leuven buildings in Bruges. That way you will also come into contact with students from the university day in and day out.</p>
-            <v-btn href="https://www.vives.be/en" target="_blank">Visit VIVES</v-btn>
+            >
+              The VIVES technology campus is embedded in the KU Leuven buildings in Bruges. That way you will also come into contact with students from the university day in and day out.
+            </p>
+            <v-btn
+              href="https://www.vives.be/en"
+              target="_blank"
+            >
+              Visit VIVES
+            </v-btn>
           </v-col>
         </v-row>
 
-        <p class="display-2">Our experiences</p>
+        <p class="display-2">
+          Our experiences
+        </p>
         <p class="body-1">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita ut ipsum saepe earum, enim rem adipisci quas neque reiciendis impedit, iure inventore,
           totam quod. Molestiae consequuntur quibusdam eveniet ab reprehenderit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, perferendis
@@ -162,11 +238,11 @@
 <script>
 import Sidebar from "../components/Sidebar";
 export default {
-  props: {
-    source: String
-  },
   components: {
     Sidebar
+  },
+  props: {
+    source: String
   }
 };
 </script>

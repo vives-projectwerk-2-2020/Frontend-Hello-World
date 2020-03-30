@@ -1,6 +1,10 @@
 <template>
   <div>
-    <v-navigation-drawer v-model="drawer" app temporary>
+    <v-navigation-drawer
+      v-model="drawer"
+      app
+      temporary
+    >
       <v-list dense>
         <v-list-item to="/">
           <v-list-item-action>
@@ -67,7 +71,10 @@
         
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar app clipped-left>
+    <v-app-bar
+      app
+      clipped-left
+    >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title>Particula</v-toolbar-title>
     </v-app-bar>
