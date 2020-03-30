@@ -6,59 +6,16 @@
       temporary
     >
       <v-list dense>
-        <v-list-item to="/">
+
+        <v-list-item v-for="item in navigation" :key="item.title" :to="item.route">
           <v-list-item-action>
-            <v-icon>mdi-home</v-icon>
+            <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Home</v-list-item-title>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
 
-        <v-list-item to="/login">
-          <v-list-item-action>
-            <v-icon>mdi-login</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Login/SignUp</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-
-        <v-list-item to="/charts">
-          <v-list-item-action>
-            <v-icon>mdi-chart-areaspline</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Sensor Charts</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-
-        <v-list-item to="/live">
-          <v-list-item-action>
-            <v-icon>mdi-clock-check-outline</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Live</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-
-        <v-list-item to="/about">
-          <v-list-item-action>
-            <v-icon>mdi-information-outline</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>About</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-
-        <v-list-item to="/settings">
-          <v-list-item-action>
-            <v-icon>mdi-wrench</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Settings</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
       </v-list>
     </v-navigation-drawer>
     <v-app-bar
@@ -74,14 +31,17 @@
 <script>
 export default {
   name: "Sidebar",
-  props: {
-    source: String
-  },
   data: () => ({
-    drawer: null
+    drawer: false,
+    navigation: [
+      { title: 'Home', route: '/', icon: 'mdi-home'},
+      { title: 'Login/SignUp', route: '/login', icon: 'mdi-login'},
+      { title: 'Sensor Charts', route: '/charts', icon: 'mdi-chart-areaspline'},
+      { title: 'Live', route: '/live', icon: 'mdi-clock-check-outline'},
+      { title: 'About', route: '/about', icon: 'mdi-information-outline'},
+      { title: 'Settings', route: '/settings', icon: 'mdi-wrench'}
+    ]
   }),
-  created() {
-    this.$vuetify.theme.dark = false;
-  }
+
 };
 </script>
