@@ -18,33 +18,3 @@ new Vue({
   vuetify,
   render: h => h(App)
 }).$mount('#app')
-
-new Vue({
-  router,
-  vuetify,
-  render: h => h(Live)
-}).$mount('#live')
-
-new Vue({
-  router,
-  vuetify,
-  render: h => h(Home)
-}).$mount('#home')
-
-new Vue({
-  router,
-  vuetify,
-  render: h => h(Admin)
-}).$mount('#admin')
-
-new Vue({
-  router,
-  vuetify,
-  render: h => h(About)
-}).$mount('#about')
-
-new Vue({
-  router,
-  vuetify,
-  render: h => h(Map)
-}).$mount('#map')
