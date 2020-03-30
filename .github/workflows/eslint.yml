@@ -13,11 +13,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      run: rm package-lock.json
+      
     - uses: actions/setup-node@v1
       with:
         node-version: '12'
-
-    - run: rm package-lock.json
+        
     - run: npm ci
     - run: npm run lint
       env:
