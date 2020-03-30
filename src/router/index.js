@@ -7,6 +7,7 @@ import Live from '../views/Live.vue'
 import Settings from '../views/Settings.vue'
 import ChartPage from '../views/ChartPage.vue'
 import HomeMap from '../views/HomeMap.vue'
+import sensorpage from '../views/sensorpage.vue'
 
 Vue.use(VueRouter)
 
@@ -51,6 +52,11 @@ const routes = [
     path: '/HomeMap',
     name: 'homeMap',
     component: HomeMap
+  },
+  {
+    path: '/sensorpage',
+    name: 'sensorpage',
+    component: sensorpage
   }
 ]
 

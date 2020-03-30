@@ -55,6 +55,15 @@
             <v-list-item-title>Settings</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+
+        <v-list-item to="/sensorpage">
+          <v-list-item-action>
+            <v-icon>mdi-wrench</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Sensorpage</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
         
       </v-list>
     </v-navigation-drawer>
