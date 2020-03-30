@@ -6,8 +6,11 @@
       temporary
     >
       <v-list dense>
-
-        <v-list-item v-for="item in navigation" :key="item.title" :to="item.route">
+        <v-list-item
+          v-for="item in navigation"
+          :key="item.title"
+          :to="item.route"
+        >
           <v-list-item-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-action>
@@ -15,7 +18,6 @@
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-
       </v-list>
     </v-navigation-drawer>
     <v-app-bar
