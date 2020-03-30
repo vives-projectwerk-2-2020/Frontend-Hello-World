@@ -1,12 +1,12 @@
-  <template>
+<template>
   <div id="map">
-      <p>{{htmlcontent}}</p>
+    <p>{{ htmlcontent }}</p>
   </div>
 </template>
 
 <script>
 export default {
-    name:'map',
+    name:'Map',
     data: () => ({
         htmlcontent: '<h1>tjoep</h1>'
     })

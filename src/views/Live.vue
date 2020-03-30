@@ -1,17 +1,28 @@
 <template>
   <v-app id="inspire">
-
-    <Sidebar></Sidebar>
+    <Sidebar />
 
     <v-content>
-      <v-container class="fill-height" fluid>
-        <v-row align="center" justify="center">
+      <v-container
+        class="fill-height"
+        fluid
+      >
+        <v-row
+          align="center"
+          justify="center"
+        >
           <v-container>
             <div id="app">
-              <v-card max-width="500" max-height="500" class="mx-auto">
+              <v-card
+                max-width="500"
+                max-height="500"
+                class="mx-auto"
+              >
                 <v-list-item>
                   <v-list-item-content>
-                    <v-list-item-title class="headline">Live Sensor</v-list-item-title>
+                    <v-list-item-title class="headline">
+                      Live Sensor
+                    </v-list-item-title>
                     <v-list-item-subtitle>These are the values of sensor with id:</v-list-item-subtitle>
                   </v-list-item-content>
                 </v-list-item>
@@ -22,7 +33,6 @@
                 <p> Pressure: {{ info.data[0].pressure }} </p>
                 <p> Humidity: {{ info.data[0].humidity }} </p>
                 <p> Time: {{ info.data[0].timestamp }} </p>
-                
               </v-card>
             </div>
           </v-container>
@@ -42,8 +52,8 @@ import axios from "axios";
 // import vuetify from '@/plugins/vuetify'
 
 export default {
-  name: "Live",
   el: "#live",
+  name: "Live",
   components: {
     Sidebar
   },
