@@ -51,7 +51,10 @@ export default {
         HumidityChart
     },
     props: {
-        title: String
+        title:{
+            type: String,
+            default: "Chart"
+        }
     },
     data: () => ({
         dropdown_charts: ['Temperature', 'Humidity', 'Pressure', 'All'],
