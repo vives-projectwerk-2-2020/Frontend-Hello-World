@@ -7,5 +7,8 @@ module.exports = {
   rules: {
     // override/add rules settings here, such as:
     // 'vue/no-unused-vars': 'error'
+    "vue/component-tags-order": ["error", {
+      "order": ["template", "script", "style"]
+    }]
   }
 }
