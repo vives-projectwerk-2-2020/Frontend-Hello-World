@@ -1,22 +1,22 @@
-  <template>
+<template>
   <v-app id="inspire">
-    <Sidebar> </Sidebar>
+    <Sidebar />
 
     <v-container>
-      <div id="demoMap" style="height:250px"></div>
+      <div
+        id="demoMap"
+        style="height:250px"
+      />
     </v-container>
     
 
     <v-footer app>
       <span>&copy; Particula 2020</span>
     </v-footer>
-      <!-- <div id="app">
+    <!-- <div id="app">
         <HelloWorld msg="Welcome to Particula"/>
       </div> -->
   </v-app>
-
-
-
 </template>
 
 <script>

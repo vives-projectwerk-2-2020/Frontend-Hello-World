@@ -1,10 +1,13 @@
 <template>
-  <div class="container" style="margin-bottom: 5vh;">
+  <div
+    class="container"
+    style="margin-bottom: 5vh;"
+  >
     <line-chart
-      height="60%"
       v-if="loaded"
+      height="60%"
       :chartdata="chartdata"
-      />
+    />
   </div>
 </template>
 

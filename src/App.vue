@@ -9,15 +9,15 @@
 <script>
 export default {
   name: 'App',
-  mounted () {
-    
-  },
   props: {
       source: String,
     },
     data: () => ({
       drawer: null,
     }),
+  mounted () {
+    
+  },
     created () {
       this.$vuetify.theme.dark = false
     },
