@@ -7,17 +7,18 @@ on:
     branches: [ master, develop ]
 
 jobs:
-  build:
+  lint:
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
-    - run: rm package-lock.json
         
     - uses: actions/setup-node@v1
       with:
         node-version: '12'
+      env:
+        RUNNER_TEMP: "/tmp/"
         
-    - run: npm i
+    - run: npm ci
     - run: npm run lint
