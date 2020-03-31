@@ -36,10 +36,10 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss">
+@import "ol/ol";
 
 #demoMap {
   height: 250px;
-  border: 1px solid black;
 }
 </style>
