@@ -20,7 +20,7 @@ jobs:
         username: "${{ github.actor }}"
         password: "${{ secrets.GITHUB_TOKEN }}"
         image_name: vives-projectwerk-2-2020/frontend/particula-frontend
-        image_tag: develop
+        image_tag: master
         registry: docker.pkg.github.com
         
   deploy:
@@ -31,11 +31,11 @@ jobs:
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.KEY }}
-        port: ${{ secrets.PORT }}
+        host: ${{ secrets.DEPLOYMENT_SERVER_HOST }}
+        username: ${{ secrets.DEPLOYMENT_SERVER_USERNAME }}
+        key: ${{ secrets.DEPLOYMENT_SERVER_KEY }}
+        port: ${{ secrets.DEPLOYMENT_SERVER_PORT }}
         script: |
-          cd ${{ secrets.PATH }}
+          cd ${{ secrets.DEPLOYMENT_SERVER_PATH_MASTER }}
           docker-compose pull frontend
           docker-compose up -d frontend
