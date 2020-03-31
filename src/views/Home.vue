@@ -1,5 +1,6 @@
 <template>
   <v-content>
+    <Map />
     <v-container
       class="fill-height"
       fluid
@@ -18,11 +19,12 @@
 
 <script>
 import SensorCharts from '../components/SensorCharts'
+import Map from '../components/Map'
 // import vuetify from '@/plugins/vuetify'
 export default {
   name: 'Home',
   components: {
-    SensorCharts
+    SensorCharts, Map
   }
 }
 </script>
