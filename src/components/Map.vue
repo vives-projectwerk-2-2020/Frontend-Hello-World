@@ -20,7 +20,7 @@ export default {
         // htmlcontent: '<h1>tjoep</h1>
     }),
     mounted: () => {
-      const map = new Map({
+      new Map({
         target: 'demoMap',
         layers: [
           new TileLayer({
@@ -32,7 +32,6 @@ export default {
           zoom: 2
         })
       });
-      console.log(map)
     }
 }
 </script>
