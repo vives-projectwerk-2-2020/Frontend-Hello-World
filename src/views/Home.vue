@@ -9,9 +9,7 @@
         align="center"
         justify="center"
       >
-        <v-container id="app">
-          <SensorCharts title="Sensor Page" />
-        </v-container>
+        <SensorCharts title="Sensor Page" />
       </v-row>
     </v-container>
   </v-content>
