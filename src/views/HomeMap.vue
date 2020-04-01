@@ -8,8 +8,6 @@
 </template>
 
 <script>
-import Sidebar from '../components/Sidebar'
-
 // import vuetify from '@/plugins/vuetify'
 
 
