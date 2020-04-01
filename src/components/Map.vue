@@ -13,8 +13,8 @@ import Map from 'ol/Map'
 import View from 'ol/View'
 import TileLayer from 'ol/layer/Tile'
 import OSM from 'ol/source/OSM'
-
 export default {
+  
     name:'Map',
     data: () => ({
         // htmlcontent: '<h1>tjoep</h1>
@@ -28,9 +28,9 @@ export default {
           })
         ],
         view: new View({
-          center: [0, 0],
-          zoom: 2
-        })
+          center: [359273.142197,6658544.189464],//EPSG:3857 coordinate format
+          zoom: 10
+        }),
       });
     }
 }
@@ -40,6 +40,6 @@ export default {
 @import "ol/ol";
 
 #demoMap {
-  height: 250px;
+  height: 900px;
 }
 </style>
