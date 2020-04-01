@@ -1,10 +1,30 @@
 <template>
-  <v-app id= "inspire">
-
+  <v-app id="inspire">
     <div>
-      <v-btn rounded color="primary" dark class="button">sensor info</v-btn>
-      <v-btn rounded color="warning" dark class="button">live values</v-btn>
-      <v-btn rounded color="success" dark class="button">sensor info</v-btn>
+      <v-btn 
+        rounded 
+        color="primary" 
+        dark 
+        class="button"
+      >
+        sensor info
+      </v-btn>
+      <v-btn 
+        rounded 
+        color="warning" 
+        dark 
+        class="button"
+      >
+        live values
+      </v-btn>
+      <v-btn 
+        rounded 
+        color="success" 
+        dark
+        class="button"
+      >
+        sensor info
+      </v-btn>
     </div>
 
     <v-layout wrap> 
@@ -13,40 +33,48 @@
         :key="parameter.title"
       >
         <v-card
-        class="cardss"
+          class="cardss"
         >
           <div 
-          :class="parameter.title"
+            :class="parameter.title"
           >
             <v-list-item three-line>
               <v-list-item-content>
-                <v-list-item-title class="headline mb-1 text">{{ parameter.title }}</v-list-item-title>
-                <v-list-item-title class="headline mb-1 text">{{ info.temperature }}°C</v-list-item-title>
+                <v-list-item-title 
+                  class="headline mb-1 text"
+                >
+                  {{ parameter.title }}
+                </v-list-item-title>
+                <v-list-item-title 
+                  class="headline mb-1 text"
+                >
+                  {{ parameter.value }}°C
+                </v-list-item-title>
               </v-list-item-content>
             </v-list-item>
           </div>
         </v-card>
       </v-flex>
-   </v-layout>
+    </v-layout>
 
     <v-content>
       <v-container
         class="fill-height"
         fluid
       >
-      <v-row
-        align="center"
-        justify="center"
-      >
-        <v-container id="sensorpage">
-          <h1>Sensor Charts</h1>
-          <SensorCharts title="Sensor Page" />
-        </v-container>
-      </v-row>
-    </v-container>
-  </v-content>
-
-    </v-app>
+        <v-row
+          align="center"
+          justify="center"
+        >
+          <v-container 
+            id="sensorpage"
+          >
+            <SensorCharts />
+          </v-container>
+        </v-row>
+      </v-container>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
@@ -62,12 +90,12 @@ export default {
     info: {},
     drawer: false,
     parameters: [
-      { title: 'temperature', value: 'info.temperature'},
-      { title: 'humidity', value: 'info.humidity'},
-      { title: 'pressure', value: 'info.pressure' },
-      { title: 'pm10', value: 'info.pm10' },
-      { title: 'pm2_5', value: 'info.pm2_5'},
-      { title: 'timestamp', value: 'info.timestamp'}
+      { title: 'temperature', value: info.temperature},
+      { title: 'humidity', value: info.humidity},
+      { title: 'pressure', value: info.pressure },
+      { title: 'pm10', value: info.pm10 },
+      { title: 'pm2_5', value: info.pm2_5},
+      { title: 'timestamp', value: info.timestamp}
     ],
     
   }),
@@ -92,7 +120,6 @@ export default {
     }
   }
 };
-
 </script>
 
 <style>
