@@ -1,6 +1,6 @@
 <template>
   <v-app id="inspire">
-    <h1>This is a testpage of Matthias</h1>
+    <h1>TestPage</h1>
     <AboutSensor />
   </v-app>
 </template>
