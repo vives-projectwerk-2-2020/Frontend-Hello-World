@@ -133,9 +133,6 @@
         It was a difficult but great project, we learned a lot from it.
       </p>
     </v-container>
-    <v-footer app>
-      <span>&copy; Particula 2020</span>
-    </v-footer>
   </v-app>
 </template>
 
