@@ -13,6 +13,7 @@
             tabindex="0"
           ></iframe>
         </v-col>
+
         <v-col cols="12" sm="6">
           <v-card-title>Sensor info</v-card-title>
 
@@ -39,106 +40,40 @@
           </v-row>
 
           <v-row>
-            <v-col cols="12" sm="10">
+            <v-col>
               <p class="text-left">Address of the sensor</p>
-              <v-text-field label="Spoorwegstraat" single-line disabled></v-text-field>
-            </v-col>
-            <v-col cols="12" sm="2" >
-              <v-text-field label="12" single-line disabled></v-text-field>
-            </v-col>
-          </v-row>          <v-row>
-            <v-col cols="12" sm="6">
-              <p class="text-left">Username</p>
-              <v-text-field label="Matthias" single-line disabled></v-text-field>
-            </v-col>
-            <v-col cols="12" sm="6">
-              <p class="text-left">email</p>
-              <v-text-field label="matthias.willem@student.vives.be" single-line disabled></v-text-field>
+              <v-row>
+                <v-col class="adressField" cols="12" sm="10">
+                  <v-text-field label="Spoorwegstraat" single-line disabled></v-text-field>
+                </v-col>
+                <v-col class="adressField" cols="12" sm="2">
+                  <v-text-field label="12" single-line disabled></v-text-field>
+                </v-col>
+              </v-row>
             </v-col>
           </v-row>
 
           <v-row>
-            <v-col cols="12" sm="6">
-              <p class="text-left">First name of owner</p>
-              <v-text-field label="Matthias" single-line disabled></v-text-field>
+            <v-col cols="12" sm="4">
+              <p class="text-left">City</p>
+              <v-text-field label="Bruges" single-line disabled></v-text-field>
             </v-col>
-            <v-col cols="12" sm="6">
-              <p class="text-left">Last name of owner</p>
-              <v-text-field label="Willem" single-line disabled></v-text-field>
+            <v-col cols="12" sm="4">
+              <p class="text-left">Country</p>
+              <v-text-field label="West-Flanders" single-line disabled></v-text-field>
             </v-col>
-          </v-row>
-
-          <v-row>
-            <v-col cols="12" sm="10">
-              <p class="text-left">Address of the sensor</p>
-              <v-text-field label="Spoorwegstraat" single-line disabled></v-text-field>
-            </v-col>
-            <v-col cols="12" sm="2" >
-              <v-text-field label="12" single-line disabled></v-text-field>
-            </v-col>
-          </v-row>          <v-row>
-            <v-col cols="12" sm="6">
-              <p class="text-left">Username</p>
-              <v-text-field label="Matthias" single-line disabled></v-text-field>
-            </v-col>
-            <v-col cols="12" sm="6">
-              <p class="text-left">email</p>
-              <v-text-field label="matthias.willem@student.vives.be" single-line disabled></v-text-field>
+            <v-col cols="12" sm="4">
+              <p class="text-left">Postal code</p>
+              <v-text-field label="8000" single-line disabled></v-text-field>
             </v-col>
           </v-row>
 
           <v-row>
-            <v-col cols="12" sm="6">
-              <p class="text-left">First name of owner</p>
-              <v-text-field label="Matthias" single-line disabled></v-text-field>
-            </v-col>
-            <v-col cols="12" sm="6">
-              <p class="text-left">Last name of owner</p>
-              <v-text-field label="Willem" single-line disabled></v-text-field>
+            <v-col>
+              <p class="text-left">About the sensor</p>
+              <v-text-field label="Bruges" single-line disabled></v-text-field>
             </v-col>
           </v-row>
-
-          <v-row>
-            <v-col cols="12" sm="10">
-              <p class="text-left">Address of the sensor</p>
-              <v-text-field label="Spoorwegstraat" single-line disabled></v-text-field>
-            </v-col>
-            <v-col cols="12" sm="2" >
-              <v-text-field label="12" single-line disabled></v-text-field>
-            </v-col>
-          </v-row>          <v-row>
-            <v-col cols="12" sm="6">
-              <p class="text-left">Username</p>
-              <v-text-field label="Matthias" single-line disabled></v-text-field>
-            </v-col>
-            <v-col cols="12" sm="6">
-              <p class="text-left">email</p>
-              <v-text-field label="matthias.willem@student.vives.be" single-line disabled></v-text-field>
-            </v-col>
-          </v-row>
-
-          <v-row>
-            <v-col cols="12" sm="6">
-              <p class="text-left">First name of owner</p>
-              <v-text-field label="Matthias" single-line disabled></v-text-field>
-            </v-col>
-            <v-col cols="12" sm="6">
-              <p class="text-left">Last name of owner</p>
-              <v-text-field label="Willem" single-line disabled></v-text-field>
-            </v-col>
-          </v-row>
-
-          <v-row>
-            <v-col cols="12" sm="10">
-              <p class="text-left">Address of the sensor</p>
-              <v-text-field label="Spoorwegstraat" single-line disabled></v-text-field>
-            </v-col>
-            <v-col cols="12" sm="2" >
-              <v-text-field label="12" single-line disabled></v-text-field>
-            </v-col>
-          </v-row>
-
-          <v-card-subtitle>1,000 miles of wonder</v-card-subtitle>
 
           <v-card-actions>
             <v-btn text>Share</v-btn>
@@ -174,8 +109,11 @@ export default {
 </script>
 
 <style>
-:v-card {
-  width: 1400px;
-  height: 900px;
+p.text-left {
+  margin: 0px;
+}
+.adressField {
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 </style>
