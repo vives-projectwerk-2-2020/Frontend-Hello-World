@@ -1,6 +1,5 @@
 <template>
   <v-app id="inspire">
-    <Sidebar></Sidebar>
     <v-container
       class="fill-height"
       style="width: 90%; margin-bottom: 20px; margin-top: 20px"
@@ -141,15 +140,7 @@
 </template>
 
 <script>
-import Sidebar from "../components/Sidebar";
-export default {
-  props: {
-    source: String
-  },
-  components: {
-    Sidebar
-  }
-};
+export default {};
 </script>
 
 <style scoped>

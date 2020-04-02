@@ -1,65 +1,72 @@
 <template>
-  <v-app id="inspire">
-    <Sidebar></Sidebar>
+  <v-row>
+    <v-card
+      width="450"
+      class="ma-auto"
+      dark
+    >
+      <v-header>Themes</v-header>
 
-    <v-row>
-      <v-card width="450" class="ma-auto" dark>
-        <v-header>Themes</v-header>
+      <v-divider />
 
-        <v-divider></v-divider>
+      <v-list light>
+        <v-list-item>
+          <v-list-item-content>
+            <v-btn @click="lightTheme">
+              Light
+            </v-btn>
+            <v-list-item-subtitle>I need a little light to guide the way!</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
 
-        <v-list light>
-          <v-list-item>
-            <v-list-item-content>
-              <v-btn @click="lightTheme">Light</v-btn>
-              <v-list-item-subtitle>I need a little light to guide the way!</v-list-item-subtitle>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
+      <v-list dark>
+        <v-list-item>
+          <v-list-item-content>
+            <v-btn @click="darkTheme">
+              Dark
+            </v-btn>
+            <v-list-item-subtitle>I like the dark side! It has cookies!</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-card>
 
-        <v-list dark>
-          <v-list-item>
-            <v-list-item-content>
-              <v-btn @click="darkTheme">Dark</v-btn>
-              <v-list-item-subtitle>I like the dark side! It has cookies!</v-list-item-subtitle>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
-      </v-card>
+    <v-card
+      width="450"
+      class="ma-auto"
+    >
+      <v-header>Fonts</v-header>
 
-      <v-card width="450" class="ma-auto">
-        <v-header>Fonts</v-header>
+      <v-divider />
 
-        <v-divider></v-divider>
-
-        <v-list>
-          <v-list-item>
-            <v-list-item-content>
-              <v-btn @click="bigFont">big</v-btn>
-              <v-btn @click="biggerFont">little bigger</v-btn>
-              <v-btn @click="normalFont">normal</v-btn>
-              <v-btn @click="smallerFont">little smaller</v-btn>
-              <v-btn @click="smallFont">small</v-btn>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
-      </v-card>
-    </v-row>
-    <v-footer app>
-      <span>&copy; Particula 2020</span>
-    </v-footer>
-  </v-app>
+      <v-list>
+        <v-list-item>
+          <v-list-item-content>
+            <v-btn @click="bigFont">
+              big
+            </v-btn>
+            <v-btn @click="biggerFont">
+              little bigger
+            </v-btn>
+            <v-btn @click="normalFont">
+              normal
+            </v-btn>
+            <v-btn @click="smallerFont">
+              little smaller
+            </v-btn>
+            <v-btn @click="smallFont">
+              small
+            </v-btn>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-card>
+  </v-row>
 </template>
 
 <script>
-import Sidebar from "../components/Sidebar";
 export default {
-  props: {
-    source: String
-  },
-  components: {
-    Sidebar
-  },
   data: () => ({
     settings: []
   }),
