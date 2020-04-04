@@ -1,5 +1,5 @@
 <template>
-  <v-app id="inspire">
+  <div>
     <div>
       <v-btn 
         rounded 
@@ -29,6 +29,7 @@
 
     <v-layout wrap> 
       <v-flex
+        xs
         v-for="parameter in parameters"
         :key="parameter.title"
       >
@@ -48,7 +49,8 @@
                 <v-list-item-title 
                   class="headline mb-1 text"
                 >
-                  {{ parameter.value }}°C
+                  {{ parameter.value }}
+                  {{ parameter.unit }}
                 </v-list-item-title>
               </v-list-item-content>
             </v-list-item>
@@ -74,7 +76,7 @@
         </v-row>
       </v-container>
     </v-content>
-  </v-app>
+  </div>
 </template>
 
 <script>
@@ -90,14 +92,14 @@ export default {
     info: {},
     drawer: false,
     parameters: [
-      { title: 'temperature', value: info.temperature},
-      { title: 'humidity', value: info.humidity},
-      { title: 'pressure', value: info.pressure },
-      { title: 'pm10', value: info.pm10 },
-      { title: 'pm2_5', value: info.pm2_5},
-      { title: 'timestamp', value: info.timestamp}
-    ],
-    
+      { title: 'temperature', value: undefined, unit:"°C"},
+      { title: 'humidity', value: undefined, unit:"%"},
+      { title: 'pressure', value: undefined, unit:"hPa" },
+      { title: 'pm10', value: undefined, unit:"%"},
+      { title: 'pm2_5', value: undefined, unit:"%"},
+      { title: 'timestamp', value: undefined, unit:""}
+    ]
+   
   }),
   mounted() {
     this.getAPI();
@@ -110,7 +112,17 @@ export default {
         .get(
           "https://virtserver.swaggerhub.com/sillevl/Particula/0.1/measurements/3fa85f64-5717-4562-b3fc-2c963f66afa6?period=24h&properties=pm10",
           { headers: { 'Access-Control-Allow-Origin': '*',} } )
-        .then(response => this.info = response.data[0] )
+        .then(response => {
+           const info = response.data[0] 
+
+           this.parameters[0].value= info.temperature
+           this.parameters[1].value = info.humidity
+           this.parameters[2].value = info.pressure
+           this.parameters[3].value = info.pm10
+           this.parameters[4].value = info.pm2_5
+           this.parameters[5].value = info.timestamp
+
+           })
     },
     intervalFetchData: function() {
       // TODO Use websocket / MQTT instead !!
@@ -137,7 +149,7 @@ export default {
 }
 
 .cardss{
-  width: 200px;
+  width: 300px;
   height: 100px;
   margin: 30px;
   display: inline-block;
@@ -149,7 +161,6 @@ export default {
   border-color: black;
   border-radius: 50px;
   color:  white;
-  width: 200px;
   height: 100px;
 }
 
@@ -163,7 +174,6 @@ export default {
   border-color: black;
   border-radius: 50px;
   color:  white;
-  width: 200px;
   height: 100px;
 }
 
@@ -177,7 +187,6 @@ export default {
   border-color: black;
   border-radius: 50px;
   color:  white;
-  width: 200px;
   height: 100px;
 }
 
@@ -191,7 +200,6 @@ export default {
   border-color: black;
   border-radius: 50px;
   color:  white;
-  width: 200px;
   height: 100px;
 }
 
@@ -201,7 +209,6 @@ export default {
   border-color: black;
   border-radius: 50px;
   color:  white;
-  width: 200px;
   height: 100px;
 }
 
@@ -211,7 +218,6 @@ export default {
   border-color: black;
   border-radius: 50px;
   color:  white;
-  width: 200px;
   height: 100px;
 }
 
