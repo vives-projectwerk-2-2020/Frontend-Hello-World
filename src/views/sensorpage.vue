@@ -17,14 +17,6 @@
       >
         live values
       </v-btn>
-      <v-btn 
-        rounded 
-        color="success" 
-        dark
-        class="button"
-      >
-        sensor info
-      </v-btn>
     </div>
 
     <v-layout wrap> 
@@ -71,7 +63,9 @@
           <v-container 
             id="sensorpage"
           >
-            <SensorCharts />
+            <div>
+              <SensorCharts />
+            </div>
           </v-container>
         </v-row>
       </v-container>
