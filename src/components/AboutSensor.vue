@@ -3,15 +3,26 @@
     <v-container class="noPad container">
       <v-row>
         <v-col cols="12" sm="6">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1250.1837652387912!2d3.2183284!3d51.1938791!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcded5a4988f83cd5!2sKU%20Leuven%20Campus%20Brugge!5e0!3m2!1sen!2sbe!4v1585853731962!5m2!1sen!2sbe"
-            width="100%"
-            height="100%"
-            frameborder="0"
-            allowfullscreen
-            aria-hidden="false"
-            tabindex="0"
-          ></iframe>
+          
+          <v-row>
+            <v-col class="noPad">
+              <v-img src="../img/brugge.jpg" :aspect-ratio="16/9"></v-img>
+            </v-col>
+          </v-row>
+
+          <v-row>
+            <v-col class="noPadBottom">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1250.1837652387912!2d3.2183284!3d51.1938791!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcded5a4988f83cd5!2sKU%20Leuven%20Campus%20Brugge!5e0!3m2!1sen!2sbe!4v1585853731962!5m2!1sen!2sbe"
+                width="100%"
+                height="100%"
+                frameborder="0"
+                allowfullscreen
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
+            </v-col>
+          </v-row>
         </v-col>
 
         <v-col cols="12" sm="6">
@@ -108,6 +119,9 @@ p.text-left {
   padding-bottom: 0px;
   padding-top: 0px;
 }
+.noPadBottom {
+  padding-bottom: 0px;
+}
 div.v-card__title {
   padding: 0px;
 }
@@ -117,8 +131,5 @@ div.v-card__actions {
 }
 div.v-card__title {
   font-size: 25px;
-}
-.container {
-  padding-top: 0px;
 }
 </style>
