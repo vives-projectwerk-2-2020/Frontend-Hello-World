@@ -32,7 +32,7 @@ export default {
         new TileLayer({
           source: new OSM()
         }),
-        new VectorLayer({
+        new VectorLayer({//begin marker
           source: new VectorSource({
             features: [
               new Feature({
@@ -50,7 +50,7 @@ export default {
               })
             ]
           })
-        })
+        })//end marker
       ],
       view: new View({
         center: [359273.142197, 6658544.189464], //EPSG:3857 coordinate format
