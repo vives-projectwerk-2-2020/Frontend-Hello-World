@@ -1,6 +1,6 @@
 <template>
-  <v-card class="mx-auto" width="1400px">
-    <v-container>
+  <v-card class="mx-auto" width="80%">
+    <v-container class="noPad container">
       <v-row>
         <v-col cols="12" sm="6">
           <iframe
@@ -16,84 +16,69 @@
 
         <v-col cols="12" sm="6">
           <v-card-title>Sensor info</v-card-title>
-
           <v-row>
-            <v-col cols="12" sm="6">
+            <v-col class="noPad" cols="12" sm="6">
               <p class="text-left">Username</p>
-              <v-text-field label="Matthias" single-line disabled></v-text-field>
+              <v-text-field value="Matthias" single-line disabled></v-text-field>
             </v-col>
-            <v-col cols="12" sm="6">
+            <v-col class="noPad" cols="12" sm="6">
               <p class="text-left">email</p>
-              <v-text-field label="matthias.willem@student.vives.be" single-line disabled></v-text-field>
+              <v-text-field value="matthias.willem@student.vives.be" single-line disabled></v-text-field>
             </v-col>
           </v-row>
 
           <v-row>
-            <v-col cols="12" sm="6">
+            <v-col class="noPad" cols="12" sm="6">
               <p class="text-left">First name of owner</p>
-              <v-text-field label="Matthias" single-line disabled></v-text-field>
+              <v-text-field value="Matthias" single-line disabled></v-text-field>
             </v-col>
-            <v-col cols="12" sm="6">
+            <v-col class="noPad" cols="12" sm="6">
               <p class="text-left">Last name of owner</p>
-              <v-text-field label="Willem" single-line disabled></v-text-field>
+              <v-text-field value="Willem" single-line disabled></v-text-field>
             </v-col>
           </v-row>
 
           <v-row>
-            <v-col>
-              <p class="text-left">Address of the sensor</p>
-              <v-row>
-                <v-col class="adressField" cols="12" sm="10">
-                  <v-text-field label="Spoorwegstraat" single-line disabled></v-text-field>
-                </v-col>
-                <v-col class="adressField" cols="12" sm="2">
-                  <v-text-field label="12" single-line disabled></v-text-field>
-                </v-col>
-              </v-row>
+            <v-col class="adressField noPad" cols="12" sm="10">
+              <p class="text-left">Street</p>
+              <v-text-field value="Spoorwegstraat" single-line disabled></v-text-field>
+            </v-col>
+            <v-col class="adressField noPad" cols="12" sm="2">
+              <p class="text-left">No.</p>
+              <v-text-field value="12" single-line disabled></v-text-field>
             </v-col>
           </v-row>
 
           <v-row>
-            <v-col cols="12" sm="4">
+            <v-col class="noPad" cols="12" sm="4">
               <p class="text-left">City</p>
-              <v-text-field label="Bruges" single-line disabled></v-text-field>
+              <v-text-field value="Bruges" single-line disabled>Brugge</v-text-field>
             </v-col>
-            <v-col cols="12" sm="4">
-              <p class="text-left">Country</p>
-              <v-text-field label="West-Flanders" single-line disabled></v-text-field>
-            </v-col>
-            <v-col cols="12" sm="4">
+            <v-col class="noPad" cols="12" sm="4">
               <p class="text-left">Postal code</p>
-              <v-text-field label="8000" single-line disabled></v-text-field>
+              <v-text-field value="8000" single-line disabled></v-text-field>
+            </v-col>
+            <v-col class="noPad" cols="12" sm="4">
+              <p class="text-left">Country</p>
+              <v-text-field value="Belgium" single-line disabled></v-text-field>
             </v-col>
           </v-row>
 
           <v-row>
-            <v-col>
+            <v-col class="noPad">
               <p class="text-left">About the sensor</p>
-              <v-text-field label="Bruges" single-line disabled></v-text-field>
+              <v-textarea
+                rows="1"
+                auto-grow
+                disabled
+                value="This is a very nice sensor. You should buy one! I like this sensor very much, believe me. This is the best sensor i've ever got!"
+              ></v-textarea>
             </v-col>
           </v-row>
 
           <v-card-actions>
-            <v-btn text>Share</v-btn>
-
-            <v-btn color="purple" text>Explore</v-btn>
-
-            <v-spacer></v-spacer>
-
-            <v-btn icon @click="show = !show">
-              <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-            </v-btn>
+            <v-btn class="back" color="#FFFFFF" text>Back to sensorpage</v-btn>
           </v-card-actions>
-
-          <v-expand-transition>
-            <div v-show="show">
-              <v-divider></v-divider>
-
-              <v-card-text>I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.</v-card-text>
-            </div>
-          </v-expand-transition>
         </v-col>
       </v-row>
     </v-container>
@@ -115,5 +100,25 @@ p.text-left {
 .adressField {
   padding-top: 0px;
   padding-bottom: 0px;
+}
+.back {
+  background-color: #679b9b;
+}
+.noPad {
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+div.v-card__title {
+  padding: 0px;
+}
+div.v-card__actions {
+  padding-left: 0px;
+  padding-bottom: 0px;
+}
+div.v-card__title {
+  font-size: 25px;
+}
+.container {
+  padding-top: 0px;
 }
 </style>

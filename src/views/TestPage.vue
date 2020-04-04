@@ -2,6 +2,7 @@
   <v-app id="inspire">
     <h1>TestPage</h1>
     <AboutSensor />
+    <h1>TestPage</h1>
   </v-app>
 </template>
 
