@@ -3,10 +3,9 @@
     <v-container class="noPad container">
       <v-row>
         <v-col cols="12" sm="6">
-          
           <v-row>
             <v-col class="noPad">
-              <v-img src="../img/brugge.jpg" :aspect-ratio="16/9"></v-img>
+              <v-img src="../img/final_product.png" :aspect-ratio="16/9"></v-img>
             </v-col>
           </v-row>
 
@@ -88,7 +87,7 @@
           </v-row>
 
           <v-card-actions>
-            <v-btn class="back" color="#FFFFFF" text>Back to sensorpage</v-btn>
+            <v-btn class="back" color="#FFFFFF" @click="back" text>Back to sensorpage</v-btn>
           </v-card-actions>
         </v-col>
       </v-row>
@@ -100,7 +99,12 @@
 export default {
   data: () => ({
     show: false
-  })
+  }),
+  methods: {
+    back() {
+      alert("test");  
+    }
+  }
 };
 </script>
 
