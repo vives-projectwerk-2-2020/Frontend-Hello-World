@@ -82,3 +82,11 @@ Allows users to login or register to the platform.
 This page gives information about the Particula project.
 
 ![Login/registration page](./src/img/About.png)
+
+## Components
+
+### AboutSensor
+
+This component gives a card with information about a sensor
+
+![AboutSensor Component](./src/img/aboutSensor-component.png)
