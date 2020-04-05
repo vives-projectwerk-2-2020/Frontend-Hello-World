@@ -20,7 +20,7 @@ jobs:
         username: "${{ github.actor }}"
         password: "${{ secrets.GITHUB_TOKEN }}"
         image_name: vives-projectwerk-2-2020/frontend/particula-frontend
-        image_tag: develop
+        image_tag: master
         registry: docker.pkg.github.com
         
   deploy:
@@ -36,6 +36,6 @@ jobs:
         key: ${{ secrets.DEPLOYMENT_SERVER_KEY }}
         port: ${{ secrets.DEPLOYMENT_SERVER_PORT }}
         script: |
-          cd ${{ secrets.DEPLOYMENT_SERVER_PATH }}
+          cd ${{ secrets.DEPLOYMENT_SERVER_PATH_MASTER }}
           docker-compose pull frontend
           docker-compose up -d frontend
