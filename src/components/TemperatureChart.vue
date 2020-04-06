@@ -5,6 +5,7 @@
   >
     <line-chart
       v-if="loaded"
+      height="60%"
       :chartdata="chartdata"
     />
   </div>
