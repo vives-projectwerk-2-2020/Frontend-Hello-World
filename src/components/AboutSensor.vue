@@ -5,10 +5,16 @@
   >
     <v-container class="noPad container">
       <v-row>
-        <v-col cols="12" sm="6">
+        <v-col 
+          cols="12" 
+          sm="6"  
+        >
           <v-row>
             <v-col class="noPad">
-              <v-img src="../img/final_product.png" :aspect-ratio="16/9"></v-img>
+              <v-img 
+                src="../img/final_product.png"
+                :aspect-ratio="16/9"
+              />
             </v-col>
           </v-row>
 
@@ -27,15 +33,30 @@
           </v-row>
         </v-col>
 
-        <v-col cols="12" sm="6">
-          <v-card-title class="font-weight-medium">Sensor info</v-card-title>
-          <v-divider></v-divider>
+        <v-col 
+          cols="12" 
+          sm="6"
+        >
+          <v-card-title class="font-weight-medium">
+            Sensor info
+          </v-card-title>
+          <v-divider />
           <v-row>
-            <v-col cols="12" sm="4">
-              <p class="text-left font-weight-black">Username</p>
-              <p class="text-left font-weight-light">{{ username }}</p>
+            <v-col 
+              cols="12" 
+              sm="4"
+            >
+              <p class="text-left font-weight-black">
+                Usernam
+              </p>
+              <p class="text-left font-weight-light">
+                {{ username }}
+              </p>
             </v-col>
-            <v-col cols="12" sm="8">
+            <v-col 
+              cols="12" 
+              sm="8"
+            >
               <p class="text-left font-weight-black">email</p>
               <p class="text-left font-weight-light">{{ email }}</p>
             </v-col>

@@ -102,7 +102,7 @@ export default {
       // setInterval(() => {
       //   this.getAPI();
       // }, 2000);
-    }
+    },
   }
 };
 </script>
