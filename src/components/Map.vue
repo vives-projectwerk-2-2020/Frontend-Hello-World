@@ -24,14 +24,13 @@ import Point from "ol/geom/Point";
 import { Vector as VectorLayer } from "ol/layer";
 import { fromLonLat } from "ol/proj";
 import VectorSource from "ol/source/Vector";
-import { Style, Fill, Stroke } from "ol/style";
-import CircleStyle from "ol/style/Circle"
+import { Style, Icon } from "ol/style";
 
 const markerStyle = new Style({
-  image: new CircleStyle({
-    fill: new Fill({color: 'red'}),
-    stroke: new Stroke({color: 'black', width: 2}),
-    radius: 10,
+  image: new Icon({
+    color: "#8959A8",
+    crossOrigin: "anonymous",
+    src: "/images/map/square.svg"
   })
 })
 
