@@ -38,18 +38,17 @@ export default {
               new Feature({
                 geometry: new Point(
                   fromLonLat([2.896372, 44.60240])
-                ).setStyle(
-                  new Style({
-                    image: new Icon({
-                      color: "#8959A8",
-                      crossOrigin: "anonymous",
-                      src: "data/square.svg"
-                    })
-                  })
                 )
               })
             ]
-          })
+          }),    
+          style: new Style({
+            image: new Icon({
+              color: "#8959A8",
+              crossOrigin: "anonymous",
+              src: "images/map/square.svg"
+            })
+          }),
         })//end marker
       ],
       view: new View({
