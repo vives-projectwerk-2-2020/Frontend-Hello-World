@@ -40,6 +40,6 @@ jobs:
         key: ${{ secrets.DEPLOYMENT_SERVER_KEY }}
         port: ${{ secrets.DEPLOYMENT_SERVER_PORT }}
         script: |
-          cd ${{ secrets.DEPLOYMENT_SERVER_PATH_MASTER }}
+          cd ${{ secrets.DEPLOYMENT_SERVER_PATH }}
           docker-compose pull frontend
           docker-compose up -d frontend
