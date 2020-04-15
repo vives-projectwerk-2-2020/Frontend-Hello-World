@@ -1,8 +1,7 @@
 <template>
-  <v-container id="map">
-    <h1>Map</h1>
+  <div id="map">
     <div id="demoMap" />
-  </v-container>
+  </div>
 </template>
 
 <script>
@@ -39,7 +38,12 @@ export default {
 <style lang="scss">
 @import "ol/ol";
 
+.template{
+  padding: 0px;
+}
+
 #demoMap {
-  height: 250px;
+  height: 100vh;
+  width: 100%;
 }
 </style>

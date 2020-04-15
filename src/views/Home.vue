@@ -1,12 +1,12 @@
 <template>
-  <v-content>
+  <div>
     <Map />
     <v-container
       class="fill-height"
       fluid
     >
     </v-container>
-  </v-content>
+  </div>
 </template>
 
 <script>
@@ -21,4 +21,5 @@ export default {
 </script>
 
 <style scoped>
+
 </style>
