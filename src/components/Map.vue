@@ -12,6 +12,7 @@ import Map from 'ol/Map'
 import View from 'ol/View'
 import TileLayer from 'ol/layer/Tile'
 import OSM from 'ol/source/OSM'
+import * as olProj from 'ol/proj';
 
 export default {
     name:'Map',
@@ -19,6 +20,9 @@ export default {
         // htmlcontent: '<h1>tjoep</h1>
     }),
     mounted: () => {
+
+      const place = olProj.transform([3.22424, 51.20892], 'EPSG:4326', 'EPSG:3857');
+
       new Map({
         target: 'demoMap',
         layers: [
@@ -27,10 +31,14 @@ export default {
           })
         ],
         view: new View({
-          center: [0, 0],
-          zoom: 2
-        })
+          center: place,
+          zoom: 10
+        }),
+
+        
       });
+    },methods: {
+
     }
 }
 </script>
