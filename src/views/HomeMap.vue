@@ -3,13 +3,15 @@
     <vl-map :load-tiles-while-animating="true" :load-tiles-while-interacting="true"
              data-projection="EPSG:4326" style="height: 400px">
       <vl-view :zoom.sync="zoom" :center.sync="center" :rotation.sync="rotation"></vl-view>
-
+<vl-feature id="point" :properties="{prop: 'value', prop2: 'value'}">
+          <vl-geom-point :coordinates="[0, 0]"></vl-geom-point>
+      </vl-feature>
       <vl-geoloc @update:position="geolocPosition = $event">
         <template slot-scope="geoloc">
           <vl-feature v-if="geoloc.position" id="position-feature">
             <vl-geom-point :coordinates="geoloc.position"></vl-geom-point>
             <vl-style-box>
-              <vl-style-icon src="_media/marker.png" :scale="0.4" :anchor="[0.5, 1]"></vl-style-icon>
+              <vl-style-icon src="images/map/square.svg" :scale="0.4" :anchor="[0.5, 1]"></vl-style-icon>
             </vl-style-box>
           </vl-feature>
         </template>
