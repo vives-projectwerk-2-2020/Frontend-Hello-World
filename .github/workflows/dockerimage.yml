@@ -2,9 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ master, develop ]
   pull_request:
-    branches: [ develop ]
+    branches: [ master, develop ]
 env:
   IMAGE_NAME: particula-frontend
 jobs:
@@ -14,13 +14,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Branch name
+      id: branchname
+      run: |
+        echo "::set-output name=branch::`echo '${{ github.ref }}' | sed -e 's,.*/\(.*\),\1,'`"
     - uses: actions/checkout@v2
     - uses: whoan/docker-build-with-cache-action@master
       with:
         username: "${{ github.actor }}"
         password: "${{ secrets.GITHUB_TOKEN }}"
         image_name: vives-projectwerk-2-2020/frontend/particula-frontend
-        image_tag: master
+        image_tag: "${{ steps.branchname.outputs.branch }}"
         registry: docker.pkg.github.com
         
   deploy:
@@ -36,6 +40,6 @@ jobs:
         key: ${{ secrets.DEPLOYMENT_SERVER_KEY }}
         port: ${{ secrets.DEPLOYMENT_SERVER_PORT }}
         script: |
-          cd ${{ secrets.DEPLOYMENT_SERVER_PATH_MASTER }}
+          cd ${{ secrets.DEPLOYMENT_SERVER_PATH }}
           docker-compose pull frontend
           docker-compose up -d frontend
