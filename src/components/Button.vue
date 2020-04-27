@@ -12,16 +12,20 @@
       {[`btn-outline-${type}`]: type && outline},
       {[`btn-${size}`]: size},
       {'btn-link': simple}
-    ]">
+    ]"
+  >
     <slot name="loading">
-      <i v-if="loading" class="fa fa-spinner fa-spin"></i>
+      <i
+        v-if="loading"
+        class="fa fa-spinner fa-spin"
+      />
     </slot>
-    <slot></slot>
+    <slot />
   </component>
 </template>
 <script>
 export default {
-  name: 'p-button',
+  name: 'PButton',
   props: {
     tag: {
       type: String,

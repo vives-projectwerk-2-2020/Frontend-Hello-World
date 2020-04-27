@@ -57,57 +57,121 @@
               cols="12" 
               sm="8"
             >
-              <p class="text-left font-weight-black">email</p>
-              <p class="text-left font-weight-light">{{ email }}</p>
+              <p class="text-left font-weight-black">
+                email
+              </p>
+              <p class="text-left font-weight-light">
+                {{ email }}
+              </p>
             </v-col>
           </v-row>
 
           <v-row>
-            <v-col cols="12" sm="6">
-              <p class="text-left font-weight-black">First name of owner</p>
-              <p class="text-left font-weight-light">{{ firstName }}</p>
+            <v-col
+              cols="12"
+              sm="6"
+            >
+              <p class="text-left font-weight-black">
+                First name of owner
+              </p>
+              <p class="text-left font-weight-light">
+                {{ firstName }}
+              </p>
             </v-col>
-            <v-col cols="12" sm="6">
-              <p class="text-left font-weight-black">Last name of owner</p>
-              <p class="text-left font-weight-light">{{ lastName }}</p>
+            <v-col
+              cols="12"
+              sm="6"
+            >
+              <p class="text-left font-weight-black">
+                Last name of owner
+              </p>
+              <p class="text-left font-weight-light">
+                {{ lastName }}
+              </p>
             </v-col>
           </v-row>
 
           <v-row>
-            <v-col cols="12" sm="6">
-              <p class="text-left font-weight-black">Street</p>
-              <p class="text-left font-weight-light">{{ street }}</p>
+            <v-col
+              cols="12"
+              sm="6"
+            >
+              <p class="text-left font-weight-black">
+                Street
+              </p>
+              <p class="text-left font-weight-light">
+                {{ street }}
+              </p>
             </v-col>
-            <v-col cols="12" sm="6">
-              <p class="text-left font-weight-black">No.</p>
-              <p class="text-left font-weight-light">{{ houseNumber }}</p>
+            <v-col
+              cols="12"
+              sm="6"
+            >
+              <p class="text-left font-weight-black">
+                No.
+              </p>
+              <p class="text-left font-weight-light">
+                {{ houseNumber }}
+              </p>
             </v-col>
           </v-row>
 
           <v-row>
-            <v-col cols="12" sm="4">
-              <p class="text-left font-weight-black">City</p>
-              <p class="text-left font-weight-light">{{ city }}</p>
+            <v-col
+              cols="12"
+              sm="4"
+            >
+              <p class="text-left font-weight-black">
+                City
+              </p>
+              <p class="text-left font-weight-light">
+                {{ city }}
+              </p>
             </v-col>
-            <v-col cols="12" sm="4">
-              <p class="text-left font-weight-black">Postal code</p>
-              <p class="text-left font-weight-light">{{ postalCode }}</p>
+            <v-col
+              cols="12"
+              sm="4"
+            >
+              <p class="text-left font-weight-black">
+                Postal code
+              </p>
+              <p class="text-left font-weight-light">
+                {{ postalCode }}
+              </p>
             </v-col>
-            <v-col cols="12" sm="4">
-              <p class="text-left font-weight-black">Country</p>
-              <p class="text-left font-weight-light">{{ country }}</p>
+            <v-col
+              cols="12"
+              sm="4"
+            >
+              <p class="text-left font-weight-black">
+                Country
+              </p>
+              <p class="text-left font-weight-light">
+                {{ country }}
+              </p>
             </v-col>
           </v-row>
-          <v-divider></v-divider>
+          <v-divider />
           <v-row>
             <v-col>
-              <p class="text-left font-weight-black">About the sensor</p>
-              <p class="text-left font-weight-light">{{ aboutSensor}}</p>
+              <p class="text-left font-weight-black">
+                About the sensor
+              </p>
+              <p class="text-left font-weight-light">
+                {{ aboutSensor }}
+              </p>
             </v-col>
           </v-row>
 
           <v-card-actions class="noPad">
-            <v-btn class="back" color="#FFFFFF" @click="back" text>Back to sensorpage</v-btn>
+            <v-btn
+              class="back"
+              color="#FFFFFF"
+              @click="back"
+              text
+            >
+              Back to sensorpage
+            </v-btn>
           </v-card-actions>
         </v-col>
       </v-row>

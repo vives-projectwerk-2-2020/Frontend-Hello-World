@@ -1,13 +1,25 @@
 <template>
-  <div class="form-group" :class="{'input-group': hasIcon}">
+  <div
+    class="form-group"
+    :class="{'input-group': hasIcon}"
+  >
     <slot name="label">
-      <label v-if="label" class="control-label">
-        {{label}}
+      <label
+        v-if="label"
+        class="control-label"
+      >
+        {{ label }}
       </label>
     </slot>
     <slot name="addonLeft">
-      <span v-if="addonLeftIcon" class="input-group-prepend">
-        <i :class="addonLeftIcon" class="input-group-text"></i>
+      <span
+        v-if="addonLeftIcon"
+        class="input-group-prepend"
+      >
+        <i
+          :class="addonLeftIcon"
+          class="input-group-text"
+        />
       </span>
     </slot>
     <input
@@ -15,11 +27,18 @@
       @input="$emit('input',$event.target.value)"
       v-bind="$attrs"
       class="form-control"
-      aria-describedby="addon-right addon-left">
-    <slot></slot>
+      aria-describedby="addon-right addon-left"
+    >
+    <slot />
     <slot name="addonRight">
-      <span v-if="addonRightIcon" class="input-group-append">
-        <i :class="addonRightIcon" class="input-group-text"></i>
+      <span
+        v-if="addonRightIcon"
+        class="input-group-append"
+      >
+        <i
+          :class="addonRightIcon"
+          class="input-group-text"
+        />
       </span>
     </slot>
   </div>
@@ -27,7 +46,7 @@
 <script>
   export default {
     inheritAttrs: false,
-    name: "fg-input",
+    name: "FgInput",
     props: {
       label: String,
       value: [String, Number],
