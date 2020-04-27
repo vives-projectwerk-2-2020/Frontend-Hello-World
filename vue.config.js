@@ -5,7 +5,7 @@ module.exports = {
     "vuetify"
   ],
 
-  publicPath: process.env.NODE_ENV === "development" ? "/vuejs-pwa/" : "",
+  publicPath: process.env.NODE_ENV === "development" ? "/" : "",
 
   configureWebpack: {
     plugins: [new GenerateSW()]
