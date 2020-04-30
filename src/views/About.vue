@@ -119,7 +119,7 @@
             website!
           </p>
 
-          <v-btn href="https://vuetifyjs.com/en/" target="_blank">Visit Vuetify</v-btn>
+          <v-btn link="./BuildSensor" target="_blank">Visit Vuetify</v-btn>
         </v-col>
       </v-row>
 
