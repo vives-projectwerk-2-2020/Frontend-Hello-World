@@ -1,20 +1,41 @@
 <template>
   <v-app id="inspire">
-    <v-container style="width: 90%; margin-bottom: 20px; margin-top: 20px;" fluid>
-      <p class="display-3">About the Project</p>
+    <v-container
+      style="width: 90%; margin-bottom: 20px; margin-top: 20px;"
+      fluid
+    >
+      <p
+        class="display-3"
+      >
+        About the Project
+      </p>
 
       <v-row>
-        <v-col cols="12" sm="6">
-          <v-img src="../img/brugge.jpg" :aspect-ratio="16 / 9" />
+        <v-col
+          cols="12"
+          sm="6"
+        >
+          <v-img
+            src="../img/brugge.jpg"
+            :aspect-ratio="16 / 9"
+          />
         </v-col>
-        <v-col cols="12" sm="6">
-          <v-img src="../img/fine_dust.jpg" :aspect-ratio="16 / 9" />
+        <v-col
+          cols="12"
+          sm="6"
+        >
+          <v-img
+            src="../img/fine_dust.jpg"
+            :aspect-ratio="16 / 9"
+          />
         </v-col>
       </v-row>
 
       <v-row>
         <v-col>
-          <p class="subtitle-1">
+          <p
+            class="subtitle-1"
+          >
             We are Electronics-ICT students at the VIVES university of Bruges. We
             were commissioned in preparation for our internship next year to fulfill
             a project of the city of Bruges. The project involves making Bruges a
@@ -24,7 +45,9 @@
             web app that can display the measurements.
           </p>
 
-          <p class="subtitle-1">
+          <p
+            class="subtitle-1"
+          >
             This project is completely open source. If you want
             to build your own sensor you can do this! Scroll down for finding out each
             component you need to build this project.
@@ -32,11 +55,20 @@
         </v-col>
       </v-row>
 
-      <p class="display-2">The final product</p>
+      <p
+        class="display-2"
+      >
+        The final product
+      </p>
 
       <v-row>
-        <v-col cols="12" sm="6">
-          <p class="body-1">
+        <v-col
+          cols="12"
+          sm="6"
+        >
+          <p
+            class="body-1"
+          >
             The end product not only works well, but is also beautiful. The
             sensor can remain outside when it rains because the material we have
             chosen allows this. The device charges using the solar panel. After
@@ -47,9 +79,17 @@
             material is listed below.
           </p>
         </v-col>
-        <v-col cols="12" sm="6">
-          <v-img src="../img/final_product.png" :aspect-ratio="16 / 9">
-            <div class="fill-height repeating-gradient" />
+        <v-col
+          cols="12"
+          sm="6"
+        >
+          <v-img
+            src="../img/final_product.png"
+            :aspect-ratio="16 / 9"
+          >
+            <div
+              class="fill-height repeating-gradient" 
+            /> <!-- Need to check this -->
           </v-img>
         </v-col>
       </v-row>
@@ -99,40 +139,72 @@
 
       <v-row>
         <v-col>
-          <p class="display-2">Extra information</p>
+          <p
+            class="display-2"
+          >
+            Extra information
+          </p>
 
-          <p class="body-1">
+          <p
+            class="body-1"
+          >
             This project is completely open-source. Feel free to build one yourself.
             Do not hesitate to give us feedback or improvements, we appreciate this
             very much.
           </p>
 
           <v-btn
-            href="https://www.youtube.com/watch?v=9fUpgn_STdc"
+            href="./BuildSensor"
             style="margin-bottom: 12px"
             target="_blank"
-          >Build your own sensor</v-btn>
-          <!-- need to change link -->
-
-          <p class="body-1">
+          >
+            Build your own sensor
+          </v-btn>
+          
+          <p
+            class="body-1"
+          >
             This website is made with vuetify, go checkout their
             website!
           </p>
 
-          <v-btn link="./BuildSensor" target="_blank">Visit Vuetify</v-btn>
+          <v-btn
+            link="https://vuetifyjs.com/en/"
+            target="_blank"
+          >
+            Visit Vuetify
+          </v-btn>
         </v-col>
       </v-row>
 
-      <p class="display-2">VIVES Brugge Station</p>
+      <p
+        class="display-2"
+      >
+        VIVES Brugge Station
+      </p>
 
       <v-row>
-        <v-col cols="12" sm="6">
-          <v-img src="../img/vives.jpg" :aspect-ratio="16 / 9">
-            <div class="fill-height repeating-gradient" />>
+        <v-col
+          cols="12"
+          sm="6"
+        >
+          <v-img
+            src="../img/vives.jpg"
+            :aspect-ratio="16 / 9"
+          >
+            <div
+              class="fill-height
+              repeating-gradient"
+            />
           </v-img>
         </v-col>
-        <v-col cols="12" sm="6">
-          <p class="body-1">
+        <v-col
+          cols="12"
+          sm="6"
+        >
+          <p
+            class="body-1"
+          >
             The VIVES Bruges technology campus is a stone's throw from the
             station. The courses that you can take there can use the most
             modern, high-tech facilities in the university landscape in
@@ -141,7 +213,9 @@
             city with age-old traditions, pleasant neighborhoods and ultramodern
             facilities.
           </p>
-          <p class="body-2">
+          <p
+            class="body-2"
+          >
             The campus in Bruges has a casual, personal atmosphere. The
             lecturers are easily approachable and you go out with students from
             other disciplines. In this way you learn to view life from many
@@ -150,20 +224,33 @@
             and live among the students. As a student you can always count on
             advice and guidance, on remedying problems or on reorientation.
           </p>
-          <p class="body-2">
+          <p
+            class="body-2"
+          >
             The VIVES technology campus is embedded in the KU Leuven buildings
             in Bruges. That way you will also come into contact with students
             from the university day in and day out.
           </p>
-          <v-btn href="https://www.vives.be/en" target="_blank">Visit VIVES</v-btn>
+          <v-btn
+            href="https://www.vives.be/en"
+            target="_blank"
+          >
+            Visit VIVES
+          </v-btn>
         </v-col>
       </v-row>
 
-      <p class="display-2">Our experiences</p>
+      <p
+        class="display-2"
+      >
+        Our experiences
+      </p>
 
       <v-row>
         <v-col>
-          <p class="body-1">
+          <p
+            class="body-1"
+          >
             Working on 1 project with 20 students? We thought this was never going
             to happen. At the beginning of the project, we did not progress as
             quickly, but this was to be expected. 2 weeks later we were weakening a

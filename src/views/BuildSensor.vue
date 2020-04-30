@@ -1,7 +1,7 @@
 <template>
   <v-app id="inspire">
     <v-container
-      style="width: 90%; margin-bottom: 20px; margin-top: 20px;" 
+      style="width: 90%; margin-bottom: 20px; margin-top: 20px;"
       fluid
     >
       <p class="display-3">
@@ -15,5 +15,4 @@
 export default {};
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
