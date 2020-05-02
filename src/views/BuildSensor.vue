@@ -4,9 +4,11 @@
       style="width: 90%; margin-bottom: 20px; margin-top: 20px;"
       fluid
     >
-      <p class="display-3">
+      <p 
+        class="display-3"
+      >
         Build your own sensor
-      </p>
+      </p> 
     </v-container>
   </v-app>
 </template>

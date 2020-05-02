@@ -5,28 +5,42 @@
       class="ma-auto"
       dark
     >
-      <v-header>Themes</v-header>
+      <v-header>
+        Themes
+      </v-header>
 
       <v-divider />
 
-      <v-list light>
+      <v-list 
+        light
+      >
         <v-list-item>
           <v-list-item-content>
-            <v-btn @click="lightTheme">
+            <v-btn
+              @click="lightTheme"
+            >
               Light
             </v-btn>
-            <v-list-item-subtitle>I need a little light to guide the way!</v-list-item-subtitle>
+            <v-list-item-subtitle>
+              I need a little light to guide the way!
+            </v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
       </v-list>
 
-      <v-list dark>
+      <v-list
+        dark
+      >
         <v-list-item>
           <v-list-item-content>
-            <v-btn @click="darkTheme">
+            <v-btn
+              @click="darkTheme"
+            >
               Dark
             </v-btn>
-            <v-list-item-subtitle>I like the dark side! It has cookies!</v-list-item-subtitle>
+            <v-list-item-subtitle>
+              I like the dark side! It has cookies!
+            </v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -36,26 +50,38 @@
       width="450"
       class="ma-auto"
     >
-      <v-header>Fonts</v-header>
+      <v-header>
+        Fonts
+      </v-header>
 
       <v-divider />
 
       <v-list>
         <v-list-item>
           <v-list-item-content>
-            <v-btn @click="bigFont">
+            <v-btn
+              @click="bigFont"
+            >
               big
             </v-btn>
-            <v-btn @click="biggerFont">
+            <v-btn
+              @click="biggerFont"
+            >
               little bigger
             </v-btn>
-            <v-btn @click="normalFont">
+            <v-btn
+              @click="normalFont"
+            >
               normal
             </v-btn>
-            <v-btn @click="smallerFont">
+            <v-btn
+              @click="smallerFont"
+            >
               little smaller
             </v-btn>
-            <v-btn @click="smallFont">
+            <v-btn
+              @click="smallFont"
+            >
               small
             </v-btn>
           </v-list-item-content>
