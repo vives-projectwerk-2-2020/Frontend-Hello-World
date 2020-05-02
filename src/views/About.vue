@@ -137,45 +137,6 @@
         </v-col>
       </v-row>-->
 
-      <v-row>
-        <v-col>
-          <p
-            class="display-2"
-          >
-            Extra information
-          </p>
-
-          <p
-            class="body-1"
-          >
-            This project is completely open-source. Feel free to build one yourself.
-            Do not hesitate to give us feedback or improvements, we appreciate this
-            very much.
-          </p>
-
-          <v-btn
-            href="./BuildSensor"
-            style="margin-bottom: 12px"
-          >
-            Build your own sensor
-          </v-btn>
-          
-          <p
-            class="body-1"
-          >
-            This website is made with vuetify, go checkout their
-            website!
-          </p>
-
-          <v-btn
-            link="https://vuetifyjs.com/en/"
-            target="_blank"
-          >
-            Visit Vuetify
-          </v-btn>
-        </v-col>
-      </v-row>
-
       <p
         class="display-2"
       >
@@ -235,6 +196,45 @@
             target="_blank"
           >
             Visit VIVES
+          </v-btn>
+        </v-col>
+      </v-row>
+
+      <v-row>
+        <v-col>
+          <p
+            class="display-2"
+          >
+            Extra information
+          </p>
+
+          <p
+            class="body-1"
+          >
+            This project is completely open-source. Feel free to build one yourself.
+            Do not hesitate to give us feedback or improvements, we appreciate this
+            very much.
+          </p>
+
+          <v-btn
+            href="./BuildSensor"
+            style="margin-bottom: 12px"
+          >
+            Build your own sensor
+          </v-btn>
+          
+          <p
+            class="body-1"
+          >
+            This website is made with vuetify, go checkout their
+            website!
+          </p>
+
+          <v-btn
+            href="https://vuetifyjs.com/en/"
+            target="_blank"
+          >
+            Visit Vuetify
           </v-btn>
         </v-col>
       </v-row>
