@@ -156,7 +156,6 @@
           <v-btn
             href="./BuildSensor"
             style="margin-bottom: 12px"
-            target="_blank"
           >
             Build your own sensor
           </v-btn>

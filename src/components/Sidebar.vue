@@ -43,7 +43,7 @@ export default {
       { title: 'About', route: '/about', icon: 'mdi-information-outline'},
       { title: 'Settings', route: '/settings', icon: 'mdi-wrench'},
       {title:'sensorpage', route:'/sensorpage', icon:'mdi-information-outline'},
-      {title:'BuildSensor', route:'/buildSensor', icon:'mdi-hammer-screwdriver'}
+      {title:'Build The Sensor Yourself', route:'/buildSensor', icon:'mdi-hammer-screwdriver'}
     ]
   }),
 
