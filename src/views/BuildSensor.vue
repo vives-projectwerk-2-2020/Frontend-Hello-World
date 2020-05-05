@@ -5,15 +5,25 @@
       fluid
     >
       <v-col>
-        <p class="display-3">Build your own sensor</p>
-        <p class="subtitle-1">
+        <p class="display-2">
+          Build your own sensor
+        </p>
+        <p
+          class="subtitle-2"
+          style="max-width: 400px; margin: auto"
+        >
           Do you want to build your own sensor? Than this is the right place to
           be!
         </p>
       </v-col>
       <v-col>
-        <p class="display-1">Components you need</p>
-        <p class="subtitle-2" style="max-width: 1080px; margin: auto">
+        <p class="display-1">
+          Components you need
+        </p>
+        <p
+          class="subtitle-2"
+          style="max-width: 980px; margin: auto"
+        >
           These are the components we used to make our sensor. Feel free to
           experiment and use your own components. If you want to build our
           sensor, you can click the 'BUY' buttons. The icons in the right corner
@@ -25,58 +35,116 @@
         <v-row>
           <v-col>
             <v-avatar color="teal">
-              <v-icon color="white">mdi-electron-framework</v-icon>
+              <v-icon color="white">
+                mdi-electron-framework
+              </v-icon>
             </v-avatar>
-            <p class="subtitle-1">Components</p>
+            <p
+              class="subtitle-2"
+              style="margin: 0px"
+            >
+              Components
+            </p>
           </v-col>
           <v-col>
             <v-avatar color="purple">
-              <v-icon color="white">mdi-developer-board</v-icon>
+              <v-icon color="white">
+                mdi-developer-board
+              </v-icon>
             </v-avatar>
-            <p class="subtitle-1">Boards</p>
+            <p
+              class="subtitle-2"
+              style="margin: 0px"
+            >
+              Boards
+            </p>
           </v-col>
           <v-col>
             <v-avatar color="red">
-              <v-icon color="white">mdi-flask-empty-outline</v-icon>
+              <v-icon color="white">
+                mdi-flask-empty-outline
+              </v-icon>
             </v-avatar>
-            <p class="subtitle-1">Extra icon</p>
+            <p
+              class="subtitle-2"
+              style="margin: 0px"
+            >
+              Extra icon
+            </p>
           </v-col>
         </v-row>
       </v-col>
 
       <v-row>
-        <v-col v-for="(item, i) in items" :key="i">
-          <v-card width="310" class="mx-auto" style="margin-right: 10px">
+        <v-col
+          v-for="(item, i) in items"
+          :key="i"
+        >
+          <v-card
+            width="310"
+            class="mx-auto"
+            style="margin-right: 10px"
+          >
             <v-list-item>
               <v-list-item-avatar :color="item.avatarColor">
-                <v-icon color="white" v-text="item.avatarIcon"></v-icon>
+                <v-icon
+                  color="white"
+                  v-text="item.avatarIcon"
+                />
               </v-list-item-avatar>
               <v-list-item-content>
                 <v-list-item-title
                   class="headline"
                   v-text="item.title"
-                ></v-list-item-title>
+                />
                 <v-list-item-subtitle
                   v-text="item.subTitle"
-                ></v-list-item-subtitle>
+                />
               </v-list-item-content>
             </v-list-item>
-            <v-img :src="item.img" height="220"></v-img>
-            <v-card-text v-text="item.text"></v-card-text>
+            <v-img
+              :src="item.img"
+              height="220"
+            />
+            <v-card-text v-text="item.text" />
             <v-card-actions>
-              <v-btn text color="blue" :href="item.link" target="_blank"
-                >Buy
+              <v-btn
+                text
+                color="blue"
+                :href="item.link"
+                target="_blank"
+              >
+                Buy
               </v-btn>
-              <v-btn text color="black" :href="item.gitLink" target="_blank">
+              <v-btn
+                text
+                color="black"
+                :href="item.gitLink"
+                target="_blank"
+              >
                 <v-icon>mdi-github</v-icon>git
               </v-btn>
-              <v-spacer></v-spacer>
-              <v-btn text tile @click="owned = !owned">
+              <v-spacer />
+              <v-btn
+                text
+                tile
+                @click="owned = !owned"
+              >
                 {{ owned ? "Bought" : "Need To Buy" }}
-                <v-icon v-show="owned" right color="teal">mdi-check</v-icon>
-                <v-icon v-show="!owned" right color="error"
-                  >mdi-window-close</v-icon
+                <v-icon
+                  v-show="owned"
+                  right
+                  color="teal"
                 >
+                  mdi-check
+                </v-icon>
+                <v-icon
+                  v-show="!owned"
+                  right
+                  color="error"
+                >
+                  mdi-window-close
+                </v-icon>
                 <!--Problem - All chards are changing together-->
               </v-btn>
             </v-card-actions>
