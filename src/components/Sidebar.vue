@@ -41,8 +41,9 @@ export default {
       { title: 'Sensor Charts', route: '/charts', icon: 'mdi-chart-areaspline'},
       { title: 'Live', route: '/live', icon: 'mdi-clock-check-outline'},
       { title: 'About', route: '/about', icon: 'mdi-information-outline'},
-      { title: 'Settings', route: '/settings', icon: 'mdi-wrench'},
-      {title:'sensorpage', route:'/sensorpage', icon:'mdi-information-outline'}
+      // { title: 'Settings', route: '/settings', icon: 'mdi-wrench'},
+      {title:'sensorpage', route:'/sensorpage', icon:'mdi-information-outline'},
+      {title:'Build The Sensor Yourself', route:'/buildSensor', icon:'mdi-hammer-screwdriver'}
     ]
   }),
 

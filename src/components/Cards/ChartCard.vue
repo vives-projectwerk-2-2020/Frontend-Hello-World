@@ -1,38 +1,42 @@
 <template>
   <card>
     <template slot="header">
-      <h4 v-if="$slots.title || title" class="card-title">
+      <h4
+        v-if="$slots.title || title"
+        class="card-title"
+      >
         <slot name="title">
-          {{title}}
+          {{ title }}
         </slot>
       </h4>
       <p class="card-category">
         <slot name="subTitle">
-          {{subTitle}}
+          {{ subTitle }}
         </slot>
       </p>
     </template>
     <div>
-      <div :id="chartId" class="ct-chart"></div>
+      <div
+        :id="chartId"
+        class="ct-chart"
+      />
       <div class="footer">
         <div class="chart-legend">
-          <slot name="legend"></slot>
+          <slot name="legend" />
         </div>
         <hr>
         <div class="stats">
-          <slot name="footer"></slot>
+          <slot name="footer" />
         </div>
-        <div class="pull-right">
-        </div>
+        <div class="pull-right" />
       </div>
     </div>
-
   </card>
 </template>
 <script>
 import Card from "./Card.vue";
 export default {
-  name: "chart-card",
+  name: "ChartCard",
   components: {
     Card
   },

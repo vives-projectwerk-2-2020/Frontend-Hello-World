@@ -3,7 +3,10 @@ import App from './App.vue'
 import vuetify from './plugins/vuetify'
 import router from './router'
 import LoadScript from 'vue-plugin-load-script';
- 
+import wb from "./registerServiceWorker";
+
+Vue.prototype.$workbox = wb;
+
 Vue.use(LoadScript)
 
 Vue.config.productionTip = false

@@ -4,8 +4,7 @@
     <v-container
       class="fill-height"
       fluid
-    >
-    </v-container>
+    />
   </div>
 </template>
 

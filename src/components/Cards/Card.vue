@@ -1,27 +1,46 @@
 <template>
   <div class="card">
-    <div class="card-image" v-if="$slots.image">
-      <slot name="image"></slot>
+    <div
+      class="card-image"
+      v-if="$slots.image"
+    >
+      <slot name="image" />
     </div>
-    <div class="card-header" v-if="$slots.header || title">
+    <div
+      class="card-header"
+      v-if="$slots.header || title"
+    >
       <slot name="header">
-        <h4 class="card-title">{{title}}</h4>
-        <p class="card-category" v-if="subTitle">{{subTitle}}</p>
+        <h4 class="card-title">
+          {{ title }}
+        </h4>
+        <p
+          class="card-category"
+          v-if="subTitle"
+        >
+          {{ subTitle }}
+        </p>
       </slot>
     </div>
-    <div class="card-body" v-if="$slots.default">
-      <slot></slot>
+    <div
+      class="card-body"
+      v-if="$slots.default"
+    >
+      <slot />
     </div>
-    <slot name="raw-content"></slot>
-    <div class="card-footer" v-if="$slots.footer">
+    <slot name="raw-content" />
+    <div
+      class="card-footer"
+      v-if="$slots.footer"
+    >
       <hr>
-      <slot name="footer"></slot>
+      <slot name="footer" />
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: "card",
+  name: "Card",
   props: {
     title: String,
     subTitle: String
