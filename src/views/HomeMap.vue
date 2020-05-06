@@ -45,7 +45,9 @@
 //import Vue from '../components/VueLayers.vue'
 import Vue from "vue";
 import VueLayers from "vuelayers";
+import $ from "jquery";
 import "vuelayers/lib/style.css"; // needs css-loader
+var featurelist = [];
 
 Vue.use(VueLayers);
 Vue.use(VueLayers, {
@@ -58,27 +60,37 @@ export default {
       center: [25.25135774256233, 45.39334701133322],
       selected: [],
       mapCursor: "default",
-      features: [
-        {
-          type: "Feature",
-          id: "marker",
-          properties: {},
-          geometry: {
-            type: "Point",
-            coordinates: [25.25135774256233, 45.39334701133322]
-          }
-        }
-      ]
+      features: featurelist //[
+      // {
+      //
+      //]
     };
   },
   mounted() {
-    setInterval(() => {
-      let feature = this.features[0];
-      feature.geometry.coordinates = [
-        feature.geometry.coordinates[0] + Math.random(),
-        feature.geometry.coordinates[1] + Math.random()
-      ];
-    }, 2000);
+    $.getJSON("http://develop.particula.devbitapp.be:8080/sensors", function(
+      data
+    ) {
+      console.log(data)
+      //data is the JSON string
+      for (var i = 0; i < data.length; i++) {
+        let feature = {
+          type: "Feature",
+          id: data[i].id,
+          geometry: {
+            type: "Point",
+            coordinates: [parseFloat(data[i].location.longitude), parseFloat(data[i].location.latitude)]
+          }
+        };
+        featurelist.push(feature);
+      }
+    });
+    // setInterval(() => {
+    //   let feature = this.features[0];
+    //   feature.geometry.coordinates = [
+    //     feature.geometry.coordinates[0] + Math.random(),
+    //     feature.geometry.coordinates[1] + Math.random()
+    //   ];
+    // }, 2000);
   },
   methods: {
     onMapPointerMove({ pixel }) {
