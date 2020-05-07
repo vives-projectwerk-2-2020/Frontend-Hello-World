@@ -54,7 +54,7 @@ const routes = [
     component: HomeMap
   },
   {
-    path: '/sensorpage',
+    path: '/sensorPage',
     name: 'sensorpage',
     component: SensorPage
   },
