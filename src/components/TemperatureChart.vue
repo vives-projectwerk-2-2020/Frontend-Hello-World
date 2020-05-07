@@ -47,7 +47,7 @@ export default {
     async getData() {
       await
         axios
-          .get("http://develop.particula.devbitapp.be/measurements/00A5B1070747C131?period=1sh&properties=temperature")
+          .get("https://develop.particula.devbitapp.be/measurements/00A5B1070747C131?period=1sh&properties=temperature")
           .then(response => (this.info = response));
         
 
