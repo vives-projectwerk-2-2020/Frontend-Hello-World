@@ -7,7 +7,7 @@ import Live from '../views/Live.vue'
 import Settings from '../views/Settings.vue'
 import ChartPage from '../views/ChartPage.vue'
 import HomeMap from '../views/HomeMap.vue'
-import sensorpage from '../views/sensorpage.vue'
+import SensorPage from '../views/SensorPage.vue'
 import BuildSensor from '../views/BuildSensor.vue'
 
 Vue.use(VueRouter)
@@ -56,7 +56,7 @@ const routes = [
   {
     path: '/sensorpage',
     name: 'sensorpage',
-    component: sensorpage
+    component: SensorPage
   },
   {
     path: '/buildSensor',
