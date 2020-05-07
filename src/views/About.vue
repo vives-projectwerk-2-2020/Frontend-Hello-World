@@ -235,7 +235,7 @@
       <v-row>
         <v-col style="padding-top: 0px">
           <p class="body-1">
-            Working on 1 project with 20 students? We thought this was never
+            Working on 1 project with 25 students? We thought this was never
             going to happen. At the beginning of the project, we did not
             progress as quickly, but this was to be expected. 2 weeks later we
             were weakening a bit. After that everyone has picked up.
