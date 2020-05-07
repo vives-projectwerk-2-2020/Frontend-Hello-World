@@ -49,7 +49,7 @@ export default {
     async getData() {
       await
         axios
-          .get("https://develop.particula.devbitapp.be/measurements/00A5B1070747C131?period=1h&properties=pressure")
+          .get("http://develop.particula.devbitapp.be/measurements/00A5B1070747C131?period=1h&properties=pressure")
           .then(response => (this.info = response));
         
         for(let i=0; i < Object.keys(this.info.data).length; i++) {
