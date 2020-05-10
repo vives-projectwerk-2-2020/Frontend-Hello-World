@@ -33,6 +33,7 @@
 <script>
 import axios from "axios";
 import SensorCharts from "../components/SensorCharts";
+import { VueSvgGauge } from "vue-svg-gauge";
 
 export default {
   name: "SensorPage",
