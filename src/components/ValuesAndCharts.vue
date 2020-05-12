@@ -1,45 +1,69 @@
 <template>
   <div>
-    <v-layout wrap>
-      <v-flex xs class="col-md-4" v-for="parameter in parameters" :key="parameter.title">
-        <v-card class="cardss">
-          <div :class="parameter.title">
-            <v-list-item three-line>
-              <v-list-item-content>
-                <v-list-item-title class="headline mb-1 text">{{ parameter.title }}</v-list-item-title>
-                <v-list-item-title class="headline mb-1 text">
-                  {{ parameter.value }}
-                  {{ parameter.unit }}
-                </v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-          </div>
-        </v-card>
-      </v-flex>
-    </v-layout>
-    <VueSvgGauge
-      class="meter"
-      :value="parameters[3].value"
-      :separator-step="10"
-      :min="0"
-      :max="100"
-      :gauge-color="[{ offset: 0, color: '#69e05c'},{ offset: 50, color: '#ef5201'}, { offset: 100, color: '#d93a35'}]"
-      :scale-interval="0.1"
-    >
-      <div class="inner-text">
-        <span>airquality</span>
+    <div class="top">
+      <div class="topLeft">
+        <div class="leftMeter">
+          <VueSvgGauge
+            class="meter"
+            :value="parameters[3].value"
+            :separator-step="10"
+            :min="0"
+            :max="100"
+            :gauge-color="[{ offset: 0, color: '#69e05c'},{ offset: 50, color: '#ef5201'}, { offset: 100, color: '#d93a35'}]"
+            :scale-interval="0.1"
+          >
+            <div class="inner-text">
+              <span>airquality</span>
+            </div>
+          </VueSvgGauge>
+        </div>
+        <div class="rightMeter">
+          <VueSvgGauge
+            class="meter"
+            :value="parameters[0].value"
+            :separator-step="5"
+            :min="0"
+            :max="50"
+            :gauge-color="[{ offset: 0, color: '#4169e1'},{ offset: 50, color: '#ef5201'}, { offset: 100, color: '#d93a35'}]"
+            :scale-interval="0.1"
+          >
+            <div class="inner-text">
+              <span>temperature</span>
+            </div>
+          </VueSvgGauge>
+        </div>
       </div>
-    </VueSvgGauge>
-
-    <v-content>
-      <v-container class="fill-height" fluid>
-        <v-row align="center" justify="center">
-          <v-container id="sensorpage">
-            <SensorCharts />
-          </v-container>
-        </v-row>
-      </v-container>
-    </v-content>
+      <div class="topRight">
+        <v-layout wrap>
+          <v-flex xs class="col-md-6" v-for="parameter in parameters" :key="parameter.title">
+            <v-card class="cardss">
+              <div :class="parameter.title">
+                <v-list-item three-line>
+                  <v-list-item-content>
+                    <v-list-item-title class="headline mb-1 text">{{ parameter.title }}</v-list-item-title>
+                    <v-list-item-title class="headline mb-1 text">
+                      {{ parameter.value }}
+                      {{ parameter.unit }}
+                    </v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+              </div>
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </div>
+    </div>
+    <div class="bottom">
+      <v-content>
+        <v-container class="fill-height" fluid>
+          <v-row align="center" justify="center">
+            <v-container id="sensorpage">
+              <SensorCharts />
+            </v-container>
+          </v-row>
+        </v-container>
+      </v-content>
+    </div>
   </div>
 </template>
 
@@ -100,10 +124,62 @@ export default {
 </script>
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
+.top {
+  display: table;
+  content: "";
+  clear: both;
+  border: 2px solid rgb(40, 40, 40, 0.4);
+  background-color: rgb(255, 254, 253);
+  width: 95%;
+  height: auto;
+  margin-left: 2.5%;
+  border-radius: 30px;
+}
+.topLeft {
+  display: table;
+  content: "";
+  clear: both;
+  float: left;
+  width: 50%;
+  height: auto;
+  border: 2px solid rgb(40, 40, 40, 0.4);
+  border-radius: 30px;
+  margin-left: 2.5%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+.bottom {
+  border: 2px solid rgb(40, 40, 40, 0.4);
+  background-color: rgb(255, 254, 253);
+  width: 95%;
+  height: auto;
+  margin-top: 2.5%;
+  margin-left: 2.5%;
+  margin-bottom: 5%;
+  border-radius: 30px;
+}
+
+.meter {
+  height: auto;
+  margin-top: 100px;
+}
+
+.leftMeter {
+  margin: 5% 30%;
+  margin-top: 0%;
+}
+.rightMeter {
+  margin: 5% 30%;
+}
+
 .cardss {
   width: 300px;
   height: 100px;
-  margin: 30px;
+  margin: 50px;
   display: inline-block;
 }
 
@@ -121,16 +197,10 @@ export default {
 }
 
 .humidity {
-  background-color: rgb(0, 68, 208, 0.4);
-  border: 10px;
-  border-color: black;
-  border-radius: 50px;
-  color: white;
+  background-color: white;
+  border: 2px solid rgb(0, 68, 208, 0.4);
+  color: rgb(0, 68, 208, 0.4);
   height: 100px;
-}
-
-.humidity:hover {
-  background-color: rgb(0, 68, 208, 0.7);
 }
 
 .pressure {
@@ -172,11 +242,6 @@ export default {
   color: white;
   height: 100px;
 }
-
-.text {
-  color: white;
-}
-
 .borders {
   border-width: 50px;
   border-color: black;
@@ -189,9 +254,5 @@ export default {
 
 span {
   max-width: 100px;
-}
-.meter {
-  height: 200px;
-  width: auto;
 }
 </style>
