@@ -17,6 +17,19 @@
         </v-card>
       </v-flex>
     </v-layout>
+    <VueSvgGauge
+      class="meter"
+      :value="parameters[3].value"
+      :separator-step="10"
+      :min="0"
+      :max="100"
+      :gauge-color="[{ offset: 0, color: '#69e05c'},{ offset: 50, color: '#ef5201'}, { offset: 100, color: '#d93a35'}]"
+      :scale-interval="0.1"
+    >
+      <div class="inner-text">
+        <span>airquality</span>
+      </div>
+    </VueSvgGauge>
 
     <v-content>
       <v-container class="fill-height" fluid>
@@ -33,11 +46,13 @@
 <script>
 import axios from "axios";
 import SensorCharts from "../components/SensorCharts";
+import { VueSvgGauge } from "vue-svg-gauge";
 
 export default {
   name: "SensorPage",
   components: {
-    SensorCharts
+    SensorCharts,
+    VueSvgGauge
   },
   data: () => ({
     info: {},
@@ -46,8 +61,8 @@ export default {
       { title: "temperature", value: undefined, unit: "°C" },
       { title: "humidity", value: undefined, unit: "%" },
       { title: "pressure", value: undefined, unit: "hPa" },
-      { title: "pm10", value: undefined, unit: "%" },
-      { title: "pm2_5", value: undefined, unit: "%" },
+      { title: "pm10", value: undefined, unit: "µm/m^3" },
+      { title: "pm2_5", value: undefined, unit: "µm/m^3" },
       { title: "timestamp", value: undefined, unit: "" }
     ]
   }),
@@ -165,5 +180,18 @@ export default {
 .borders {
   border-width: 50px;
   border-color: black;
+}
+.inner-text {
+  height: 100%;
+  width: auto;
+  margin-top: 70px;
+}
+
+span {
+  max-width: 100px;
+}
+.meter {
+  height: 200px;
+  width: auto;
 }
 </style>
