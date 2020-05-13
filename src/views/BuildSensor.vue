@@ -28,7 +28,7 @@
       <v-col>
         <v-row>
           <v-col>
-            <v-avatar color="teal">
+            <v-avatar color="red">
               <v-icon color="white">
                 mdi-electron-framework
               </v-icon>
@@ -48,13 +48,13 @@
             </p>
           </v-col>
           <v-col>
-            <v-avatar color="red">
+            <v-avatar color="teal">
               <v-icon color="white">
-                mdi-flask-empty-outline
+                mdi-sprout
               </v-icon>
             </v-avatar>
             <p class="subtitle-2" style="margin: 0px">
-              components
+              Self Made
             </p>
           </v-col>
         </v-row>
@@ -106,7 +106,7 @@ export default {
     owned: false,
     items: [
       {
-        avatarColor: "teal",
+        avatarColor: "red",
         avatarIcon: "mdi-electron-framework",
         title: "BME 208",
         subTitle: "Combo sensor",
@@ -127,10 +127,9 @@ export default {
         text:
           "The STM32 Nucleo board provides an affordable and flexible way for users to try out new ideas and build prototypes with any STM32 microcontroller line. Arduino™ Nano V3 connectivity support.",
         link: "https://os.mbed.com/platforms/ST-Nucleo-L432KC/",
-        gitLink: "",
       },
       {
-        avatarColor: "teal",
+        avatarColor: "red",
         avatarIcon: "mdi-electron-framework",
         title: "SDS 011",
         subTitle: "Particle sensor",
@@ -140,31 +139,29 @@ export default {
           "The SDS 011 Sensor is a quite recent Air Quality Sensor. It has opted for a size tradeoff allowing it to use a larger fan and with its size, it is probably one of the best sensor in terms of accuracy.",
         link:
           "https://csd-electronics.de/ICs/sensor/fijn-stof/Deeltjes-sensor-SDS011::12368.html",
-        gitLink: "",
       },
       {
-        avatarColor: "purple",
-        avatarIcon: "mdi-developer-board",
+        avatarColor: "teal",
+        avatarIcon: "mdi-sprout",
         title: "Prototype Board",
-        subTitle: "prototype Board",
+        subTitle: "Prototype board",
         img:
           "https://raw.githubusercontent.com/vives-projectwerk-2-2020/Prototype_Board_Niels/master/images/board_soldered.png",
         text:
           "This in our self-made prototype board, developped by Niels Vanhove. He's going to give some more explanation soon, but the board isn't redesigned yet. So we have to be a bit patient.",
-        link: "",
-        gitLink: "https://github.com/vives-projectwerk-2-2020/Prototype_Board_Niels",
+        gitLink:
+          "https://github.com/vives-projectwerk-2-2020/Prototype_Board_Niels",
       },
       {
-        avatarColor: "red",
-        avatarIcon: "mdi-flask-empty-outline",
-        title: "TEST",
-        subTitle: "this is a test",
+        avatarColor: "teal",
+        avatarIcon: "mdi-sprout",
+        title: "Antenna Board",
+        subTitle: "LoRaWAN board + Antenna",
         img:
-          "https://images.unsplash.com/photo-1523895665936-7bfe172b757d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
+          "https://raw.githubusercontent.com/vives-projectwerk-2-2020/LoRaWAN-antenna/master/img/Antenna_board.png",
         text:
-          "Hello, I'm testing here some cards. I hope it works well. I should see it in a moment I guess. I'm typing some more text beacouse why shouldn't I do that. I think this phrase is also very helpful.",
-        link: "https://www.youtube.com/watch?v=9fUpgn_STdc",
-        gitLink: "",
+          "This self-made antenna board, developped by Laura De Baets, has a PCB antenna that is suitable for a frequency around 868MHz. The RF95 module is suitable for ultra-long range spread spectrum communications.",
+        gitLink: "https://github.com/vives-projectwerk-2-2020/LoRaWAN-antenna",
       },
     ],
   }),
