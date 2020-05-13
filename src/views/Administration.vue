@@ -65,24 +65,30 @@
                 </v-toolbar>
                 <v-card-text>
                   <v-text-field
+                    v-model="username"
                     label="Username"
                     name="login"
                     type="text"
                   />
                   <v-text-field
+                    v-model="email"
                     label="Email"
                     name="email"
                     type="text"
                   />
                   <v-text-field
+                    v-model="password"
                     id="password"
                     label="Password"
                     name="password"
                     type="password"
                   />
                 </v-card-text>
+                <p>{{ responses }}</p>
                 <v-card-actions>
-                  <v-btn color="primary">
+                  <v-btn color="primary"
+                    @click.native="postAPI()"
+                  >
                     SIGN UP
                   </v-btn>
                 </v-card-actions>
@@ -96,8 +102,31 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
-};
+  username: "",
+  email: "",
+  password: "",
+  data(){
+    return{
+    responses: []
+    }
+  },
+  created: function()
+  {
+    this.postAPI();
+  },
+  methods: {
+    postAPI() {
+      axios.post(
+      "https://develop.particula.devbitapp.be/api/user/register?UserName=" + this.username + "&UserPassword=" + this.password + "&Email=" + this.email)
+      .then((response) => {
+        this.responses = response.data;
+      });
+    }
+  }
+}
 </script>
 
 <style scoped>
