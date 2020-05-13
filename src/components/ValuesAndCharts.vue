@@ -24,7 +24,7 @@
             :separator-step="5"
             :min="0"
             :max="50"
-            :gauge-color="[{ offset: 0, color: '#4169e1'},{ offset: 50, color: '#ef5201'}, { offset: 100, color: '#d93a35'}]"
+            :gauge-color="[{ offset: 0, color: '#4fc3f7'},{ offset: 50, color: '#FFFF00'}, { offset: 100, color: '#FFA500'}]"
             :scale-interval="0.1"
           >
             <div class="inner-text">
@@ -121,7 +121,7 @@ export default {
     }
   }
 };
-</script>
+</script> 
 
 <style>
 * {
@@ -177,7 +177,7 @@ export default {
 }
 
 .cardss {
-  width: 300px;
+  width: 75%;
   height: 100px;
   margin: 50px;
   display: inline-block;
