@@ -8,7 +8,10 @@
         <p class="display-2">
           Build your own sensor
         </p>
-        <p class="subtitle-2" style="max-width: 400px; margin: auto">
+        <p
+          class="subtitle-2"
+          style="max-width: 400px; margin: auto"
+        >
           Do you want to build your own sensor? Than this is the right place to
           be!
         </p>
@@ -17,7 +20,10 @@
         <p class="display-1">
           Components you need
         </p>
-        <p class="subtitle-2" style="max-width: 980px; margin: auto">
+        <p
+          class="subtitle-2"
+          style="max-width: 980px; margin: auto"
+        >
           These are the components we used to make our sensor. Feel free to
           experiment and use your own components. If you want to build our
           sensor, you can click the 'BUY' buttons. The icons in the right corner
@@ -28,13 +34,16 @@
       <v-col>
         <v-row>
           <v-col>
-            <v-avatar color="red">
+            <v-avatar color="teal">
               <v-icon color="white">
                 mdi-electron-framework
               </v-icon>
             </v-avatar>
-            <p class="subtitle-2" style="margin: 0px">
-              Sensors
+            <p
+              class="subtitle-2"
+              style="margin: 0px"
+            >
+              Components
             </p>
           </v-col>
           <v-col>
@@ -43,7 +52,10 @@
                 mdi-developer-board
               </v-icon>
             </v-avatar>
-            <p class="subtitle-2" style="margin: 0px">
+            <p
+              class="subtitle-2"
+              style="margin: 0px"
+            >
               Boards
             </p>
           </v-col>

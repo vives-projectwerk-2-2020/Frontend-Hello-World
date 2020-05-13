@@ -20,10 +20,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar
-      app
-      clipped-left
-    >
+    <v-app-bar>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title>Particula</v-toolbar-title>
     </v-app-bar>
@@ -36,16 +33,27 @@ export default {
   data: () => ({
     drawer: false,
     navigation: [
-      { title: 'Home', route: '/', icon: 'mdi-home'},
-      { title: 'Login/SignUp', route: '/login', icon: 'mdi-login'},
-      { title: 'Sensor Charts', route: '/charts', icon: 'mdi-chart-areaspline'},
-      { title: 'Live', route: '/live', icon: 'mdi-clock-check-outline'},
-      { title: 'About', route: '/about', icon: 'mdi-information-outline'},
+      { title: "Home", route: "/", icon: "mdi-home" },
+      { title: "Login/SignUp", route: "/login", icon: "mdi-login" },
+      // {
+      //   title: "Sensor Charts",
+      //   route: "/charts",
+      //   icon: "mdi-chart-areaspline"
+      // },
+      // { title: "Live", route: "/live", icon: "mdi-clock-check-outline" },
       // { title: 'Settings', route: '/settings', icon: 'mdi-wrench'},
-      {title:'sensorpage', route:'/sensorpage', icon:'mdi-information-outline'},
-      {title:'Build The Sensor Yourself', route:'/buildSensor', icon:'mdi-hammer-screwdriver'}
+      {
+        title: "sensorpage",
+        route: "/sensorpage",
+        icon: "mdi-chart-areaspline"
+      },
+      { title: "About", route: "/about", icon: "mdi-information-outline" },
+      {
+        title: "Build The Sensor Yourself",
+        route: "/buildSensor",
+        icon: "mdi-hammer-screwdriver"
+      }
     ]
-  }),
-
+  })
 };
 </script>
