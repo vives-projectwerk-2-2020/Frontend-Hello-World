@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="top">
+      <h1>Live Values</h1>
       <div class="topLeft">
         <div class="leftMeter">
           <VueSvgGauge
@@ -35,21 +36,36 @@
       </div>
       <div class="topRight">
         <v-layout wrap>
-          <v-flex xs 
-            class="col-md-6" 
-            v-for="parameter in parameters" :key="parameter.title
-          ">
+          <v-flex
+            v-for="parameter in parameters"
+            :key="parameter.title" 
+            xs
+            class="col-md-6"
+          >
             <v-card class="cardss">
               <div :class="parameter.title">
-                <v-list-item three-line>
-                  <v-list-item-content>
-                    <v-list-item-title class="headline mb-1 text">{{ parameter.title }}</v-list-item-title>
-                    <v-list-item-title class="headline mb-1 text">
-                      {{ parameter.value }}
-                      {{ parameter.unit }}
-                    </v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
+                <div class="cardLeft">
+                  <v-list-item three-line>
+                    <v-list-item-content>
+                      <v-list-item-title class="text">
+                        {{ parameter.title }}
+                      </v-list-item-title>
+                      <v-list-item-title class="text">
+                        {{ parameter.value }}
+                        {{ parameter.unit }}
+                      </v-list-item-title>
+                    </v-list-item-content>
+                  </v-list-item>
+                </div>
+                <div class="cardRight">
+                  <v-icon 
+                    size="300%" 
+                    class="icons"
+                    :color="parameter.color"
+                  > 
+                    {{ parameter.icon }}
+                  </v-icon>
+                </div>
               </div>
             </v-card>
           </v-flex>
@@ -57,6 +73,7 @@
       </div>
     </div>
     <div class="bottom">
+      <h1>Charts</h1>
       <v-content>
         <v-container class="fill-height" fluid>
           <v-row align="center" justify="center">
@@ -74,23 +91,24 @@
 import axios from "axios";
 import SensorCharts from "../components/SensorCharts";
 import { VueSvgGauge } from "vue-svg-gauge";
+import { mdiThermometer } from '@mdi/js';
 
 export default {
   name: "SensorPage",
   components: {
     SensorCharts,
-    VueSvgGauge
+    VueSvgGauge,
   },
   data: () => ({
     info: {},
     drawer: false,
     parameters: [
-      { title: "temperature", value: undefined, unit: "°C" },
-      { title: "humidity", value: undefined, unit: "%" },
-      { title: "pressure", value: undefined, unit: "hPa" },
-      { title: "pm10", value: undefined, unit: "µm/m^3" },
-      { title: "pm2_5", value: undefined, unit: "µm/m^3" },
-      { title: "timestamp", value: undefined, unit: "" }
+      {title: "temperature", value: undefined, unit: "°C", icon:"mdi-thermometer", color: "rgb(139, 0, 0, 0.4)" },
+      { title: "humidity", value: undefined, unit: "%", icon:"mdi-water-percent", color: "rgb(0, 68, 208, 0.4)"  },
+      { title: "pressure", value: undefined, unit: "hPa", icon:"mdi-arrow-collapse-down", color: "rgb(0, 153, 0, 0.4)" },
+      { title: "pm10", value: undefined, unit: "µm/m^3", icon:"mdi-google-circles-extended", color: "rgb(76, 0, 153, 0.4)"  },
+      { title: "pm2_5", value: undefined, unit: "µm/m^3", icon:"mdi-google-circles-extended", color: "rgb(204, 0, 204, 0.4)"   },
+      { title: "timestamp", value: undefined, unit: "", icon:"mdi-clock-outline", color: "rgb(255, 128, 0, 0.4)"}
     ]
   }),
   mounted() {
@@ -131,6 +149,24 @@ export default {
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: follana;
+  src: url(fonts/SIMPLIFICATypeface.ttf);
+}
+
+.text {
+  font-family: follana;
+  font-size: 150%;
+  font-weight: 40px;
+}
+
+h1 {
+  font-family: follana;
+  font-weight: 40px;
+  font-size: 300%;
+  margin-top: 2.5%;
+}
+
 .top {
   display: table;
   content: "";
@@ -141,6 +177,8 @@ export default {
   height: auto;
   margin-left: 2.5%;
   border-radius: 30px;
+  font-family: follana;
+  font-weight: 40px;
 }
 .topLeft {
   display: table;
@@ -184,6 +222,7 @@ export default {
   height: 100px;
   margin: 50px;
   display: inline-block;
+  text-align: left;
 }
 
 .temperature {
@@ -209,14 +248,14 @@ export default {
 
 .pm2_5 {
   background-color: white;
-  border: 2px solid rgb(76, 0, 153, 0.6);
+  border: 2px solid rgb(76, 0, 153, 0.4);
   color: rgb(76, 0, 153, 0.6);
   height: 100px;
 }
 
 .pm10 {
   background-color: white;
-  border: 2px solid rgb(204, 0, 204, 0.6);
+  border: 2px solid rgb(204, 0, 204, 0.4);
   color: rgb(204, 0, 204, 0.6);
   height: 100px;
 }
@@ -224,7 +263,7 @@ export default {
 .timestamp {
   height: 100px;
   background-color: white;
-  border: 2px solid rgb(255, 128, 0, 0.6);
+  border: 2px solid rgb(255, 128, 0, 0.4);
   color: rgb(255, 128, 0, 0.6);
   height: 100px;
 }
@@ -236,6 +275,14 @@ export default {
   height: 100%;
   width: auto;
   margin-top: 70px;
+}
+
+.cardLeft{
+  float:left;
+}
+
+.icons{
+  float: right;
 }
 
 span {
