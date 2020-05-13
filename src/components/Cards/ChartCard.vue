@@ -1,6 +1,6 @@
 <template>
   <card>
-    <template slot="header">
+    <template #header>
       <h4
         v-if="$slots.title || title"
         class="card-title"
@@ -78,6 +78,15 @@ export default {
       chartId: "no-id"
     };
   },
+  mounted() {
+    this.updateChartId();
+    // import('chartist').then((Chartist) => {
+    //   let ChartistLib = Chartist.default || Chartist ;
+    //   this.$nextTick(() => {
+    //     this.initChart(ChartistLib);
+    //   });
+    // });
+  },
   methods: {
     /***
      * Initializes the chart by merging the chart options sent via props and the default chart options
@@ -101,15 +110,6 @@ export default {
     getRandomInt(min, max) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
-  },
-  mounted() {
-    this.updateChartId();
-    import('chartist').then((Chartist) => {
-      let ChartistLib = Chartist.default || Chartist ;
-      this.$nextTick(() => {
-        this.initChart(ChartistLib);
-      });
-    });
   }
 };
 </script>

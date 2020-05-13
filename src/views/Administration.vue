@@ -77,8 +77,8 @@
                     type="text"
                   />
                   <v-text-field
-                    v-model="password"
                     id="password"
+                    v-model="password"
                     label="Password"
                     name="password"
                     type="password"
@@ -86,7 +86,8 @@
                 </v-card-text>
                 <p>{{ responses }}</p>
                 <v-card-actions>
-                  <v-btn color="primary"
+                  <v-btn
+                    color="primary"
                     @click.native="postAPI()"
                   >
                     SIGN UP

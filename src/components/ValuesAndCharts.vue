@@ -35,12 +35,19 @@
       </div>
       <div class="topRight">
         <v-layout wrap>
-          <v-flex xs class="col-md-6" v-for="parameter in parameters" :key="parameter.title">
+          <v-flex
+            v-for="parameter in parameters"
+            :key="parameter.title"
+            xs
+            class="col-md-6"
+          >
             <v-card class="cardss">
               <div :class="parameter.title">
                 <v-list-item three-line>
                   <v-list-item-content>
-                    <v-list-item-title class="headline mb-1 text">{{ parameter.title }}</v-list-item-title>
+                    <v-list-item-title class="headline mb-1 text">
+                      {{ parameter.title }}
+                    </v-list-item-title>
                     <v-list-item-title class="headline mb-1 text">
                       {{ parameter.value }}
                       {{ parameter.unit }}
@@ -55,8 +62,14 @@
     </div>
     <div class="bottom">
       <v-content>
-        <v-container class="fill-height" fluid>
-          <v-row align="center" justify="center">
+        <v-container
+          class="fill-height"
+          fluid
+        >
+          <v-row
+            align="center"
+            justify="center"
+          >
             <v-container id="sensorpage">
               <SensorCharts />
             </v-container>

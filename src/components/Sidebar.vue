@@ -1,8 +1,16 @@
 <template>
   <div>
-    <v-navigation-drawer v-model="drawer" app temporary>
+    <v-navigation-drawer
+      v-model="drawer"
+      app
+      temporary
+    >
       <v-list dense>
-        <v-list-item v-for="item in navigation" :key="item.title" :to="item.route">
+        <v-list-item
+          v-for="item in navigation"
+          :key="item.title"
+          :to="item.route"
+        >
           <v-list-item-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-action>
@@ -12,7 +20,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar app clipped-left>
+    <v-app-bar>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title>Particula</v-toolbar-title>
     </v-app-bar>

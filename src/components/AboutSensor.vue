@@ -217,7 +217,6 @@
             <v-btn
               class="back"
               color="#FFFFFF"
-              @click="back"
               text
             >
               Back to sensorpage

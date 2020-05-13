@@ -1,11 +1,9 @@
 <template>
-  <div id="app">
-    <v-app id="inspire">
-      <Sidebar />
-      <router-view />
-      <Footer />
-    </v-app>
-  </div>
+  <v-app>
+    <Sidebar />
+    <router-view />
+    <Footer />
+  </v-app>
 </template>
 
 <script>
