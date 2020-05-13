@@ -75,8 +75,14 @@
     <div class="bottom">
       <h1>Charts</h1>
       <v-content>
-        <v-container class="fill-height" fluid>
-          <v-row align="center" justify="center">
+        <v-container
+          class="fill-height" 
+          fluid
+        >
+          <v-row 
+            align="center" 
+            justify="center"
+          >
             <v-container id="sensorpage">
               <SensorCharts />
             </v-container>
