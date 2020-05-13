@@ -47,12 +47,13 @@ export default {
     async getData() {
       await
         axios
-          .get("https://virtserver.swaggerhub.com/sillevl/Particula/0.1/measurements/3fa85f64-5717-4562-b3fc-2c963f66afa6?period=24h&properties=pm10")
+          .get("https://develop.particula.devbitapp.be/measurements/bc41aa7d-9443-11ea-883d-02420a010064?period=24h&properties=temperature")
           .then(response => (this.info = response));
         
+
         for(let i=0; i < Object.keys(this.info.data).length; i++) {
           this.chartdata.datasets[0].data.push(this.info.data[i].temperature)
-          this.chartdata.labels.push( this.info.data[i].timestamp )
+          this.chartdata.labels.push( this.info.data[i].time )
         }
       this.loaded = true
     }
