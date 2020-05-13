@@ -35,7 +35,10 @@
       </div>
       <div class="topRight">
         <v-layout wrap>
-          <v-flex xs class="col-md-6" v-for="parameter in parameters" :key="parameter.title">
+          <v-flex xs 
+            class="col-md-6" 
+            v-for="parameter in parameters" :key="parameter.title
+          ">
             <v-card class="cardss">
               <div :class="parameter.title">
                 <v-list-item three-line>
@@ -184,16 +187,10 @@ export default {
 }
 
 .temperature {
-  background-color: rgb(139, 0, 0, 0.4);
-  border-width: 10px;
-  border-color: black;
-  border-radius: 50px;
-  color: white;
+  background-color: white;
+  border: 2px solid rgb(139, 0, 0, 0.4);
+  color: rgb(139, 0, 0, 0.4);
   height: 100px;
-}
-
-.temperature:hover {
-  background-color: rgb(139, 0, 0, 0.7);
 }
 
 .humidity {
@@ -204,42 +201,31 @@ export default {
 }
 
 .pressure {
-  background-color: rgb(0, 153, 0, 0.4);
-  border-width: 10px;
-  border-color: black;
-  border-radius: 50px;
-  color: white;
+  background-color: white;
+  border: 2px solid rgb(0, 153, 0, 0.4);
+  color: rgb(0, 153, 0, 0.4);
   height: 100px;
 }
 
-.pressure:hover {
-  background-color: rgb(0, 153, 0, 0.7);
-}
-
 .pm2_5 {
-  background-color: rgb(76, 0, 153, 0.6);
-  border-width: 10px;
-  border-color: black;
-  border-radius: 50px;
-  color: white;
+  background-color: white;
+  border: 2px solid rgb(76, 0, 153, 0.6);
+  color: rgb(76, 0, 153, 0.6);
   height: 100px;
 }
 
 .pm10 {
-  background-color: rgb(204, 0, 204, 0.6);
-  border-width: 10px;
-  border-color: black;
-  border-radius: 50px;
-  color: white;
+  background-color: white;
+  border: 2px solid rgb(204, 0, 204, 0.6);
+  color: rgb(204, 0, 204, 0.6);
   height: 100px;
 }
 
 .timestamp {
-  background-color: rgb(255, 128, 0, 0.6);
-  border-width: 400px;
-  border-color: black;
-  border-radius: 50px;
-  color: white;
+  height: 100px;
+  background-color: white;
+  border: 2px solid rgb(255, 128, 0, 0.6);
+  color: rgb(255, 128, 0, 0.6);
   height: 100px;
 }
 .borders {
