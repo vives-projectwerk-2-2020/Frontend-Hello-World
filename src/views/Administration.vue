@@ -77,7 +77,7 @@
                     type="text"
                   />
                   <v-text-field
-                    v-model="passwor"
+                    v-model="password"
                     id="password"
                     label="Password"
                     name="password"
@@ -107,7 +107,7 @@ import axios from "axios";
 export default {
   username: "",
   email: "",
-  passwor: "",
+  password: "",
   data(){
     return{
     responses: []
@@ -120,7 +120,7 @@ export default {
   methods: {
     postAPI() {
       axios.post(
-      "https://develop.particula.devbitapp.be/api/user/register?UserName=" + this.username + "&UserPassword=" + this.passwor + "&Email=" + this.email)
+      "https://develop.particula.devbitapp.be/api/user/register?UserName=" + this.username + "&UserPassword=" + this.password + "&Email=" + this.email)
       .then((response) => {
         this.responses = response.data;
       });
