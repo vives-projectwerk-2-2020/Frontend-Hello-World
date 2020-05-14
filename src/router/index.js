@@ -8,6 +8,7 @@ import Settings from '../views/Settings.vue'
 import ChartPage from '../views/ChartPage.vue'
 import HomeMap from '../views/HomeMap.vue'
 import sensorpage from '../views/sensorpage.vue'
+import sensors from '../views/Sensors.vue'
 
 Vue.use(VueRouter)
 
@@ -54,9 +55,15 @@ const routes = [
     component: HomeMap
   },
   {
-    path: '/sensorpage',
-    name: 'sensorpage',
+    path: '/sensor/:guid',
+    name: 'sensor',
+    props: true,
     component: sensorpage
+  },
+  {
+    path: '/sensors',
+    name: 'sensors',
+    component: sensors
   }
 ]
 
