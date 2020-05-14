@@ -1,8 +1,26 @@
 <template>
   <div>
     <div>
-      <v-btn rounded color="primary" dark class="button" @click="toSensorInfo">sensor info</v-btn>
-      <v-btn rounded color="warning" dark class="button" @click="toValues">live values</v-btn>
+      <v-btn 
+        rounded
+        dark 
+        class="button" 
+        :style="{
+          sensorInfoActive : sensorInfoActive ? 'black !important' : '',
+          color: sensorInfoActive ? 'white !important' : 'black'}"
+        @click="toSensorInfo" 
+      >
+        sensor info
+      </v-btn>
+      <v-btn 
+        rounded 
+        color="warning" 
+        dark 
+        class="button" 
+        @click="toValues"
+      >
+        live values
+      </v-btn>
     </div>
     <valuesAndCharts v-show="liveValuesActive" />
     <AboutSensor v-show="sensorInfoActive" />
