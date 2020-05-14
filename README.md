@@ -83,6 +83,12 @@ This page gives information about the Particula project.
 
 ![Login/registration page](./src/img/About.png)
 
+### Build your own sensor
+
+This page gives information about the used components in the Particula project.
+
+![Login/registration page](./src/img/BuildYourOwnSensor.png)
+
 ## Components
 
 ### AboutSensor
