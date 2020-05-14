@@ -165,6 +165,9 @@ export default {
   font-size: 150%;
   font-weight:300px;
 }
+.smalltext{
+  font-size:110%
+}
 
 h1 {
   font-family: follana;
