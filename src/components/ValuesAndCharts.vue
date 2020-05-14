@@ -285,13 +285,6 @@ h1 {
   width: auto;
   margin-top: 70px;
 }
-<<<<<<< HEAD
-/* Don't do this. Buttons met more than 12 chars won't fit anymore. 
-span {
-  max-width: 100px;
-}
-*/
-=======
 
 .cardLeft{
   float:left;
@@ -301,8 +294,8 @@ span {
   float: right;
 }
 
+/* DONT DO THIS! IT BREAKS THE BUTTONS ON OTHER PAGES!
 span {
   max-width: 100px;
-}
->>>>>>> bd0e75ff1d3577533b8fa9a7484f4bff619a80e4
+} */
 </style>

@@ -55,11 +55,6 @@ const routes = [
     component: HomeMap
   },
   {
-    path: '/sensorpage',
-    name: 'sensorpage',
-    component: sensorpage
-  },
-  {
     path: '/sensorPage',
     name: 'sensorpage',
     component: SensorPage
