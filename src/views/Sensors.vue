@@ -6,10 +6,7 @@
     <v-row
       class="mb-6"
     >
-      <v-col
-        v-for="sensor in sensors"
-        v-bind:key="sensor.guid"
-      >
+      <v-col>
         <SensorCard 
           v-for="sensor in sensors"
           id="sensorCard"
