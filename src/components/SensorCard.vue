@@ -13,13 +13,13 @@
       <b> City : </b> <p>{{ location.city }}</p>
     </v-card-text>
     <v-card-actions>
-        <v-btn
-          text
-          color="deep-purple accent-4"
-          :to="{ path: `/sensorPage/${guid}` }"
-        >
-            More Info...
-        </v-btn>
+      <v-btn
+        text
+        color="deep-purple accent-4"
+        :to="{ path: `/sensorPage/${guid}` }"
+      >
+        More Info...
+      </v-btn>
     </v-card-actions>
   </v-card>
 </template>
