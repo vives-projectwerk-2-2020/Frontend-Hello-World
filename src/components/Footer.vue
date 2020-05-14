@@ -1,5 +1,7 @@
 <template>
   <v-footer app>
-    <span>&copy; Particula 2020</span>
+    <v-container>
+          <span>&copy; Particula 2020</span>
+    </v-container>
   </v-footer>
 </template>

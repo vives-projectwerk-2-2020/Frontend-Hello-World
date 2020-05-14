@@ -3,24 +3,9 @@
     <TemperatureChart v-show="showTemperature" />
     <HumidityChart v-show="showHumidity" />
     <PressureChart v-show="showPressure" />
-    <v-btn
-      class="temp"
-      @click="showTemperatureChart"
-    >
-      temperature
-    </v-btn>
-    <v-btn
-      class="humid"
-      @click="showHumidityChart"
-    >
-      humidity
-    </v-btn>
-    <v-btn
-      class="press"
-      @click="showPressureChart"
-    >
-      Pressure
-    </v-btn>
+    <v-btn @click="showTemperatureChart" class="temp">temperature</v-btn>
+    <v-btn @click="showHumidityChart" class="humid">humidity</v-btn>
+    <v-btn @click="showPressureChart" class="press">Pressure</v-btn>
   </div>
 </template>
 
