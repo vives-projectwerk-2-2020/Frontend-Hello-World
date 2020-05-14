@@ -29,15 +29,16 @@
                     type="text"
                   />
                   <v-text-field
-                    v-model="password"
                     id="password"
+                    v-model="password"
                     label="Password"
                     name="password"
                     type="password"
                   />
                 </v-card-text>
                 <v-card-actions>
-                  <v-btn color="primary"
+                  <v-btn
+                    color="primary"
                     @click="login()"
                   >
                     Login
@@ -49,7 +50,7 @@
                     right
                     color="deep-blue accent-4"
                   >
-                  Forgot Password?
+                    Forgot Password?
                   </v-btn>
                 </v-card-actions>
               </v-card>
@@ -93,7 +94,8 @@
                 </v-card-text>
                 <p>{{ registrationReturn }}</p>
                 <v-card-actions>
-                  <v-btn color="primary"
+                  <v-btn
+                    color="primary"
                     @click="register()"
                   >
                     SIGN UP

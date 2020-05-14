@@ -1,6 +1,10 @@
 <template>
   <v-app id="inspire">
-    <v-container class="my-5" style="width: 90%" fluid>
+    <v-container
+      class="my-5"
+      style="width: 90%"
+      fluid
+    >
       <p class="display-2 text-center">
         Build your own sensor
       </p>
@@ -64,11 +68,20 @@
       </v-col>
 
       <v-row>
-        <v-col v-for="(item, i) in items" :key="i">
-          <v-card width="310" class="mx-auto">
+        <v-col
+          v-for="(item, i) in items"
+          :key="i"
+        >
+          <v-card
+            width="310"
+            class="mx-auto"
+          >
             <v-list-item>
               <v-list-item-avatar :color="item.avatarColor">
-                <v-icon color="white" v-text="item.avatarIcon" />
+                <v-icon
+                  color="white"
+                  v-text="item.avatarIcon"
+                />
               </v-list-item-avatar>
               <v-list-item-content>
                 <v-list-item-title
@@ -81,22 +94,50 @@
                 />
               </v-list-item-content>
             </v-list-item>
-            <v-img :src="item.img" height="220" />
-            <v-card-text class="text-center pb-0" v-text="item.text" />
+            <v-img
+              :src="item.img"
+              height="220"
+            />
+            <v-card-text
+              class="text-center pb-0"
+              v-text="item.text"
+            />
             <v-card-actions>
-              <v-btn text color="blue" :href="item.link" target="_blank">
+              <v-btn
+                text
+                color="blue"
+                :href="item.link"
+                target="_blank"
+              >
                 Buy
               </v-btn>
-              <v-btn text color="black" :href="item.gitLink" target="_blank">
+              <v-btn
+                text
+                color="black"
+                :href="item.gitLink"
+                target="_blank"
+              >
                 <v-icon>mdi-github</v-icon>git
               </v-btn>
               <v-spacer />
-              <v-btn text tile @click="owned = !owned">
+              <v-btn
+                text
+                tile
+                @click="owned = !owned"
+              >
                 {{ owned ? "Bought" : "Need To Buy" }}
-                <v-icon v-show="owned" right color="teal">
+                <v-icon
+                  v-show="owned"
+                  right
+                  color="teal"
+                >
                   mdi-check
                 </v-icon>
-                <v-icon v-show="!owned" right color="error">
+                <v-icon
+                  v-show="!owned"
+                  right
+                  color="error"
+                >
                   mdi-window-close
                 </v-icon>
                 <!--Problem - All chards are changing together-->
