@@ -1,15 +1,13 @@
 <template>
   <v-app id="inspire">
-    <v-container
-      style="width: 90%; margin-bottom: 20px; margin-top: 20px;"
-      fluid
-    >
+    <v-container class="my-5" style="width: 90%" fluid>
+      <!-- Nog aanpassen, style moet weg (class mss ook als de footer werkt) -->
+      <p class="display-2 text-center">
+        Build your own sensor
+      </p>
       <v-col>
-        <p class="display-2">
-          Build your own sensor
-        </p>
         <p
-          class="subtitle-2"
+          class="subtitle-2 text-center"
           style="max-width: 400px; margin: auto"
         >
           Do you want to build your own sensor? Than this is the right place to
@@ -17,11 +15,11 @@
         </p>
       </v-col>
       <v-col>
-        <p class="display-1">
+        <p class="display-1 text-center">
           Components you need
         </p>
         <p
-          class="subtitle-2"
+          class="subtitle-2 text-center"
           style="max-width: 980px; margin: auto"
         >
           These are the components we used to make our sensor. Feel free to
@@ -32,17 +30,14 @@
         </p>
       </v-col>
       <v-col>
-        <v-row>
+        <v-row class="text-center">
           <v-col>
             <v-avatar color="teal">
               <v-icon color="white">
                 mdi-electron-framework
               </v-icon>
             </v-avatar>
-            <p
-              class="subtitle-2"
-              style="margin: 0px"
-            >
+            <p class="subtitle-2" style="margin: 0px">
               Components
             </p>
           </v-col>
@@ -52,10 +47,7 @@
                 mdi-developer-board
               </v-icon>
             </v-avatar>
-            <p
-              class="subtitle-2"
-              style="margin: 0px"
-            >
+            <p class="subtitle-2" style="margin: 0px">
               Boards
             </p>
           </v-col>
@@ -80,12 +72,18 @@
                 <v-icon color="white" v-text="item.avatarIcon" />
               </v-list-item-avatar>
               <v-list-item-content>
-                <v-list-item-title class="headline" v-text="item.title" />
-                <v-list-item-subtitle v-text="item.subTitle" />
+                <v-list-item-title
+                  class="headline text-center"
+                  v-text="item.title"
+                />
+                <v-list-item-subtitle
+                  class="text-center"
+                  v-text="item.subTitle"
+                />
               </v-list-item-content>
             </v-list-item>
             <v-img :src="item.img" height="220" />
-            <v-card-text v-text="item.text" style="padding-bottom: 0px" />
+            <v-card-text class="text-center" v-text="item.text" style="padding-bottom: 0px" />
             <v-card-actions>
               <v-btn text color="blue" :href="item.link" target="_blank">
                 Buy

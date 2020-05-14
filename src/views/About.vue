@@ -1,9 +1,8 @@
 <template>
   <v-app id="inspire">
     <v-container class="my-5" style="width: 90%" fluid>
-      <!-- Nog aanpassen, style moet weg (class mss ook als de footer werkt) -->
       <p class="display-2 text-center">
-        About the Project
+        About the project
       </p>
 
       <v-row>
@@ -89,9 +88,11 @@
             in Bruges. That way you will also come into contact with students
             from the university day in and day out.
           </p>
-          <v-btn href="https://www.vives.be/en" target="_blank">
-            Visit VIVES
-          </v-btn>
+          <v-container class="pa-0" text-center>
+            <v-btn href="https://www.vives.be/en" target="_blank"
+              >Visit VIVES
+            </v-btn>
+          </v-container>
         </v-col>
       </v-row>
 
@@ -106,18 +107,20 @@
             yourself. Do not hesitate to give us feedback or improvements, we
             appreciate this very much.
           </p>
-
-          <v-btn class="mb-3" href="./BuildSensor">
-            Build your own sensor
-          </v-btn>
+          <v-container class="pa-0" text-center>
+            <v-btn class="mb-3" href="./BuildSensor">
+              Buildyour own sensor
+            </v-btn>
+          </v-container>
 
           <p class="body-1 text-center">
             This website is made with vuetify, go checkout their website!
           </p>
-
-          <v-btn href="https://vuetifyjs.com/en/" target="_blank">
-            Visit Vuetify
-          </v-btn>
+          <v-container class="pa-0" text-center>
+            <v-btn href="https://vuetifyjs.com/en/" target="_blank">
+              Visit Vuetify
+            </v-btn>
+          </v-container>
         </v-col>
       </v-row>
 
