@@ -47,10 +47,10 @@
                 <div class="cardLeft">
                   <v-list-item three-line>
                     <v-list-item-content>
-                      <v-list-item-title class="text">
+                      <v-list-item-title class="bigtext">
                         {{ parameter.title }}
                       </v-list-item-title>
-                      <v-list-item-title class="text">
+                      <v-list-item-title class="smalltext">
                         {{ parameter.value }}
                         {{ parameter.unit }}
                       </v-list-item-title>
@@ -160,10 +160,13 @@ export default {
   src: url(fonts/SIMPLIFICATypeface.ttf);
 }
 
-.text {
+.bigtext {
   font-family: follana;
   font-size: 150%;
-  font-weight: 40px;
+  font-weight:300px;
+}
+.smalltext{
+  font-size:110%
 }
 
 h1 {
