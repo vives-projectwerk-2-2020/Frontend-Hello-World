@@ -11,13 +11,13 @@
         v-bind:key="sensor.guid"
       >
         <SensorCard 
-          id="sensorCard"
           v-for="sensor in sensors"
-          v-bind:key="sensor.guid"
-          v-bind:guid="sensor.guid"
-          v-bind:name="sensor.name"
-          v-bind:description="sensor.description"
-          v-bind:location="sensor.location"
+          id="sensorCard"
+          :key="sensor.guid"
+          :guid="sensor.guid"
+          :name="sensor.name"
+          :description="sensor.description"
+          :location="sensor.location"
 
           tile
           outlined
