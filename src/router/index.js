@@ -10,6 +10,7 @@ import HomeMap from '../views/HomeMap.vue'
 import SensorPage from '../views/SensorPage.vue'
 import BuildSensor from '../views/BuildSensor.vue'
 import Profile from '../views/Profile.vue'
+import Sensors from '../views/Sensors.vue'
 
 Vue.use(VueRouter)
 
@@ -68,6 +69,12 @@ const routes = [
     path: '/profile',
     name: 'profile',
     component: Profile
+  }
+  ,
+  {
+    path: '/sensors',
+    name: 'sensors',
+    component: Sensors
   }
 ]
 
