@@ -137,7 +137,7 @@ export default {
           this.parameters[2].value = info.pressure;
           this.parameters[3].value = info.pm10;
           this.parameters[4].value = info.pm2_5;
-          this.parameters[5].value = info.timestamp;
+          this.parameters[5].value = info.timestamp.slice(0,10) + " / " + info.timestamp.slice(11,16);
         });
     },
     intervalFetchData: function() {
@@ -162,11 +162,11 @@ export default {
 
 .bigtext {
   font-family: follana;
-  font-size: 150%;
+  font-size: 200%;
   font-weight:300px;
 }
 .smalltext{
-  font-size:110%
+  font-size:150%
 }
 
 h1 {
@@ -227,7 +227,7 @@ h1 {
 }
 
 .cardss {
-  width: 75%;
+  width: 80%;
   height: 100px;
   margin: 50px;
   display: inline-block;
