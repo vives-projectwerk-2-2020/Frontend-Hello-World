@@ -64,14 +64,7 @@ export default {
   data: () => ({
     info: {},
     drawer: false,
-    parameters: [
-      { title: 'temperature', value: undefined, unit:"°C"},
-      { title: 'humidity', value: undefined, unit:"%"},
-      { title: 'pressure', value: undefined, unit:"hPa" },
-      { title: 'pm10', value: undefined, unit:"%"},
-      { title: 'pm2_5', value: undefined, unit:"%"},
-      { title: 'timestamp', value: undefined, unit:""}
-    ]
+    parameters: []
    
   }),
   mounted() {
@@ -83,19 +76,11 @@ export default {
       // TODO Use websocket / MQTT instead !!
       axios
         .get(
-          "https://virtserver.swaggerhub.com/sillevl/Particula/0.1/measurements/3fa85f64-5717-4562-b3fc-2c963f66afa6?period=24h&properties=pm10",
-          { headers: { 'Access-Control-Allow-Origin': '*',} } )
+          "https://develop.particula.devbitapp.be/..."
+        )
         .then(response => {
-           const info = response.data[0] 
-
-           this.parameters[0].value= info.temperature
-           this.parameters[1].value = info.humidity
-           this.parameters[2].value = info.pressure
-           this.parameters[3].value = info.pm10
-           this.parameters[4].value = info.pm2_5
-           this.parameters[5].value = info.timestamp
-
-           })
+          this.parameters = response.data
+        })
     },
     intervalFetchData: function() {
       // TODO Use websocket / MQTT instead !!
