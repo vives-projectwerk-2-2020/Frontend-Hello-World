@@ -9,6 +9,7 @@ import ChartPage from '../views/ChartPage.vue'
 import HomeMap from '../views/HomeMap.vue'
 import SensorPage from '../views/SensorPage.vue'
 import BuildSensor from '../views/BuildSensor.vue'
+import Profile from '../views/Profile.vue'
 
 Vue.use(VueRouter)
 
@@ -53,11 +54,6 @@ const routes = [
     name: 'homeMap',
     component: HomeMap
   },
-  // {
-  //   path: '/sensorpage',
-  //   name: 'sensorpage',
-  //   component: sensorpage
-  // },
   {
     path: '/sensorPage',
     name: 'sensorpage',
@@ -67,6 +63,11 @@ const routes = [
     path: '/buildSensor',
     name: 'buildSensor',
     component: BuildSensor
+  },
+  {
+    path: '/profile',
+    name: 'profile',
+    component: Profile
   }
 ]
 

@@ -1,20 +1,22 @@
 <template>
   <div>
     <div>
-      <v-btn
+      <v-btn 
         rounded
-        color="primary"
-        dark
-        class="button"
-        @click="toSensorInfo"
+        dark 
+        class="button" 
+        :style="{
+          backgroundColor: sensorInfoActive ? 'rgb(0, 68, 208) !important' : 'rgb(0, 68, 208, 0.5)'}"
+        @click="toSensorInfo" 
       >
         sensor info
       </v-btn>
-      <v-btn
-        rounded
-        color="warning"
-        dark
-        class="button"
+      <v-btn 
+        rounded 
+        dark 
+        class="button" 
+        :style="{
+          backgroundColor: liveValuesActive ? 'rgb(255, 128, 0) !important' : 'rgb(255, 128, 0, 0.5)'}"
         @click="toValues"
       >
         live values
@@ -64,7 +66,6 @@ export default {
   margin-top: 70px;
   margin-right: 20px;
   margin-bottom: 30px;
-  opacity: 50%;
 }
 
 .button:hover {
