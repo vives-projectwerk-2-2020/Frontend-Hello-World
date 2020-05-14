@@ -1,14 +1,13 @@
 <template>
   <v-app id="inspire">
     <v-container class="my-5" style="width: 90%" fluid>
-      <!-- Nog aanpassen, style moet weg (class mss ook als de footer werkt) -->
       <p class="display-2 text-center">
         Build your own sensor
       </p>
-      <v-col>
+      <v-col class="pt-0">
         <p
-          class="subtitle-2 text-center"
-          style="max-width: 400px; margin: auto"
+          class="subtitle-2 ma-auto text-center"
+          style="max-width: 400px"
         >
           Do you want to build your own sensor? Than this is the right place to
           be!
@@ -19,8 +18,8 @@
           Components you need
         </p>
         <p
-          class="subtitle-2 text-center"
-          style="max-width: 980px; margin: auto"
+          class="subtitle-2 text-center ma-auto"
+          style="max-width: 980px"
         >
           These are the components we used to make our sensor. Feel free to
           experiment and use your own components. If you want to build our
@@ -29,7 +28,7 @@
           need to buy.
         </p>
       </v-col>
-      <v-col>
+      <v-col class="pt-0">
         <v-row class="text-center">
           <v-col>
             <v-avatar color="teal">
@@ -37,7 +36,7 @@
                 mdi-electron-framework
               </v-icon>
             </v-avatar>
-            <p class="subtitle-2" style="margin: 0px">
+            <p class="subtitle-2 ma-0">
               Components
             </p>
           </v-col>
@@ -47,7 +46,7 @@
                 mdi-developer-board
               </v-icon>
             </v-avatar>
-            <p class="subtitle-2" style="margin: 0px">
+            <p class="subtitle-2 ma-0">
               Boards
             </p>
           </v-col>
@@ -57,7 +56,7 @@
                 mdi-sprout
               </v-icon>
             </v-avatar>
-            <p class="subtitle-2" style="margin: 0px">
+            <p class="subtitle-2 ma-0">
               Self Made
             </p>
           </v-col>
@@ -66,7 +65,7 @@
 
       <v-row>
         <v-col v-for="(item, i) in items" :key="i">
-          <v-card width="310" class="mx-auto" style="margin-right: 10px">
+          <v-card width="310" class="mx-auto">
             <v-list-item>
               <v-list-item-avatar :color="item.avatarColor">
                 <v-icon color="white" v-text="item.avatarIcon" />
@@ -83,7 +82,7 @@
               </v-list-item-content>
             </v-list-item>
             <v-img :src="item.img" height="220" />
-            <v-card-text class="text-center" v-text="item.text" style="padding-bottom: 0px" />
+            <v-card-text class="text-center pb-0" v-text="item.text" />
             <v-card-actions>
               <v-btn text color="blue" :href="item.link" target="_blank">
                 Buy
