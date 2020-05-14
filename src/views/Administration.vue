@@ -38,7 +38,7 @@
                 </v-card-text>
                 <v-card-actions>
                   <v-btn color="primary"
-                    @click.native="login()"
+                    @click="login()"
                   >
                     Login
                   </v-btn>
@@ -125,7 +125,7 @@ export default {
   methods: {
     register() {
       axios.post(
-      "https://localhost:5001/api/user/register?UserName=" + this.username + "&UserPassword=" + this.password + "&Email=" + this.email)
+      "https://develop.particula.devbitapp.be/api/user/register?UserName=" + this.username + "&UserPassword=" + this.password + "&Email=" + this.email)
       .then((response) => {
         this.responses = response.data;
         this.registrationReturn = this.responses;
@@ -133,7 +133,7 @@ export default {
     },
     login() {
       axios.post(
-      "https://localhost:5001/api/user/login?UserName=" + this.username + "&UserPassword=" + this.password)
+      "https://develop.particula.devbitapp.be/api/user/login?UserName=" + this.username + "&UserPassword=" + this.password)
       .then((response) => {
         this.loginData = response.data;
         console.log(this.loginData);
