@@ -16,7 +16,7 @@
         <v-btn
           text
           color="deep-purple accent-4"
-          to="/sensorPage"
+          :to="{ path: `/sensorPage/${guid}` }"
         >
             More Info...
         </v-btn>
