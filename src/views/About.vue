@@ -1,16 +1,34 @@
 <template>
   <v-app id="inspire">
-    <v-container class="my-5" style="width: 90%" fluid>
+    <v-container
+      class="my-5"
+      style="width: 90%"
+      fluid
+    >
       <p class="display-2 text-center">
         About the project
       </p>
 
       <v-row>
-        <v-col cols="12" sm="6" class="pt-0">
-          <v-img src="../img/brugge.jpg" :aspect-ratio="16 / 9" />
+        <v-col
+          cols="12"
+          sm="6"
+          class="pt-0"
+        >
+          <v-img
+            src="../img/brugge.jpg"
+            :aspect-ratio="16 / 9"
+          />
         </v-col>
-        <v-col cols="12" sm="6" class="pt-0">
-          <v-img src="../img/fine_dust.jpg" :aspect-ratio="16 / 9" />
+        <v-col
+          cols="12"
+          sm="6"
+          class="pt-0"
+        >
+          <v-img
+            src="../img/fine_dust.jpg"
+            :aspect-ratio="16 / 9"
+          />
         </v-col>
       </v-row>
 
@@ -39,7 +57,11 @@
       </p>
 
       <v-row>
-        <v-col cols="12" sm="6" class="pt-0">
+        <v-col
+          cols="12"
+          sm="6"
+          class="pt-0"
+        >
           <p class="body-1 text-center">
             The end product not only works well, but is also beautiful. The
             sensor can remain outside when it rains because the material we have
@@ -51,8 +73,15 @@
             material is listed below.
           </p>
         </v-col>
-        <v-col cols="12" sm="6" class="pt-0">
-          <v-img src="../img/final_product.png" :aspect-ratio="16 / 9"> </v-img>
+        <v-col
+          cols="12"
+          sm="6"
+          class="pt-0"
+        >
+          <v-img
+            src="../img/final_product.png"
+            :aspect-ratio="16 / 9"
+          />
         </v-col>
       </v-row>
 
@@ -61,10 +90,21 @@
       </p>
 
       <v-row>
-        <v-col cols="12" sm="6" class="pt-0">
-          <v-img src="../img/vives.jpg" :aspect-ratio="16 / 9"> </v-img>
+        <v-col
+          cols="12"
+          sm="6"
+          class="pt-0"
+        >
+          <v-img
+            src="../img/vives.jpg"
+            :aspect-ratio="16 / 9"
+          />
         </v-col>
-        <v-col cols="12" sm="6" class="pt-0">
+        <v-col
+          cols="12"
+          sm="6"
+          class="pt-0"
+        >
           <p class="body-1 text-center">
             The VIVES Bruges technology campus is a stone's throw from the
             station. The courses that you can take there can use the most
@@ -88,9 +128,15 @@
             in Bruges. That way you will also come into contact with students
             from the university day in and day out.
           </p>
-          <v-container class="pa-0" text-center>
-            <v-btn href="https://www.vives.be/en" target="_blank"
-              >Visit VIVES
+          <v-container
+            class="pa-0"
+            text-center
+          >
+            <v-btn
+              href="https://www.vives.be/en"
+              target="_blank"
+            >
+              Visit VIVES
             </v-btn>
           </v-container>
         </v-col>
@@ -107,8 +153,14 @@
             yourself. Do not hesitate to give us feedback or improvements, we
             appreciate this very much.
           </p>
-          <v-container class="pa-0" text-center>
-            <v-btn class="mb-3" href="./BuildSensor">
+          <v-container
+            class="pa-0"
+            text-center
+          >
+            <v-btn
+              class="mb-3"
+              href="./BuildSensor"
+            >
               Buildyour own sensor
             </v-btn>
           </v-container>
@@ -116,8 +168,14 @@
           <p class="body-1 text-center">
             This website is made with vuetify, go checkout their website!
           </p>
-          <v-container class="pa-0" text-center>
-            <v-btn href="https://vuetifyjs.com/en/" target="_blank">
+          <v-container
+            class="pa-0"
+            text-center
+          >
+            <v-btn
+              href="https://vuetifyjs.com/en/"
+              target="_blank"
+            >
               Visit Vuetify
             </v-btn>
           </v-container>
