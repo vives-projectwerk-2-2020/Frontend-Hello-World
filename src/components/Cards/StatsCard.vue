@@ -3,14 +3,14 @@
     <div>
       <div class="row">
         <div
-          class="col-5"
           v-if="$slots.header"
+          class="col-5"
         >
           <slot name="header" />
         </div>
         <div
-          class="col-7"
           v-if="$slots.content"
+          class="col-7"
         >
           <slot name="content" />
         </div>

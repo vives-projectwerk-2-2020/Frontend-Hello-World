@@ -1,37 +1,37 @@
 <template>
   <div class="card">
     <div
-      class="card-image"
       v-if="$slots.image"
+      class="card-image"
     >
       <slot name="image" />
     </div>
     <div
-      class="card-header"
       v-if="$slots.header || title"
+      class="card-header"
     >
       <slot name="header">
         <h4 class="card-title">
           {{ title }}
         </h4>
         <p
-          class="card-category"
           v-if="subTitle"
+          class="card-category"
         >
           {{ subTitle }}
         </p>
       </slot>
     </div>
     <div
-      class="card-body"
       v-if="$slots.default"
+      class="card-body"
     >
       <slot />
     </div>
     <slot name="raw-content" />
     <div
-      class="card-footer"
       v-if="$slots.footer"
+      class="card-footer"
     >
       <hr>
       <slot name="footer" />
@@ -42,8 +42,8 @@
 export default {
   name: "Card",
   props: {
-    title: String,
-    subTitle: String
+    title: { type: String, default: "Card Title" },
+    subTitle: { type: String, default: "Card Subtitle" }
   }
 };
 </script>

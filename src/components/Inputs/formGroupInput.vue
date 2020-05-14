@@ -24,10 +24,10 @@
     </slot>
     <input
       :value="value"
-      @input="$emit('input',$event.target.value)"
       v-bind="$attrs"
       class="form-control"
       aria-describedby="addon-right addon-left"
+      @input="$emit('input',$event.target.value)"
     >
     <slot />
     <slot name="addonRight">
@@ -45,13 +45,13 @@
 </template>
 <script>
   export default {
-    inheritAttrs: false,
     name: "FgInput",
+    inheritAttrs: false,
     props: {
-      label: String,
-      value: [String, Number],
-      addonRightIcon: String,
-      addonLeftIcon: String
+      label: { type: String, default: "label" },
+      value: { type: [String, Number], default: "value" },
+      addonRightIcon: { type: String, default: '' },
+      addonLeftIcon: { type: String, default: '' }
     },
     computed: {
       hasIcon() {
