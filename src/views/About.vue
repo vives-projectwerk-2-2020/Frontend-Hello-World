@@ -1,39 +1,23 @@
 <template>
   <v-app id="inspire">
-    <v-container
-      style="width: 90%; margin-bottom: 20px; margin-top: 20px;"
-      fluid
-    >
-      <p class="display-2">
+    <v-container class="my-5" style="width: 90%" fluid>
+      <!-- Nog aanpassen, style moet weg (class mss ook als de footer werkt) -->
+      <p class="display-2 text-center">
         About the Project
       </p>
 
       <v-row>
-        <v-col
-          cols="12"
-          sm="6"
-          style="padding-top: 0px"
-        >
-          <v-img
-            src="../img/brugge.jpg"
-            :aspect-ratio="16 / 9"
-          />
+        <v-col cols="12" sm="6" class="pt-0">
+          <v-img src="../img/brugge.jpg" :aspect-ratio="16 / 9" />
         </v-col>
-        <v-col
-          cols="12"
-          sm="6"
-          style="padding-top: 0px"
-        >
-          <v-img
-            src="../img/fine_dust.jpg"
-            :aspect-ratio="16 / 9"
-          />
+        <v-col cols="12" sm="6" class="pt-0">
+          <v-img src="../img/fine_dust.jpg" :aspect-ratio="16 / 9" />
         </v-col>
       </v-row>
 
       <v-row>
-        <v-col style="padding-top: 0px">
-          <p class="subtitle-1">
+        <v-col class="pt-0">
+          <p class="subtitle-1 text-center">
             We are Electronics-ICT students at the VIVES university of Bruges.
             We were commissioned in preparation for our internship next year to
             fulfill a project of the city of Bruges. The project involves making
@@ -43,7 +27,7 @@
             that, along with a web app that can display the measurements.
           </p>
 
-          <p class="subtitle-1">
+          <p class="subtitle-1 text-center">
             This project is completely open source. If you want to build your
             own sensor you can do this! Scroll down for finding out each
             component you need to build this project.
@@ -51,17 +35,13 @@
         </v-col>
       </v-row>
 
-      <p class="display-1">
+      <p class="display-1 text-center">
         The final product
       </p>
 
       <v-row>
-        <v-col
-          cols="12"
-          sm="6"
-          style="padding-top: 0px"
-        >
-          <p class="body-1">
+        <v-col cols="12" sm="6" class="pt-0">
+          <p class="body-1 text-center">
             The end product not only works well, but is also beautiful. The
             sensor can remain outside when it rains because the material we have
             chosen allows this. The device charges using the solar panel. After
@@ -72,93 +52,21 @@
             material is listed below.
           </p>
         </v-col>
-        <v-col
-          cols="12"
-          sm="6"
-          style="padding-top: 0px"
-        >
-          <v-img
-            src="../img/final_product.png"
-            :aspect-ratio="16 / 9"
-          >
-            <div class="fill-height repeating-gradient" />
-            <!-- Need to check this -->
-          </v-img>
+        <v-col cols="12" sm="6" class="pt-0">
+          <v-img src="../img/final_product.png" :aspect-ratio="16 / 9"> </v-img>
         </v-col>
       </v-row>
 
-      <!-- <p class="display-2">Used materials and sensors</p>
-
-      <v-row>
-        <v-col cols="6" sm="4">
-          <v-img src="../img/pressure_sensor.jpg" :aspect-ratio="16 / 9" />
-
-          <p class="display-1">The pressure sensor</p>
-
-          <p class="body-1">
-            247/5000 This is the sensor linked to the board, which can measure
-            the 2.5 and 5 nm particles in the air. He sends data that our sign
-            can process, does not require much energy, ... !!! Enter something
-            decent if you know anything about it !!! !!! Change photo !!!
-          </p>
-        </v-col>
-
-        <v-col cols="6" sm="4">
-          <p class="display-1">The solar panel</p>
-          <p class="body-1">
-            This is the solar panel, which provides enough energy to charge the
-            battery in 1 hour. It does not cost much and can be used in all
-            weather conditions. !!! Enter something decent if you know anything
-            about it !!! !!! Change photo !!!
-          </p>
-          <v-img src="../img/solar-panel.jpg" :aspect-ratio="16 / 9">
-            <div class="fill-height bottom-gradient" />
-          </v-img>
-        </v-col>
-
-        <v-col cols="6" sm="4">
-          <v-img src="../img/mbed-module.jpg" :aspect-ratio="16 / 9">
-            <div class="fill-height repeating-gradient" />
-          </v-img>
-          <p class="display-1">The mbed module</p>
-          <p class="body-1">
-            This sign works perfectly for our sensor, it is economical and does
-            not cost much. Has everything we need, nothing more. Is easy to use.
-            Has ... pins, ... Blablablabla !!! Enter something decent if you
-            know anything about it !!! !!! Change photo !!!
-          </p>
-        </v-col>
-      </v-row>-->
-
-      <p
-        class="display-1"
-        style="margin-top: 16px"
-      >
+      <p class="display-1 text-center mt-4">
         VIVES Brugge Station
       </p>
 
       <v-row>
-        <v-col
-          cols="12"
-          sm="6"
-          style="padding-top: 0px"
-        >
-          <v-img
-            src="../img/vives.jpg"
-            :aspect-ratio="16 / 9"
-          >
-            <div
-              class="fill-height
-              repeating-gradient"
-            />
-          </v-img>
+        <v-col cols="12" sm="6" class="pt-0">
+          <v-img src="../img/vives.jpg" :aspect-ratio="16 / 9"> </v-img>
         </v-col>
-        <v-col
-          cols="12"
-          sm="6"
-          style="padding-top: 0px"
-        >
-          <p class="body-1">
+        <v-col cols="12" sm="6" class="pt-0">
+          <p class="body-1 text-center">
             The VIVES Bruges technology campus is a stone's throw from the
             station. The courses that you can take there can use the most
             modern, high-tech facilities in the university landscape in
@@ -167,7 +75,7 @@
             city with age-old traditions, pleasant neighborhoods and ultramodern
             facilities.
           </p>
-          <p class="body-2">
+          <p class="body-2 text-center">
             The campus in Bruges has a casual, personal atmosphere. The
             lecturers are easily approachable and you go out with students from
             other disciplines. In this way you learn to view life from many
@@ -176,65 +84,50 @@
             and live among the students. As a student you can always count on
             advice and guidance, on remedying problems or on reorientation.
           </p>
-          <p class="body-2">
+          <p class="body-2 text-center">
             The VIVES technology campus is embedded in the KU Leuven buildings
             in Bruges. That way you will also come into contact with students
             from the university day in and day out.
           </p>
-          <v-btn
-            href="https://www.vives.be/en"
-            target="_blank"
-          >
+          <v-btn href="https://www.vives.be/en" target="_blank">
             Visit VIVES
           </v-btn>
         </v-col>
       </v-row>
 
-      <p
-        class="display-1"
-        style="margin-top: 16px"
-      >
+      <p class="display-1 text-center mt-4">
         Extra information
       </p>
 
       <v-row>
-        <v-col style="padding-top: 0px">
-          <p class="body-1">
+        <v-col class="pt-0">
+          <p class="body-1 text-center">
             This project is completely open-source. Feel free to build one
             yourself. Do not hesitate to give us feedback or improvements, we
             appreciate this very much.
           </p>
 
-          <v-btn
-            href="./BuildSensor"
-            style="margin-bottom: 12px"
-          >
+          <v-btn class="mb-3" href="./BuildSensor">
             Build your own sensor
           </v-btn>
 
-          <p class="body-1">
+          <p class="body-1 text-center">
             This website is made with vuetify, go checkout their website!
           </p>
 
-          <v-btn
-            href="https://vuetifyjs.com/en/"
-            target="_blank"
-          >
+          <v-btn href="https://vuetifyjs.com/en/" target="_blank">
             Visit Vuetify
           </v-btn>
         </v-col>
       </v-row>
 
-      <p
-        class="display-1"
-        style="margin-top: 16px"
-      >
+      <p class="display-1 text-center mt-4">
         Our experiences
       </p>
 
       <v-row>
-        <v-col style="padding-top: 0px">
-          <p class="body-1">
+        <v-col class="pt-0">
+          <p class="body-1 text-center">
             Working on 1 project with 25 students? We thought this was never
             going to happen. At the beginning of the project, we did not
             progress as quickly, but this was to be expected. 2 weeks later we

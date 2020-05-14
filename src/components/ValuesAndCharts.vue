@@ -264,8 +264,9 @@ export default {
   width: auto;
   margin-top: 70px;
 }
-
+/* Don't do this. Buttons met more than 12 chars won't fit anymore. 
 span {
   max-width: 100px;
 }
+*/
 </style>
