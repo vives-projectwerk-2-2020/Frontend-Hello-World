@@ -5,9 +5,6 @@
         rounded
         dark 
         class="button" 
-        :style="{
-          sensorInfoActive : sensorInfoActive ? 'black !important' : '',
-          color: sensorInfoActive ? 'white !important' : 'black'}"
         @click="toSensorInfo" 
       >
         sensor info
