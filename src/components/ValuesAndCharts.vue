@@ -35,9 +35,11 @@
       </div>
       <div class="topRight">
         <v-layout wrap>
-          <v-flex xs 
+          <v-flex 
+            xs 
             class="col-md-6" 
-            v-for="parameter in parameters" :key="parameter.title
+            v-for="parameter in parameters" 
+            :key="parameter.title
           ">
             <v-card class="cardss">
               <div :class="parameter.title">
@@ -58,8 +60,14 @@
     </div>
     <div class="bottom">
       <v-content>
-        <v-container class="fill-height" fluid>
-          <v-row align="center" justify="center">
+        <v-container 
+          class="fill-height" 
+          fluid
+        >
+          <v-row 
+            align="center" 
+            justify="center
+          ">
             <v-container id="sensorpage">
               <SensorCharts />
             </v-container>
