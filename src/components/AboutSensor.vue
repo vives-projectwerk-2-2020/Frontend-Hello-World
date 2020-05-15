@@ -123,27 +123,12 @@
               <p
                 class="text-left font-weight-black"
               >
-                Street
+                Address
               </p>
               <p
                 class="text-left font-weight-light"
               >
-                {{ street }}
-              </p>
-            </v-col>
-            <v-col
-              cols="12"
-              sm="6"
-            >
-              <p
-                class="text-left font-weight-black"
-              >
-                No.
-              </p>
-              <p
-                class="text-left font-weight-light"
-              >
-                {{ houseNumber }}
+                {{ sensor.location.address }}
               </p>
             </v-col>
           </v-row>
@@ -161,7 +146,7 @@
               <p
                 class="text-left font-weight-light"
               >
-                {{ city }}
+                {{ sensor.location.city }}
               </p>
             </v-col>
             <v-col
@@ -206,7 +191,7 @@
               <p
                 class="text-left font-weight-light"
               >
-                {{ aboutSensor }}
+                {{ sensor.description }}
               </p>
             </v-col>
           </v-row>
@@ -217,10 +202,10 @@
             <v-btn
               class="back"
               color="#FFFFFF"
-              @click="back"
+              to="/sensors"
               text
             >
-              Back to sensorpage
+              go Back
             </v-btn>
           </v-card-actions>
         </v-col>
@@ -230,21 +215,42 @@
 </template>
 
 <script>
+
+import axios from "axios"
+
 export default {
+  props: ['guid'],
   data: () => ({
+    API_url: "https://develop.particula.devbitapp.be/",
     sensor: {},
-    username: "Matthias",
-    email: "matthias.willem@student.vives.be",
-    firstName: "Matthias",
-    lastName: "Willem",
+    username: "username",
+    email: "email@vives.be",
+    firstName: "firstname",
+    lastName: "lastname",
     street: "Spoorwegstraat",
-    houseNumber: "12",
     city: "Bruges",
-    postalCode: "8000",
-    country: "Belgium",
+    postalCode: "-",
+    country: "-",
     aboutSensor:
       "This is a very nice sensor. You should buy one! I like this sensor very much, believe me. This is the best sensor i've ever got!"
-  })
+  }),
+  mounted() {
+    this.getAPI()
+  },
+  methods: {
+    getAPI: function() {
+      let sensor_url = this.API_url + 'sensors/' + this.$props['guid']
+
+      // TODO Use websocket / MQTT instead !!
+      axios
+        .get(
+          sensor_url
+        )
+        .then(response => {
+          this.sensor = response.data
+        });
+    },
+  }
 };
 </script>
 
