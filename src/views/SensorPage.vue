@@ -5,7 +5,7 @@
         rounded
         color="primary"
         dark
-        class="button"
+        class="buttonSens"
         @click="toSensorInfo"
       >
         sensor info
@@ -14,7 +14,7 @@
         rounded
         color="warning"
         dark
-        class="button"
+        class="buttonSens"
         @click="toValues"
       >
         live values
@@ -60,14 +60,14 @@ export default {
   background-color: rgb(255, 128, 0, 0.1);
 }
 
-.button {
+.buttonSens {
   margin-top: 70px;
   margin-right: 20px;
   margin-bottom: 30px;
   opacity: 50%;
 }
 
-.button:hover {
+.buttonSens:hover {
   opacity: 100%;
 }
 </style>
