@@ -181,7 +181,7 @@ h1 {
 }
 
 .top {
-  display: table;
+  display: block;
   content: "";
   clear: both;
   border: 2px solid rgb(40, 40, 40, 0.4);
@@ -194,7 +194,7 @@ h1 {
   font-weight: 40px;
 }
 .topLeft {
-  display: table;
+  display: block;
   content: "";
   clear: both;
   float: left;

@@ -53,7 +53,7 @@ export default {
         
         for(let i=0; i < Object.keys(this.info.data).length; i++) {
           this.chartdata.datasets[0].data.push(this.info.data[i].humidity)
-          this.chartdata.labels.push( this.info.data[i].time )
+          this.chartdata.labels.push( this.info.data[i].time.slice(0,9) + "/" + this.info.data[i].time.slice(11,15)  )
         }
       this.loaded = true
     }
