@@ -26,7 +26,10 @@
       v-show="liveValuesActive" 
       v-bind:guid="guid"
     />
-    <AboutSensor v-show="sensorInfoActive" />
+    <AboutSensor 
+      v-show="sensorInfoActive"
+      v-bind:guid="guid"
+    />
   </div>
 </template>
 
@@ -43,24 +46,12 @@ export default {
   data() {
     return {
       API_url: 'https://develop.particula.devbitapp.be/',
-      sensorInfoActive: false,
-      liveValuesActive: true,
-      guid: this.$route.params.guid,
-      sensorInfo: undefined
+      sensorInfoActive: true,
+      liveValuesActive: false,
+      guid: this.$route.params.guid
     }
   },
   methods: {
-    getAPI: function() {
-      let sensor_link = this.API_url + 'sensors/' + this.$props['guid']
-
-        .get(
-          sensor_link
-        )
-        .then(response => {
-          console.log(response.data)
-          const info = response.data;
-        });
-    },
     toSensorInfo: function() {
       if (!this.sensorInfoActive) {
         this.liveValuesActive = false;
