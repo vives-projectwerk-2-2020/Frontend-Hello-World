@@ -1,26 +1,44 @@
 <template>
   <div>
-    <TemperatureChart v-show="showTemperature" />
-    <HumidityChart v-show="showHumidity" />
-    <PressureChart v-show="showPressure" />
-    <v-btn
+    <v-btn 
       class="temp"
       @click="showTemperatureChart"
     >
       temperature
     </v-btn>
-    <v-btn
-      class="humid"
+    <v-btn 
+      class="humid" 
       @click="showHumidityChart"
     >
       humidity
     </v-btn>
-    <v-btn
+    <v-btn 
       class="press"
       @click="showPressureChart"
     >
       Pressure
     </v-btn>
+    <!--<v-select
+      v-model="chosenItem"
+      width="100px"
+      :items="items"
+      :menu-props="{ top: true, offsetY: true }"
+    />-->
+    <TemperatureChart
+      v-show="showTemperature" 
+      :v-bind:guid="this.$props.guid"
+      :v-bind:period="chosenItem" 
+    />
+    <HumidityChart
+      v-show="showHumidity"
+      :v-bind:guid="this.$props.guid"
+      :v-bind:period="chosenItem" 
+    />
+    <PressureChart
+      v-show="showPressure"
+      :v-bind:guid="this.$props.guid"
+      :v-bind:period="chosenItem" 
+    />
   </div>
 </template>
 
@@ -37,8 +55,10 @@ export default {
     TemperatureChart,
     HumidityChart
   },
-
+  props: ['guid'],
   data: () => ({
+    //chosenItem: '1h',
+    //items: ["1h", "24h", "7d", "30d", "1y"],
     showTemperature: true,
     showHumidity: false,
     showPressure: false
