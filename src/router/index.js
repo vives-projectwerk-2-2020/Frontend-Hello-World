@@ -72,8 +72,8 @@ const routes = [
   }
   ,
   {
-    path: '/sensors',
-    name: 'sensors',
+    path: '/allsensors',
+    name: 'allsensors',
     component: Sensors
   }
 ]

@@ -166,7 +166,7 @@
             <v-btn
               class="back"
               color="#FFFFFF"
-              to="/sensors"
+              to="/allsensors"
               text
             >
               go Back
