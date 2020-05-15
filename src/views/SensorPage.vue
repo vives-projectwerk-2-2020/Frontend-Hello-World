@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div>
-      <v-btn 
+    <div class="center">
+      <v-btn
         rounded
         dark 
         class="button" 

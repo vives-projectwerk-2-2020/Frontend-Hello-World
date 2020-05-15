@@ -1,66 +1,72 @@
 <template>
   <div>
-    <v-btn 
-      class="temp"
-      @click="showTemperatureChart"
-    >
-      temperature
-    </v-btn>
-    <v-btn 
-      class="humid" 
-      @click="showHumidityChart"
-    >
-      humidity
-    </v-btn>
-    <v-btn 
-      class="press"
-      @click="showPressureChart"
-    >
-      Pressure
-    </v-btn>
-    <v-btn 
-      class="Pm2_5" 
-      @click="showPm2_5Chart"
-    >
-      Pm 2.5
-    </v-btn>
-        <v-btn 
-      class="Pm10" 
-      @click="showPm10Chart"
-    >
-      Pm 10
-    </v-btn>
+    <div class="center">
+      <v-btn 
+        class="temp"
+        @click="showTemperatureChart"
+      >
+        temperature
+      </v-btn>
+      <v-btn 
+        class="humid" 
+        @click="showHumidityChart"
+      >
+        humidity
+      </v-btn>
+      <v-btn 
+        class="press"
+        @click="showPressureChart"
+      >
+        Pressure
+      </v-btn>
+      <v-btn 
+        class="Pm2_5" 
+        @click="showPm2_5Chart"
+      >
+        Pm 2.5
+      </v-btn>
+      <v-btn 
+        class="Pm10" 
+        @click="showPm10Chart"
+      >
+        Pm 10
+      </v-btn>
+    </div>
     <!--<v-select
       v-model="chosenItem"
       width="100px"
       :items="items"
       :menu-props="{ top: true, offsetY: true }"
     />-->
-    <TemperatureChart
-      v-show="showTemperature" 
-      :v-bind:guid="this.$props.guid"
-      :v-bind:period="chosenItem" 
-    />
-    <HumidityChart
-      v-show="showHumidity"
-      :v-bind:guid="this.$props.guid"
-      :v-bind:period="chosenItem" 
-    />
-    <PressureChart
-      v-show="showPressure"
-      :v-bind:guid="this.$props.guid"
-      :v-bind:period="chosenItem" 
-    />
-    <Pm2_5Chart
-      v-show="showPm2_5"
-      :v-bind:guid="this.$props.guid"
-      :v-bind:period="chosenItem" 
-    />
-    <Pm10Chart
-      v-show="showPm10"
-      :v-bind:guid="this.$props.guid"
-      :v-bind:period="chosenItem" 
-    />
+    <div class="charts">
+      <TemperatureChart
+        v-show="showTemperature" 
+        :v-bind:guid="this.$props.guid"
+        :v-bind:period="chosenItem" 
+        :width="auto"
+        :height="300"
+      />
+      <HumidityChart
+        v-show="showHumidity"
+        :v-bind:guid="this.$props.guid"
+        :v-bind:period="chosenItem" 
+      />
+      <PressureChart
+        v-show="showPressure"
+        :v-bind:guid="this.$props.guid"
+        :v-bind:period="chosenItem" 
+      />
+      <Pm2_5Chart
+        v-show="showPm2_5"
+        :v-bind:guid="this.$props.guid"
+        :v-bind:period="chosenItem" 
+      />
+      <Pm10Chart
+        v-show="showPm10"
+        :v-bind:guid="this.$props.guid"
+        :v-bind:period="chosenItem" 
+      />
+    </div>
   </div>
 </template>
 
@@ -165,5 +171,15 @@ export default {
 .Pm10 {
   color: rgb(139, 0, 0, 0.4);
   margin-right: 20px;
+}
+.center{
+  display: table;
+  margin: 0 auto;
+}
+
+.charts{
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 </style>>

@@ -14,7 +14,7 @@
             :scale-interval="0.1"
           >
             <div class="inner-text">
-              <span>airquality</span>
+              <p>airquality</p>
             </div>
           </VueSvgGauge>
         </div>
@@ -29,7 +29,7 @@
             :scale-interval="0.1"
           >
             <div class="inner-text">
-              <span>temperature</span>
+              <p>temperature</p>
             </div>
           </VueSvgGauge>
         </div>
@@ -115,8 +115,8 @@ export default {
         { title: "temperature", value: undefined , unit: "°C", icon:"mdi-thermometer", color: "rgb(139, 0, 0, 0.4)" },
         { title: "humidity", value: undefined, unit: "%", icon:"mdi-water-percent", color: "rgb(0, 68, 208, 0.4)"  },
         { title: "pressure", value: undefined, unit: "hPa", icon:"mdi-arrow-collapse-down", color: "rgb(0, 153, 0, 0.4)" },
-        { title: "pm2_5", value: undefined, unit: "µm/m^3", icon:"mdi-google-circles-extended", color: "rgb(76, 0, 153, 0.4)"  },
-        { title: "pm10", value: undefined, unit: "µm/m^3", icon:"mdi-google-circles-extended", color: "rgb(204, 0, 204, 0.4)"   },
+        { title: "pm10", value: undefined, unit: "µm/m^3", icon:"mdi-google-circles-extended", color: "rgb(76, 0, 153, 0.4)"  },
+        { title: "pm2_5", value: undefined, unit: "µm/m^3", icon:"mdi-google-circles-extended", color: "rgb(204, 0, 204, 0.4)"   },
         { title: "timestamp", value: undefined, unit: "", icon:"mdi-clock-outline", color: "rgb(255, 128, 0, 0.4)"}
       ]
     }
@@ -141,7 +141,7 @@ export default {
           this.parameters[2].value = response.data.measurements[0].pressure
           this.parameters[3].value = response.data.measurements[0].pm10
           this.parameters[4].value = response.data.measurements[0].pm25
-          this.parameters[5].value = response.data.measurements[0].time
+          this.parameters[5].value = response.data.measurements[0].time.slice(0,10) + " / " + response.data.measurements[0].time.slice(11,16)
         });
     },
     intervalFetchData: function() {
@@ -299,7 +299,7 @@ h1 {
   float: right;
 }
 
-span {
-  max-width: 100px;
+p{
+  text-align: center;
 }
 </style>

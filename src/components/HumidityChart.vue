@@ -22,7 +22,7 @@ export default {
     loaded: true,
     API_url_measurements: "https://develop.particula.devbitapp.be/measurements/",
     options: {
-      responsive: true,
+      responsive:true,
       maintainAspectRatio: false
     },
     chartdata: { 
@@ -60,3 +60,6 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+</style>
