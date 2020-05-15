@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class = "center">
+    <div class="center">
       <v-btn
         rounded
         color="primary"

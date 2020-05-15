@@ -14,7 +14,7 @@
             :scale-interval="0.1"
           >
             <div class="inner-text">
-              <span>airquality</span>
+              <p>airquality</p>
             </div>
           </VueSvgGauge>
         </div>
@@ -29,7 +29,7 @@
             :scale-interval="0.1"
           >
             <div class="inner-text">
-              <span>temperature</span>
+              <p>temperature</p>
             </div>
           </VueSvgGauge>
         </div>
@@ -141,7 +141,7 @@ export default {
           this.parameters[2].value = response.data.measurements[0].pressure
           this.parameters[3].value = response.data.measurements[0].pm10
           this.parameters[4].value = response.data.measurements[0].pm25
-          this.parameters[5].value = response.data.measurements[0].time
+          this.parameters[5].value = response.data.measurements[0].time.slice(0,10) + " / " + response.data.measurements[0].time.slice(11,16)
         });
     },
     intervalFetchData: function() {
@@ -178,6 +178,7 @@ h1 {
   font-weight: 40px;
   font-size: 300%;
   margin-top: 2.5%;
+  text-align: center;
 }
 
 .top {
@@ -298,7 +299,7 @@ h1 {
   float: right;
 }
 
-span {
-  max-width: 100px;
+p{
+  text-align: center;
 }
 </style>
