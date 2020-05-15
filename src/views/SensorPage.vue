@@ -1,20 +1,22 @@
 <template>
   <div>
-    <div class="text-center">
-      <v-btn
+    <div>
+      <v-btn 
         rounded
-        color="primary"
-        dark
-        class="buttonSens"
-        @click="toSensorInfo"
+        dark 
+        class="button" 
+        :style="{
+          backgroundColor: sensorInfoActive ? 'rgb(0, 68, 208) !important' : 'rgb(0, 68, 208, 0.5)'}"
+        @click="toSensorInfo" 
       >
         sensor info
       </v-btn>
-      <v-btn
-        rounded
-        color="warning"
-        dark
-        class="buttonSens"
+      <v-btn 
+        rounded 
+        dark 
+        class="button" 
+        :style="{
+          backgroundColor: liveValuesActive ? 'rgb(255, 128, 0) !important' : 'rgb(255, 128, 0, 0.5)'}"
         @click="toValues"
       >
         live values
@@ -36,6 +38,7 @@ import valuesAndCharts from "../components/ValuesAndCharts";
 import AboutSensor from "../components/AboutSensor";
 
 export default {
+  el: "#sensorpage",
   components: {
     valuesAndCharts,
     AboutSensor
@@ -70,14 +73,13 @@ export default {
   background-color: rgb(255, 128, 0, 0.1);
 }
 
-.buttonSens {
+.button {
   margin-top: 70px;
   margin-right: 20px;
   margin-bottom: 30px;
-  opacity: 50%;
 }
 
-.buttonSens:hover {
+.button:hover {
   opacity: 100%;
 }
 </style>
