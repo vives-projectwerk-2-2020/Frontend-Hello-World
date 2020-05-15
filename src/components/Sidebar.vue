@@ -23,11 +23,14 @@
     <v-app-bar>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title>Particula</v-toolbar-title>
-      <v-spacer></v-spacer>
-      <router-link to="/profile" tag="button">
-      <v-btn icon>
-      <v-icon>mdi-account</v-icon>
-      </v-btn>
+      <v-spacer />
+      <router-link
+        to="/profile"
+        tag="button"
+      >
+        <v-btn icon>
+          <v-icon>mdi-account</v-icon>
+        </v-btn>
       </router-link>
     </v-app-bar>
   </div>

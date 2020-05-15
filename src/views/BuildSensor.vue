@@ -27,15 +27,15 @@
         >
           These are the components we used to make our sensor. Feel free to
           experiment and use your own components. If you want to build our
-          sensor, you can click the 'BUY' buttons. The icons in the right corner
+          sensor, you can click the 'BUY' buttons. The button in the right corner of the cards
           helps you remind wich components you already have and wich you still
-          need to buy.
+          need to buy. Some components cannot be bought because we designed them ourselves. There is a github link of the reposetorys for these types of components, where more explanations, diagrams and other important matters are provided.
         </p>
       </v-col>
       <v-col class="pt-0">
         <v-row class="text-center">
           <v-col>
-            <v-avatar color="teal">
+            <v-avatar color="red">
               <v-icon color="white">
                 mdi-electron-framework
               </v-icon>
@@ -212,6 +212,17 @@ export default {
         text:
           "This self-made antenna board, developped by Laura De Baets, has a PCB antenna that is suitable for a frequency around 868MHz. The RF95 module is suitable for ultra-long range spread spectrum communications.",
         gitLink: "https://github.com/vives-projectwerk-2-2020/LoRaWAN-antenna",
+      },
+      {
+        avatarColor: "teal",
+        avatarIcon: "mdi-sprout",
+        title: "Battery system",
+        subTitle: "Solarpanel + Battery system",
+        img:
+          "https://raw.githubusercontent.com/vives-projectwerk-2-2020/FinalSolarChargeSystem/master/img/20200514_160916.jpg",
+        text:
+          "This self-made battery system, developped by Tom Van Hove, charges the batteries until they are under 4.2V with a solarpanel. When the batteries are fully charged, the circuit will shut down. And so on.",
+        gitLink: "https://github.com/vives-projectwerk-2-2020/FinalSolarChargeSystem",
       },
     ],
   }),
