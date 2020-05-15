@@ -115,8 +115,8 @@ export default {
         { title: "temperature", value: undefined , unit: "°C", icon:"mdi-thermometer", color: "rgb(139, 0, 0, 0.4)" },
         { title: "humidity", value: undefined, unit: "%", icon:"mdi-water-percent", color: "rgb(0, 68, 208, 0.4)"  },
         { title: "pressure", value: undefined, unit: "hPa", icon:"mdi-arrow-collapse-down", color: "rgb(0, 153, 0, 0.4)" },
-        { title: "pm10", value: undefined, unit: "µm/m^3", icon:"mdi-google-circles-extended", color: "rgb(76, 0, 153, 0.4)"  },
-        { title: "pm2_5", value: undefined, unit: "µm/m^3", icon:"mdi-google-circles-extended", color: "rgb(204, 0, 204, 0.4)"   },
+        { title: "pm2_5", value: undefined, unit: "µm/m^3", icon:"mdi-google-circles-extended", color: "rgb(76, 0, 153, 0.4)"  },
+        { title: "pm10", value: undefined, unit: "µm/m^3", icon:"mdi-google-circles-extended", color: "rgb(204, 0, 204, 0.4)"   },
         { title: "timestamp", value: undefined, unit: "", icon:"mdi-clock-outline", color: "rgb(255, 128, 0, 0.4)"}
       ]
     }
@@ -178,6 +178,7 @@ h1 {
   font-weight: 40px;
   font-size: 300%;
   margin-top: 2.5%;
+  text-align: center;
 }
 
 .top {

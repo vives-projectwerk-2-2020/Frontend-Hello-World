@@ -18,6 +18,18 @@
     >
       Pressure
     </v-btn>
+    <v-btn 
+      class="Pm2_5" 
+      @click="showPm2_5Chart"
+    >
+      Pm 2.5
+    </v-btn>
+        <v-btn 
+      class="Pm10" 
+      @click="showPm10Chart"
+    >
+      Pm 10
+    </v-btn>
     <!--<v-select
       v-model="chosenItem"
       width="100px"
@@ -39,6 +51,16 @@
       :v-bind:guid="this.$props.guid"
       :v-bind:period="chosenItem" 
     />
+    <Pm2_5Chart
+      v-show="showPm2_5"
+      :v-bind:guid="this.$props.guid"
+      :v-bind:period="chosenItem" 
+    />
+    <Pm10Chart
+      v-show="showPm10"
+      :v-bind:guid="this.$props.guid"
+      :v-bind:period="chosenItem" 
+    />
   </div>
 </template>
 
@@ -46,6 +68,8 @@
 import PressureChart from "./PressureChart";
 import TemperatureChart from "./TemperatureChart";
 import HumidityChart from "./HumidityChart";
+import Pm2_5Chart from "./Pm2_5Chart";
+import Pm10Chart from "./Pm10Chart";
 import "vuetify/dist/vuetify.min.css";
 
 export default {
@@ -53,7 +77,9 @@ export default {
   components: {
     PressureChart,
     TemperatureChart,
-    HumidityChart
+    HumidityChart,
+    Pm2_5Chart,
+    Pm10Chart
   },
   props: ['guid'],
   data: () => ({
@@ -61,7 +87,9 @@ export default {
     //items: ["1h", "24h", "7d", "30d", "1y"],
     showTemperature: true,
     showHumidity: false,
-    showPressure: false
+    showPressure: false,
+    showPm2_5: false,
+    showPm10: false
   }),
 
   methods: {
@@ -69,7 +97,9 @@ export default {
       if (!this.showTemperature) {
         (this.showTemperature = true),
           (this.showHumidity = false),
-          (this.showPressure = false);
+          (this.showPressure = false),
+          (this.showPm2_5 = false),
+          (this.showPm10 = false);
       }
     },
 
@@ -77,7 +107,9 @@ export default {
       if (!this.showHumidity) {
         (this.showTemperature = false),
           (this.showHumidity = true),
-          (this.showPressure = false);
+          (this.showPressure = false),
+          (this.showPm2_5 = false),
+          (this.showPm10 = false);
       }
     },
 
@@ -85,7 +117,27 @@ export default {
       if (!this.showPressure) {
         (this.showTemperature = false),
           (this.showHumidity = false),
-          (this.showPressure = true);
+          (this.showPressure = true),
+          (this.showPm2_5 = false),
+          (this.showPm10 = false);
+      }
+    },
+    showPm2_5Chart: function() {
+      if (!this.showPm2_5) {
+        (this.showTemperature = false),
+          (this.showHumidity = false),
+          (this.showPressure = false),
+          (this.showPm2_5 = true),
+          (this.showPm10 = false);
+      }
+    },
+    showPm10Chart: function() {
+      if (!this.showPm10) {
+        (this.showTemperature = false),
+          (this.showHumidity = false),
+          (this.showPressure = false),
+          (this.showPm2_5 = false),
+          (this.showPm10 = true);
       }
     }
   }
@@ -101,6 +153,16 @@ export default {
   margin-right: 20px;
 }
 .humid {
+  color: rgb(139, 0, 0, 0.4);
+  margin-right: 20px;
+}
+
+.Pm2_5 {
+  color: rgb(139, 0, 0, 0.4);
+  margin-right: 20px;
+}
+
+.Pm10 {
   color: rgb(139, 0, 0, 0.4);
   margin-right: 20px;
 }
