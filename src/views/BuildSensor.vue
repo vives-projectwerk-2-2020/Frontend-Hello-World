@@ -1,48 +1,46 @@
 <template>
   <v-app id="inspire">
     <v-container
-      style="width: 90%; margin-bottom: 20px; margin-top: 20px;"
+      class="my-5"
+      style="width: 90%"
       fluid
     >
-      <v-col>
-        <p class="display-2">
-          Build your own sensor
-        </p>
+      <p class="display-2 text-center">
+        Build your own sensor
+      </p>
+      <v-col class="pt-0">
         <p
-          class="subtitle-2"
-          style="max-width: 400px; margin: auto"
+          class="subtitle-2 ma-auto text-center"
+          style="max-width: 400px"
         >
           Do you want to build your own sensor? Than this is the right place to
           be!
         </p>
       </v-col>
       <v-col>
-        <p class="display-1">
+        <p class="display-1 text-center">
           Components you need
         </p>
         <p
-          class="subtitle-2"
-          style="max-width: 980px; margin: auto"
+          class="subtitle-2 text-center ma-auto"
+          style="max-width: 980px"
         >
           These are the components we used to make our sensor. Feel free to
           experiment and use your own components. If you want to build our
-          sensor, you can click the 'BUY' buttons. The icons in the right corner
+          sensor, you can click the 'BUY' buttons. The button in the right corner of the cards
           helps you remind wich components you already have and wich you still
-          need to buy.
+          need to buy. Some components cannot be bought because we designed them ourselves. There is a github link of the reposetorys for these types of components, where more explanations, diagrams and other important matters are provided.
         </p>
       </v-col>
-      <v-col>
-        <v-row>
+      <v-col class="pt-0">
+        <v-row class="text-center">
           <v-col>
-            <v-avatar color="teal">
+            <v-avatar color="red">
               <v-icon color="white">
                 mdi-electron-framework
               </v-icon>
             </v-avatar>
-            <p
-              class="subtitle-2"
-              style="margin: 0px"
-            >
+            <p class="subtitle-2 ma-0">
               Components
             </p>
           </v-col>
@@ -52,24 +50,18 @@
                 mdi-developer-board
               </v-icon>
             </v-avatar>
-            <p
-              class="subtitle-2"
-              style="margin: 0px"
-            >
+            <p class="subtitle-2 ma-0">
               Boards
             </p>
           </v-col>
           <v-col>
-            <v-avatar color="red">
+            <v-avatar color="teal">
               <v-icon color="white">
-                mdi-flask-empty-outline
+                mdi-sprout
               </v-icon>
             </v-avatar>
-            <p
-              class="subtitle-2"
-              style="margin: 0px"
-            >
-              Extra icon
+            <p class="subtitle-2 ma-0">
+              Self Made
             </p>
           </v-col>
         </v-row>
@@ -83,7 +75,6 @@
           <v-card
             width="310"
             class="mx-auto"
-            style="margin-right: 10px"
           >
             <v-list-item>
               <v-list-item-avatar :color="item.avatarColor">
@@ -94,10 +85,11 @@
               </v-list-item-avatar>
               <v-list-item-content>
                 <v-list-item-title
-                  class="headline"
+                  class="headline text-center"
                   v-text="item.title"
                 />
                 <v-list-item-subtitle
+                  class="text-center"
                   v-text="item.subTitle"
                 />
               </v-list-item-content>
@@ -106,7 +98,10 @@
               :src="item.img"
               height="220"
             />
-            <v-card-text v-text="item.text" />
+            <v-card-text
+              class="text-center pb-0"
+              v-text="item.text"
+            />
             <v-card-actions>
               <v-btn
                 text
@@ -161,15 +156,16 @@ export default {
     owned: false,
     items: [
       {
-        avatarColor: "teal",
+        avatarColor: "red",
         avatarIcon: "mdi-electron-framework",
-        title: "Thermistor",
-        subTitle: "10K Precision Epoxy Thermistor",
-        img: "https://cdn-shop.adafruit.com/970x728/372-00.jpg",
+        title: "BME 208",
+        subTitle: "Combo sensor",
+        img: "https://cdn-reichelt.de/bilder/web/artikel_ws/B400/BME_280.jpg",
         text:
-          "This epoxy-coated precision 1% 10K thermistor is an inexpensive way to measure temperature in weather or liquids.",
-        link: "https://www.adafruit.com/product/372",
-        gitLink: "",
+          "This environmental sensor combines the 3 different sensor types: (absolute) pressure, humidity and temperature sensor. It is made for extremely low power consumption, long-term stability and high EMC resistance.",
+        link:
+          "https://www.reichelt.nl/combo-sensor-luchtdruk-luchtvochtigheid-temp-bme-280-p159825.html",
+        gitLink: "https://github.com/vives-projectwerk-2-2020/ParticulaTPH",
       },
       {
         avatarColor: "purple",
@@ -179,64 +175,54 @@ export default {
         img:
           "https://os.mbed.com/media/cache/platforms/Nucleo32_ULP_cbKR6Cl.jpg.250x250_q85.jpg",
         text:
-          "The STM32 Nucleo board provides an affordable and flexible way for users to try out new ideas and build prototypes with any STM32 microcontroller line, choosing from the various combinations of performance, power consumption and features.",
+          "The STM32 Nucleo board provides an affordable and flexible way for users to try out new ideas and build prototypes with any STM32 microcontroller line. Arduino™ Nano V3 connectivity support.",
         link: "https://os.mbed.com/platforms/ST-Nucleo-L432KC/",
-        gitLink: "",
       },
       {
         avatarColor: "red",
-        avatarIcon: "mdi-flask-empty-outline",
-        title: "TEST",
-        subTitle: "this is a test",
+        avatarIcon: "mdi-electron-framework",
+        title: "SDS 011",
+        subTitle: "Particle sensor",
         img:
-          "https://images.unsplash.com/photo-1523895665936-7bfe172b757d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
+          "https://csd-electronics.de/images/product_images/info_images/37884_Product.jpg",
         text:
-          "Hello, I'm testing here some cards. I hope it works well. I should see it in a moment I guess.",
-        link: "https://www.youtube.com/watch?v=9fUpgn_STdc",
+          "The SDS 011 Sensor is a quite recent Air Quality Sensor. It has opted for a size tradeoff allowing it to use a larger fan and with its size, it is probably one of the best sensor in terms of accuracy.",
+        link:
+          "https://csd-electronics.de/ICs/sensor/fijn-stof/Deeltjes-sensor-SDS011::12368.html",
       },
       {
-        avatarColor: "red",
-        avatarIcon: "mdi-flask-empty-outline",
-        title: "TEST",
-        subTitle: "this is a test",
+        avatarColor: "teal",
+        avatarIcon: "mdi-sprout",
+        title: "Prototype Board",
+        subTitle: "Prototype board",
         img:
-          "https://images.unsplash.com/photo-1523895665936-7bfe172b757d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
+          "https://raw.githubusercontent.com/vives-projectwerk-2-2020/Prototype_Board_Niels/master/images/board_soldered.png",
         text:
-          "Hello, I'm testing here some cards. I hope it works well. I should see it in a moment I guess.",
-        link: "https://www.youtube.com/watch?v=9fUpgn_STdc",
+          "This in our self-made prototype board, developped by Niels Vanhove. He's going to give some more explanation soon, but the board isn't redesigned yet. So we have to be a bit patient.",
+        gitLink:
+          "https://github.com/vives-projectwerk-2-2020/Prototype_Board_Niels",
       },
       {
-        avatarColor: "red",
-        avatarIcon: "mdi-flask-empty-outline",
-        title: "TEST",
-        subTitle: "this is a test",
+        avatarColor: "teal",
+        avatarIcon: "mdi-sprout",
+        title: "Antenna Board",
+        subTitle: "LoRaWAN board + Antenna",
         img:
-          "https://images.unsplash.com/photo-1523895665936-7bfe172b757d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
+          "https://raw.githubusercontent.com/vives-projectwerk-2-2020/LoRaWAN-antenna/master/img/Antenna_board.png",
         text:
-          "Hello, I'm testing here some cards. I hope it works well. I should see it in a moment I guess.",
-        link: "https://www.youtube.com/watch?v=9fUpgn_STdc",
+          "This self-made antenna board, developped by Laura De Baets, has a PCB antenna that is suitable for a frequency around 868MHz. The RF95 module is suitable for ultra-long range spread spectrum communications.",
+        gitLink: "https://github.com/vives-projectwerk-2-2020/LoRaWAN-antenna",
       },
       {
-        avatarColor: "red",
-        avatarIcon: "mdi-flask-empty-outline",
-        title: "TEST",
-        subTitle: "this is a test",
+        avatarColor: "teal",
+        avatarIcon: "mdi-sprout",
+        title: "Battery system",
+        subTitle: "Solarpanel + Battery system",
         img:
-          "https://images.unsplash.com/photo-1523895665936-7bfe172b757d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
+          "https://raw.githubusercontent.com/vives-projectwerk-2-2020/FinalSolarChargeSystem/master/img/20200514_160916.jpg",
         text:
-          "Hello, I'm testing here some cards. I hope it works well. I should see it in a moment I guess.",
-        link: "https://www.youtube.com/watch?v=9fUpgn_STdc",
-      },
-      {
-        avatarColor: "red",
-        avatarIcon: "mdi-flask-empty-outline",
-        title: "TEST",
-        subTitle: "this is a test",
-        img:
-          "https://images.unsplash.com/photo-1523895665936-7bfe172b757d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
-        text:
-          "Hello, I'm testing here some cards. I hope it works well. I should see it in a moment I guess.",
-        link: "https://www.youtube.com/watch?v=9fUpgn_STdc",
+          "This self-made battery system, developped by Tom Van Hove, charges the batteries until they are under 4.2V with a solarpanel. When the batteries are fully charged, the circuit will shut down. And so on.",
+        gitLink: "https://github.com/vives-projectwerk-2-2020/FinalSolarChargeSystem",
       },
     ],
   }),

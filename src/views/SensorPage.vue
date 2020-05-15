@@ -66,9 +66,15 @@ export default {
   margin-top: 70px;
   margin-right: 20px;
   margin-bottom: 30px;
+  opacity: 50%;
 }
 
 .button:hover {
   opacity: 100%;
+}
+
+.center {
+  display: table;
+  margin: 0 auto;  
 }
 </style>
