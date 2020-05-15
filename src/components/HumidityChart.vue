@@ -32,9 +32,9 @@ export default {
           label: 'Humidity',
           data: [],
           backgroundColor:
-                    'rgba(0, 0, 132, 0.2)',
+                    'rgb(0, 68, 208, 0.15)',
                 borderColor:
-                    'rgba(0, 0, 0, 1)',
+                    'rgb(0, 68, 208, 1)',
                 borderWidth: 1
         }
       ] 
@@ -53,7 +53,11 @@ export default {
         
         for(let i=0; i < Object.keys(this.info.data).length; i++) {
           this.chartdata.datasets[0].data.push(this.info.data[i].humidity)
+<<<<<<< HEAD
           this.chartdata.labels.push( this.info.data[i].time.slice(0,9) + "/" + this.info.data[i].time.slice(11,15)  )
+=======
+          this.chartdata.labels.push(this.info.data[i].time.slice(0,10) + " / " + this.info.data[i].time.slice(11,16))
+>>>>>>> ac3ee2fd7ce81aa178477446b014ca923d74ff09
         }
       this.loaded = true
     }
