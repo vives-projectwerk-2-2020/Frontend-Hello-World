@@ -20,8 +20,14 @@
         live values
       </v-btn>
     </div>
-    <valuesAndCharts v-show="liveValuesActive" />
-    <AboutSensor v-show="sensorInfoActive" />
+    <valuesAndCharts 
+      v-show="liveValuesActive" 
+      v-bind:guid="guid"
+    />
+    <AboutSensor 
+      v-show="sensorInfoActive"
+      v-bind:guid="guid"
+    />
   </div>
 </template>
 
@@ -34,10 +40,14 @@ export default {
     valuesAndCharts,
     AboutSensor
   },
-  data: () => ({
-    sensorInfoActive: true,
-    liveValuesActive: false
-  }),
+  data() {
+    return {
+      API_url: 'https://develop.particula.devbitapp.be/',
+      sensorInfoActive: true,
+      liveValuesActive: false,
+      guid: this.$route.params.guid
+    }
+  },
   methods: {
     toSensorInfo: function() {
       if (!this.sensorInfoActive) {

@@ -75,7 +75,7 @@ A page with historical values of a selected sensor.
 
 gives you 2 types of information:
 
-#### sensor info 
+#### sensor info
 
 gives you the information about the sensor.
 for example:
