@@ -84,7 +84,7 @@
             justify="center"
           >
             <v-container id="sensorpage">
-              <SensorCharts />
+              <SensorCharts v-bind="this.$props['guid']"/>
             </v-container>
           </v-row>
         </v-container>
@@ -100,16 +100,18 @@ import { VueSvgGauge } from "vue-svg-gauge";
 import { mdiThermometer } from '@mdi/js';
 
 export default {
+  props: ['guid'],
   name: "SensorPage",
   components: {
     SensorCharts,
     VueSvgGauge,
   },
   data: () => ({
+    API_Link : "https://develop.particula.devbitapp.be/measurements/",
     info: {},
     drawer: false,
     parameters: [
-      {title: "temperature", value: undefined, unit: "°C", icon:"mdi-thermometer", color: "rgb(139, 0, 0, 0.4)" },
+      { title: "temperature", value: undefined, unit: "°C", icon:"mdi-thermometer", color: "rgb(139, 0, 0, 0.4)" },
       { title: "humidity", value: undefined, unit: "%", icon:"mdi-water-percent", color: "rgb(0, 68, 208, 0.4)"  },
       { title: "pressure", value: undefined, unit: "hPa", icon:"mdi-arrow-collapse-down", color: "rgb(0, 153, 0, 0.4)" },
       { title: "pm10", value: undefined, unit: "µm/m^3", icon:"mdi-google-circles-extended", color: "rgb(76, 0, 153, 0.4)"  },
@@ -122,24 +124,6 @@ export default {
     this.intervalFetchData();
   },
   methods: {
-    getAPI: function() {
-      // TODO Use websocket / MQTT instead !!
-      axios
-        .get(
-          "https://virtserver.swaggerhub.com/sillevl/Particula/0.1/measurements/3fa85f64-5717-4562-b3fc-2c963f66afa6?period=24h&properties=pm10",
-          { headers: { "Access-Control-Allow-Origin": "*" } }
-        )
-        .then(response => {
-          const info = response.data[0];
-
-          this.parameters[0].value = info.temperature;
-          this.parameters[1].value = info.humidity;
-          this.parameters[2].value = info.pressure;
-          this.parameters[3].value = info.pm10;
-          this.parameters[4].value = info.pm2_5;
-          this.parameters[5].value = info.timestamp;
-        });
-    },
     intervalFetchData: function() {
       // TODO Use websocket / MQTT instead !!
       // setInterval(() => {
