@@ -71,6 +71,22 @@ A page with historical values of a selected sensor.
 
 ![Historical values page](./src/img/Historical-values.png)
 
+### sensorpage
+
+gives you 2 types of information:
+
+#### sensor info 
+
+gives you the information about the sensor.
+for example:
+    - the location
+    - owner
+    - a foto
+
+#### live values
+
+gives you the live values of the chosen sensor
+
 ### Login/registration
 
 Allows users to login or register to the platform.
