@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>
+    <div class = "center">
       <v-btn
         rounded
         color="primary"
@@ -69,5 +69,10 @@ export default {
 
 .button:hover {
   opacity: 100%;
+}
+
+.center {
+  display: table;
+  margin: 0 auto;  
 }
 </style>

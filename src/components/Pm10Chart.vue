@@ -29,12 +29,12 @@ export default {
       labels: [],
       datasets: [
         {
-          label: 'Temperature',
+          label: 'Pm 10',
           data: [],
           backgroundColor:
-                    'rgb(139, 0, 0, 0.15)',
+                    'rgb(204, 0, 204, 0.15)',
                 borderColor:
-                    'rgb(139, 0, 0, 1)',
+                    'rgb(204, 0, 204, 1)',
                 borderWidth: 1
         }
       ] 
@@ -48,12 +48,12 @@ export default {
     async getData() {
       await
         axios
-          .get(`${this.API_url_measurements}${this.$props.guid}?period=24h&properties=temperature`)
+          .get(`${this.API_url_measurements}${this.$props.guid}?period=24h&properties=pm10`)
           .then(response => (this.info = response));
         
 
         for(let i=0; i < Object.keys(this.info.data).length; i++) {
-          this.chartdata.datasets[0].data.push(this.info.data[i].temperature)
+          this.chartdata.datasets[0].data.push(this.info.data[i].pm10)
           this.chartdata.labels.push(this.info.data[i].time.slice(0,10) + " / " + this.info.data[i].time.slice(11,16))
         }
       this.loaded = true

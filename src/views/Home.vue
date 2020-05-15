@@ -4,9 +4,12 @@
       ref="map"
       data-projection="EPSG:4326"
     >
-       <vl-view :zoom="zoom" :center="center"></vl-view>
+      <vl-view
+        :zoom="zoom"
+        :center="center"
+      />
       <vl-layer-tile>
-        <vl-source-osm></vl-source-osm>
+        <vl-source-osm />
       </vl-layer-tile>
 
       <vl-interaction-select :features="selected">
@@ -14,21 +17,25 @@
           <vl-style-icon
             src="https://img.icons8.com/ultraviolet/50/000000/place-marker.png"
             :anchor="[0.5, 1]"
-          ></vl-style-icon>
+          />
         </vl-style-box>
       </vl-interaction-select>
 
       <vl-layer-vector>
         <vl-source-vector>
-          <vl-feature v-for="(feature,idx) in features" :key="idx" :id="feature.id">
-            <vl-geom-point :coordinates="feature.geometry.coordinates"></vl-geom-point>
+          <vl-feature
+            v-for="(feature,idx) in features"
+            :id="feature.id"
+            :key="idx"
+          >
+            <vl-geom-point :coordinates="feature.geometry.coordinates" />
           </vl-feature>
 
           <vl-style-box>
             <vl-style-icon
               src="https://img.icons8.com/office/50/000000/place-marker.png"
               :anchor="[0.5, 1]"
-            ></vl-style-icon>
+            />
           </vl-style-box>
         </vl-source-vector>
       </vl-layer-vector>
