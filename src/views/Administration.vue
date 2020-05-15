@@ -23,31 +23,23 @@
                 </v-toolbar>
                 <v-card-text>
                   <v-text-field
-                    v-model="username"
                     label="Username"
                     name="login"
                     type="text"
                   />
                   <v-text-field
                     id="password"
-                    v-model="password"
                     label="Password"
                     name="password"
                     type="password"
                   />
                 </v-card-text>
                 <v-card-actions>
-                  <v-btn
-                    color="primary"
-                    @click="login()"
-                  >
+                  <v-btn color="primary">
                     Login
                   </v-btn>
                   <v-btn
                     text
-                    x-small
-                    absolute
-                    right
                     color="deep-blue accent-4"
                   >
                     Forgot Password?
@@ -92,11 +84,11 @@
                     type="password"
                   />
                 </v-card-text>
-                <p>{{ registrationReturn }}</p>
+                <p>{{ responses }}</p>
                 <v-card-actions>
                   <v-btn
                     color="primary"
-                    @click="register()"
+                    @click.native="postAPI()"
                   >
                     SIGN UP
                   </v-btn>
@@ -114,33 +106,26 @@
 import axios from "axios";
 
 export default {
+  username: "",
+  email: "",
+  password: "",
   data(){
     return{
-    responses: [],
-    loginData:[],
-    registrationReturn: "",
-    username: "",
-    email: "",
-    password: ""
+    responses: []
     }
   },
+  created: function()
+  {
+    this.postAPI();
+  },
   methods: {
-    register() {
+    postAPI() {
       axios.post(
       "https://develop.particula.devbitapp.be/api/user/register?UserName=" + this.username + "&UserPassword=" + this.password + "&Email=" + this.email)
       .then((response) => {
         this.responses = response.data;
-        this.registrationReturn = this.responses;
       });
-    },
-    login() {
-      axios.post(
-      "https://develop.particula.devbitapp.be/api/user/login?UserName=" + this.username + "&UserPassword=" + this.password)
-      .then((response) => {
-        this.loginData = response.data;
-        console.log(this.loginData);
-      });
-    },
+    }
   }
 }
 </script>

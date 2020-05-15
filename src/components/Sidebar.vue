@@ -20,21 +20,9 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar
-      app
-      clipped-left
-    >
+    <v-app-bar>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title>Particula</v-toolbar-title>
-      <v-spacer />
-      <router-link
-        to="/profile"
-        tag="button"
-      >
-        <v-btn icon>
-          <v-icon>mdi-account</v-icon>
-        </v-btn>
-      </router-link>
     </v-app-bar>
   </div>
 </template>

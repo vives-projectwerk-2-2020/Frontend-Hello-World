@@ -1,7 +1,6 @@
 <template>
   <div>
     <div class="top">
-      <h1>Live Values</h1>
       <div class="topLeft">
         <div class="leftMeter">
           <VueSvgGauge
@@ -25,7 +24,7 @@
             :separator-step="5"
             :min="0"
             :max="50"
-            :gauge-color="[{ offset: 0, color: '#4fc3f7'},{ offset: 50, color: '#FFFF00'}, { offset: 100, color: '#FFA500'}]"
+            :gauge-color="[{ offset: 0, color: '#4169e1'},{ offset: 50, color: '#ef5201'}, { offset: 100, color: '#d93a35'}]"
             :scale-interval="0.1"
           >
             <div class="inner-text">
@@ -38,34 +37,23 @@
         <v-layout wrap>
           <v-flex
             v-for="parameter in parameters"
-            :key="parameter.title" 
+            :key="parameter.title"
             xs
             class="col-md-6"
           >
             <v-card class="cardss">
               <div :class="parameter.title">
-                <div class="cardLeft">
-                  <v-list-item three-line>
-                    <v-list-item-content>
-                      <v-list-item-title class="bigtext">
-                        {{ parameter.title }}
-                      </v-list-item-title>
-                      <v-list-item-title class="smalltext">
-                        {{ parameter.value }}
-                        {{ parameter.unit }}
-                      </v-list-item-title>
-                    </v-list-item-content>
-                  </v-list-item>
-                </div>
-                <div class="cardRight">
-                  <v-icon 
-                    size="300%" 
-                    class="icons"
-                    :color="parameter.color"
-                  > 
-                    {{ parameter.icon }}
-                  </v-icon>
-                </div>
+                <v-list-item three-line>
+                  <v-list-item-content>
+                    <v-list-item-title class="headline mb-1 text">
+                      {{ parameter.title }}
+                    </v-list-item-title>
+                    <v-list-item-title class="headline mb-1 text">
+                      {{ parameter.value }}
+                      {{ parameter.unit }}
+                    </v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
               </div>
             </v-card>
           </v-flex>
@@ -73,14 +61,13 @@
       </div>
     </div>
     <div class="bottom">
-      <h1>Charts</h1>
       <v-content>
         <v-container
-          class="fill-height" 
+          class="fill-height"
           fluid
         >
-          <v-row 
-            align="center" 
+          <v-row
+            align="center"
             justify="center"
           >
             <v-container id="sensorpage">
@@ -97,24 +84,23 @@
 import axios from "axios";
 import SensorCharts from "../components/SensorCharts";
 import { VueSvgGauge } from "vue-svg-gauge";
-import { mdiThermometer } from '@mdi/js';
 
 export default {
   name: "SensorPage",
   components: {
     SensorCharts,
-    VueSvgGauge,
+    VueSvgGauge
   },
   data: () => ({
     info: {},
     drawer: false,
     parameters: [
-      {title: "temperature", value: undefined, unit: "°C", icon:"mdi-thermometer", color: "rgb(139, 0, 0, 0.4)" },
-      { title: "humidity", value: undefined, unit: "%", icon:"mdi-water-percent", color: "rgb(0, 68, 208, 0.4)"  },
-      { title: "pressure", value: undefined, unit: "hPa", icon:"mdi-arrow-collapse-down", color: "rgb(0, 153, 0, 0.4)" },
-      { title: "pm10", value: undefined, unit: "µm/m^3", icon:"mdi-google-circles-extended", color: "rgb(76, 0, 153, 0.4)"  },
-      { title: "pm2_5", value: undefined, unit: "µm/m^3", icon:"mdi-google-circles-extended", color: "rgb(204, 0, 204, 0.4)"   },
-      { title: "timestamp", value: undefined, unit: "", icon:"mdi-clock-outline", color: "rgb(255, 128, 0, 0.4)"}
+      { title: "temperature", value: undefined, unit: "°C" },
+      { title: "humidity", value: undefined, unit: "%" },
+      { title: "pressure", value: undefined, unit: "hPa" },
+      { title: "pm10", value: undefined, unit: "µm/m^3" },
+      { title: "pm2_5", value: undefined, unit: "µm/m^3" },
+      { title: "timestamp", value: undefined, unit: "" }
     ]
   }),
   mounted() {
@@ -137,7 +123,7 @@ export default {
           this.parameters[2].value = info.pressure;
           this.parameters[3].value = info.pm10;
           this.parameters[4].value = info.pm2_5;
-          this.parameters[5].value = info.timestamp.slice(0,10) + " / " + info.timestamp.slice(11,16);
+          this.parameters[5].value = info.timestamp;
         });
     },
     intervalFetchData: function() {
@@ -148,32 +134,11 @@ export default {
     }
   }
 };
-</script> 
+</script>
 
 <style>
 * {
   box-sizing: border-box;
-}
-
-@font-face {
-  font-family: follana;
-  src: url(fonts/SIMPLIFICATypeface.ttf);
-}
-
-.bigtext {
-  font-family: follana;
-  font-size: 200%;
-  font-weight:300px;
-}
-.smalltext{
-  font-size:150%
-}
-
-h1 {
-  font-family: follana;
-  font-weight: 40px;
-  font-size: 300%;
-  margin-top: 2.5%;
 }
 
 .top {
@@ -186,8 +151,6 @@ h1 {
   height: auto;
   margin-left: 2.5%;
   border-radius: 30px;
-  font-family: follana;
-  font-weight: 40px;
 }
 .topLeft {
   display: table;
@@ -227,18 +190,23 @@ h1 {
 }
 
 .cardss {
-  width: 80%;
+  width: 300px;
   height: 100px;
   margin: 50px;
   display: inline-block;
-  text-align: left;
 }
 
 .temperature {
-  background-color: white;
-  border: 2px solid rgb(139, 0, 0, 0.4);
-  color: rgb(139, 0, 0, 0.4);
+  background-color: rgb(139, 0, 0, 0.4);
+  border-width: 10px;
+  border-color: black;
+  border-radius: 50px;
+  color: white;
   height: 100px;
+}
+
+.temperature:hover {
+  background-color: rgb(139, 0, 0, 0.7);
 }
 
 .humidity {
@@ -249,31 +217,42 @@ h1 {
 }
 
 .pressure {
-  background-color: white;
-  border: 2px solid rgb(0, 153, 0, 0.4);
-  color: rgb(0, 153, 0, 0.4);
+  background-color: rgb(0, 153, 0, 0.4);
+  border-width: 10px;
+  border-color: black;
+  border-radius: 50px;
+  color: white;
   height: 100px;
 }
 
+.pressure:hover {
+  background-color: rgb(0, 153, 0, 0.7);
+}
+
 .pm2_5 {
-  background-color: white;
-  border: 2px solid rgb(76, 0, 153, 0.4);
-  color: rgb(76, 0, 153, 0.6);
+  background-color: rgb(76, 0, 153, 0.6);
+  border-width: 10px;
+  border-color: black;
+  border-radius: 50px;
+  color: white;
   height: 100px;
 }
 
 .pm10 {
-  background-color: white;
-  border: 2px solid rgb(204, 0, 204, 0.4);
-  color: rgb(204, 0, 204, 0.6);
+  background-color: rgb(204, 0, 204, 0.6);
+  border-width: 10px;
+  border-color: black;
+  border-radius: 50px;
+  color: white;
   height: 100px;
 }
 
 .timestamp {
-  height: 100px;
-  background-color: white;
-  border: 2px solid rgb(255, 128, 0, 0.4);
-  color: rgb(255, 128, 0, 0.6);
+  background-color: rgb(255, 128, 0, 0.6);
+  border-width: 400px;
+  border-color: black;
+  border-radius: 50px;
+  color: white;
   height: 100px;
 }
 .borders {
@@ -285,17 +264,4 @@ h1 {
   width: auto;
   margin-top: 70px;
 }
-
-.cardLeft{
-  float:left;
-}
-
-.icons{
-  float: right;
-}
-
-/* DONT DO THIS! IT BREAKS THE BUTTONS ON OTHER PAGES!
-span {
-  max-width: 100px;
-}*/
 </style>

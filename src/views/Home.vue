@@ -5,14 +5,14 @@
       data-projection="EPSG:4326"
     >
       <vl-view
-        v-model:zoom="zoom"
-        v-model:center="center"
+        :zoom="zoom"
+        :center="center"
       />
       <vl-layer-tile>
         <vl-source-osm />
       </vl-layer-tile>
 
-      <vl-interaction-select v-model:features="selected">
+      <vl-interaction-select :features="selected">
         <vl-style-box>
           <vl-style-icon
             src="https://img.icons8.com/ultraviolet/50/000000/place-marker.png"
@@ -28,7 +28,7 @@
             :id="feature.id"
             :key="idx"
           >
-            <vl-geom-point v-model:coordinates="feature.geometry.coordinates" />
+            <vl-geom-point :coordinates="feature.geometry.coordinates" />
           </vl-feature>
 
           <vl-style-box>
@@ -74,7 +74,7 @@ export default {
     $.getJSON("https://develop.particula.devbitapp.be:80/sensors", function(
       data
     ) {
-      //console.log(data)
+      console.log(data)
       //data is the JSON string
       for (var i = 0; i < data.length; i++) {
         let feature = {
@@ -91,15 +91,15 @@ export default {
     
   },
   methods: {
-    onMapPointerMove({ pixel }) {
-      let hit = this.$refs.map.forEachFeatureAtPixel(pixel, () => true);
+    // onMapPointerMove({ pixel }) {
+    //   let hit = this.$refs.map.forEachFeatureAtPixel(pixel, () => true);
 
-      if (hit) {
-        this.mapCursor = "pointer";
-      } else {
-        this.mapCursor = "default";
-      }
-    }
+    //   // if (hit) {
+    //   //   this.mapCursor = "pointer";
+    //   // } else {
+    //   //   this.mapCursor = "default";
+    //   // }
+    // }
   }
 };
 </script>
