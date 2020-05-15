@@ -297,5 +297,5 @@ h1 {
 /* DONT DO THIS! IT BREAKS THE BUTTONS ON OTHER PAGES!
 span {
   max-width: 100px;
-} */
+}*/
 </style>
