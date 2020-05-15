@@ -51,7 +51,6 @@ export default {
         )
         .then(response => {
             this.sensors = response.data
-            console.log(this.sensors)
         })
     },
     intervalFetchData: function() {
