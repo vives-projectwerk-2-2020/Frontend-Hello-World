@@ -16,9 +16,11 @@ import axios from "axios"
 
 export default {
   name: 'LineChartContainer',
+  props: ['guid','period'],
   components: { LineChart },
   data: () => ({
     loaded: true,
+    API_url_measurements: "https://develop.particula.devbitapp.be/measurements/",
     options: {
       responsive: true,
       maintainAspectRatio: false
@@ -48,7 +50,7 @@ export default {
     async getData() {
       await
         axios
-          .get("https://develop.particula.devbitapp.be/measurements/bc41aa7d-9443-11ea-883d-02420a010064?period=24h&properties=pressure")
+          .get(`${this.API_url_measurements}${this.$props.guid}?period=24h&properties=pressure`)
           .then(response => (this.info = response));
         
         for(let i=0; i < Object.keys(this.info.data).length; i++) {
