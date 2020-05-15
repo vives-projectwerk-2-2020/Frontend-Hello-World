@@ -106,24 +106,44 @@ export default {
     SensorCharts,
     VueSvgGauge,
   },
-  data: () => ({
-    API_Link : "https://develop.particula.devbitapp.be/measurements/",
-    info: {},
-    drawer: false,
-    parameters: [
-      { title: "temperature", value: undefined, unit: "°C", icon:"mdi-thermometer", color: "rgb(139, 0, 0, 0.4)" },
-      { title: "humidity", value: undefined, unit: "%", icon:"mdi-water-percent", color: "rgb(0, 68, 208, 0.4)"  },
-      { title: "pressure", value: undefined, unit: "hPa", icon:"mdi-arrow-collapse-down", color: "rgb(0, 153, 0, 0.4)" },
-      { title: "pm10", value: undefined, unit: "µm/m^3", icon:"mdi-google-circles-extended", color: "rgb(76, 0, 153, 0.4)"  },
-      { title: "pm2_5", value: undefined, unit: "µm/m^3", icon:"mdi-google-circles-extended", color: "rgb(204, 0, 204, 0.4)"   },
-      { title: "timestamp", value: undefined, unit: "", icon:"mdi-clock-outline", color: "rgb(255, 128, 0, 0.4)"}
-    ]
-  }),
+  data: function() {
+    return {
+      API_url: "https://develop.particula.devbitapp.be/",
+      sensor: {},
+      drawer: false,
+      parameters: [
+        { title: "temperature", value: undefined , unit: "°C", icon:"mdi-thermometer", color: "rgb(139, 0, 0, 0.4)" },
+        { title: "humidity", value: undefined, unit: "%", icon:"mdi-water-percent", color: "rgb(0, 68, 208, 0.4)"  },
+        { title: "pressure", value: undefined, unit: "hPa", icon:"mdi-arrow-collapse-down", color: "rgb(0, 153, 0, 0.4)" },
+        { title: "pm10", value: undefined, unit: "µm/m^3", icon:"mdi-google-circles-extended", color: "rgb(76, 0, 153, 0.4)"  },
+        { title: "pm2_5", value: undefined, unit: "µm/m^3", icon:"mdi-google-circles-extended", color: "rgb(204, 0, 204, 0.4)"   },
+        { title: "timestamp", value: undefined, unit: "", icon:"mdi-clock-outline", color: "rgb(255, 128, 0, 0.4)"}
+      ]
+    }
+  },
   mounted() {
-    this.getAPI();
-    this.intervalFetchData();
+    this.intervalFetchData()
+    this.getAPI()
   },
   methods: {
+    getAPI: function() {
+      let sensor_url = 'https://develop.particula.devbitapp.be/sensors/' + this.$props['guid'] 
+      console.log(sensor_url)
+
+      // TODO Use websocket / MQTT instead !!
+      axios
+        .get(
+          sensor_url
+        )
+        .then(response => {
+          this.parameters[0].value = response.data.measurements[0].temperature
+          this.parameters[1].value = response.data.measurements[0].humidity
+          this.parameters[2].value = response.data.measurements[0].pressure
+          this.parameters[3].value = response.data.measurements[0].pm10
+          this.parameters[4].value = response.data.measurements[0].pm25
+          this.parameters[5].value = response.data.measurements[0].time
+        });
+    },
     intervalFetchData: function() {
       // TODO Use websocket / MQTT instead !!
       // setInterval(() => {
