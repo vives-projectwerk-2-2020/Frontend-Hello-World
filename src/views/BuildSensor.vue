@@ -35,7 +35,7 @@
       <v-col class="pt-0">
         <v-row class="text-center">
           <v-col>
-            <v-avatar color="teal">
+            <v-avatar color="red">
               <v-icon color="white">
                 mdi-electron-framework
               </v-icon>
