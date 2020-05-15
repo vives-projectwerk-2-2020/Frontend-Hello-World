@@ -1,9 +1,20 @@
 <template>
-  <v-container style="width: 90%" class="ma-auto">
+  <v-container
+    style="width: 90%"
+    class="ma-auto"
+  >
     <v-row class="my-auto">
-      <v-col cols="12" sm="6" class="my-auto">
+      <v-col
+        cols="12"
+        sm="6"
+        class="my-auto"
+      >
         <v-card class="elevation-5">
-          <v-toolbar color="primary" dark flat>
+          <v-toolbar
+            color="primary"
+            dark
+            flat
+          >
             <v-toolbar-title>User Login</v-toolbar-title>
           </v-toolbar>
           <v-card-text>
@@ -22,18 +33,35 @@
             />
           </v-card-text>
           <v-card-actions>
-            <v-btn color="primary" @click="login()">
+            <v-btn
+              color="primary"
+              @click="login()"
+            >
               Login
             </v-btn>
-            <v-btn text x-small absolute right color="deep-blue accent-4">
+            <v-btn
+              text
+              x-small
+              absolute
+              right
+              color="deep-blue accent-4"
+            >
               Forgot Password?
             </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
-      <v-col cols="12" sm="6" class="my-auto">
+      <v-col
+        cols="12"
+        sm="6"
+        class="my-auto"
+      >
         <v-card class="elevation-5">
-          <v-toolbar color="primary" dark flat>
+          <v-toolbar
+            color="primary"
+            dark
+            flat
+          >
             <v-toolbar-title>User Registration</v-toolbar-title>
           </v-toolbar>
           <v-card-text>
@@ -61,7 +89,10 @@
             {{ registrationReturn }}
           </p>
           <v-card-actions>
-            <v-btn color="primary" @click="register()">
+            <v-btn
+              color="primary"
+              @click="register()"
+            >
               SIGN UP
             </v-btn>
           </v-card-actions>
