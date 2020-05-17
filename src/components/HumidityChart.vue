@@ -16,11 +16,13 @@ import axios from "axios";
 
 export default {
   name: 'LineChartContainer',
+  props: ['guid','period'],
   components: { LineChart },
   data: () => ({
     loaded: true,
+    API_url_measurements: "https://develop.particula.devbitapp.be/measurements/",
     options: {
-      responsive: true,
+      responsive:true,
       maintainAspectRatio: false
     },
     chartdata: { 
@@ -30,9 +32,9 @@ export default {
           label: 'Humidity',
           data: [],
           backgroundColor:
-                    'rgba(0, 0, 132, 0.2)',
+                    'rgb(0, 68, 208, 0.15)',
                 borderColor:
-                    'rgba(0, 0, 0, 1)',
+                    'rgb(0, 68, 208, 1)',
                 borderWidth: 1
         }
       ] 
@@ -46,15 +48,18 @@ export default {
     async getData() {
       await
         axios
-          .get("https://develop.particula.devbitapp.be/measurements/bc41aa7d-9443-11ea-883d-02420a010064?period=24h&properties=humidity")
+          .get(`${this.API_url_measurements}${this.$props.guid}?period=24h&properties=humidity`)
           .then(response => (this.info = response));
         
         for(let i=0; i < Object.keys(this.info.data).length; i++) {
           this.chartdata.datasets[0].data.push(this.info.data[i].humidity)
-          this.chartdata.labels.push( this.info.data[i].time )
+          this.chartdata.labels.push(this.info.data[i].time.slice(0,10) + " / " + this.info.data[i].time.slice(11,16))
         }
       this.loaded = true
     }
   }
 }
 </script>
+
+<style scoped>
+</style>
