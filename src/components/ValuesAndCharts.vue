@@ -84,7 +84,7 @@
             justify="center"
           >
             <v-container id="sensorpage">
-              <SensorCharts v-bind="this.$props['guid']"/>
+              <SensorCharts v-bind="this.$props['guid']" />
             </v-container>
           </v-row>
         </v-container>
@@ -100,12 +100,12 @@ import { VueSvgGauge } from "vue-svg-gauge";
 import { mdiThermometer } from '@mdi/js';
 
 export default {
-  props: ['guid'],
   name: "SensorPage",
   components: {
     SensorCharts,
     VueSvgGauge,
   },
+  props: ['guid'],
   data: function() {
     return {
       API_url: "https://develop.particula.devbitapp.be/",

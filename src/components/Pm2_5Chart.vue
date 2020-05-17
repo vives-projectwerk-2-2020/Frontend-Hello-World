@@ -16,8 +16,8 @@ import axios from "axios";
 
 export default {
   name: 'LineChartContainer',
-  props: ['guid','period'],
   components: { LineChart },
+  props: ['guid','period'],
   data: () => ({
     loaded: true,
     API_url_measurements: "https://develop.particula.devbitapp.be/measurements/",

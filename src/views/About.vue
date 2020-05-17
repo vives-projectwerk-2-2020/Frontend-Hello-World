@@ -159,7 +159,7 @@
           >
             <v-btn
               class="mb-3"
-              href="./BuildSensor"
+              href="./buildSensor"
             >
               Buildyour own sensor
             </v-btn>
